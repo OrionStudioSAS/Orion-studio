@@ -65,7 +65,6 @@ export default function Nav() {
           <span className="nav__sep">|</span>
           <Link href="/le-studio" className="nav__link">Le studio</Link>
           <Link href="/projets" className="nav__link">Nos projets</Link>
-          <Link href="/blog" className="nav__link">Blog</Link>
 
           {/* Trigger — hover géré en JS, pas en CSS */}
           <span
@@ -75,6 +74,8 @@ export default function Nav() {
           >
             Services <span className="nav__plus">+</span>
           </span>
+
+          <Link href="/blog" className="nav__link">Blog</Link>
         </nav>
 
         <Link href="#contact" className="nav__cta">
@@ -122,11 +123,11 @@ export default function Nav() {
       <div className={`nav__mobile${mobileOpen ? ' open' : ''}`}>
         <Link href="/le-studio" onClick={closeMobile}>Le studio</Link>
         <Link href="/projets" onClick={closeMobile}>Nos projets</Link>
-        <Link href="/blog" onClick={closeMobile}>Blog</Link>
         <span className="nav__mobile-label">Services</span>
         <Link href="/site-vitrine" onClick={closeMobile}>Site Vitrine</Link>
         <Link href="/site-e-commerce" onClick={closeMobile}>Site E-commerce</Link>
         <Link href="/automatisation" onClick={closeMobile}>Automatisation</Link>
+        <Link href="/blog" onClick={closeMobile}>Blog</Link>
         <Link href="#contact" onClick={closeMobile}>Parlez-nous de votre projet</Link>
       </div>
     </header>
