@@ -1,4 +1,6 @@
 import './globals.css'
+import PageTransition from '@/components/PageTransition'
+import SmoothScroll from '@/components/SmoothScroll'
 
 export const metadata = {
   title: 'Orion Studio — Agence Web & Automatisations',
@@ -21,7 +23,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll />
+        <PageTransition>{children}</PageTransition>
+      </body>
     </html>
   )
 }

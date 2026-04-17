@@ -1,3 +1,68 @@
+/* ===================== PAGE TRANSITION ===================== */
+/* Overlay sombre qui couvre l'écran pendant la navigation.
+   Phases : covering (slide-in bas → haut) → covered (immobile) → revealing (slide-out haut). */
+.page-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #040506;
+  pointer-events: none;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+/* Trait dégradé sur le bord supérieur du panneau */
+.page-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #4F8EF7, #A855F7, #f97316);
+}
+
+/* Logo / texte au centre pendant la couverture */
+.page-overlay::after {
+  content: 'ORION STUDIO.';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.page-overlay--covering {
+  pointer-events: auto;
+  animation: page-overlay-cover 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+.page-overlay--covered {
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.page-overlay--covered::after { opacity: 1; }
+.page-overlay--revealing {
+  pointer-events: auto;
+  transform: translateY(0);
+  animation: page-overlay-reveal 0.65s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+.page-overlay--revealing::after { opacity: 1; }
+
+@keyframes page-overlay-cover {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes page-overlay-reveal {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
 /* ===================== RESET & BASE ===================== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -24,9 +89,15 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scrollbar-width: none;
 }
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
 
 html::-webkit-scrollbar {
   display: none;
