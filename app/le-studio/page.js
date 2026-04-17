@@ -163,11 +163,16 @@ export default function LeStudio() {
                 <p>
                   Paris pour la dynamique business, Cannes pour la créativité méditerranéenne. Nous intervenons partout en France et à l&apos;international.
                 </p>
-                <a href="mailto:julien@orion-studio.io" className="cta" style={{ alignSelf: 'flex-start' }}>
-                  <span className="text-cta">julien@orion-studio.io</span>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/starblack.png" alt="" className="star" />
-                </a>
+                <div className="ls-offices__emails">
+                  <a href="mailto:julien@orion-studio.io" className="ls-email">
+                    <span className="ls-email__name">Julien</span>
+                    <span className="ls-email__addr">julien@orion-studio.io</span>
+                  </a>
+                  <a href="mailto:theo@orion-studio.io" className="ls-email">
+                    <span className="ls-email__name">Théo</span>
+                    <span className="ls-email__addr">theo@orion-studio.io</span>
+                  </a>
+                </div>
               </div>
 
               <div className="ls-offices__right">
