@@ -3,6 +3,11 @@ import './globals.css'
 export const metadata = {
   title: 'Orion Studio — Agence Web & Automatisations',
   description: 'Agence web spécialisée en création de sites Webflow et Shopify pour entrepreneurs et PME. Paris & Cannes.',
+  icons: {
+    icon: '/images/favicon.png',
+    shortcut: '/images/favicon.png',
+    apple: '/images/favicon.png',
+  },
 }
 
 export default function RootLayout({ children }) {
