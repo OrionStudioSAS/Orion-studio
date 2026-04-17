@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agence web spécialisée en création de sites Webflow et Shopify pour entrepreneurs et PME. Paris & Cannes.">
+  <title>Orion Studio — Agence Web & Automatisations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="cursor-wrapper" id="cursor-wrapper">
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-circle" id="cursor-circle">
+      <div class="planet-turn-container _1"><div class="planet-dot_1"></div></div>
+      <div class="planet-turn-container _2"><div class="planet-dot_2"></div></div>
+      <div class="planet-turn-container _3"><div class="planet-dot_3"></div></div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__bg"></div>
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">ORION STUDIO.</a>
+      <nav class="nav__menu">
+        <span class="nav__brand">Agence web 🇫🇷</span>
+        <span class="nav__sep">|</span>
+        <a href="/le-studio" class="nav__link">Le studio</a>
+        <a href="/projets" class="nav__link">Nos projets</a>
+        <div class="nav__dropdown-wrapper">
+          <span class="nav__link nav__link--services">Services <span class="nav__plus">+</span></span>
+          <div class="nav__dropdown">
+            <a href="#services">Site Vitrine</a>
+            <a href="#services">Site E-commerce</a>
+            <a href="#services">Automatisation</a>
+          </div>
+        </div>
+      </nav>
+      <a href="#contact" class="nav__cta">Parlez-nous de votre projet <span class="nav__cta-star">✦</span></a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="nav-mobile">
+      <a href="/le-studio">Le studio</a>
+      <a href="/projets">Nos projets</a>
+      <a href="#services">Site Vitrine</a>
+      <a href="#services">Site E-commerce</a>
+      <a href="#services">Automatisation</a>
+      <a href="#contact">Parlez-nous de votre projet</a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+
+    <!-- LEFT COLUMN -->
+    <div class="hero__left">
+
+      <!-- Contenu centré verticalement -->
+      <div class="hero__left-content">
+
+        <div class="hero__google">
+          <span class="hero__google-star">★</span>
+          <span>5/5 - 6 avis sur</span>
+          <span class="hero__google-logo">
+            <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+          </span>
+        </div>
+
+        <h1 class="hero__title">
+          AGENCE <span class="text-accent">WEB</span> &amp;<br>
+          <span class="text-accent">AUTOMATISATIONS</span>.
+        </h1>
+
+        <p class="hero__subtitle">
+          Que vous soyez entrepreneur, dirigeant de PME ou marque en développement, nous concevons des sites vitrines et boutiques en ligne sur Webflow et Shopify qui renforcent votre visibilité, votre crédibilité et transforment votre présence en ligne en véritable levier de croissance.
+        </p>
+
+        <a href="#contact" class="btn btn--hero-cta">
+          Parlez-nous de votre projet
+          <span class="btn-plus">+</span>
+        </a>
+
+      </div><!-- /hero__left-content -->
+
+      <!-- Testimonial slider (collé en bas) -->
+      <div class="hero__slider">
+        <div class="hero__slides">
+
+          <div class="hero__slide active">
+            <div class="hero__slide-avatar" style="background:#12152e">VC</div>
+            <div class="hero__slide-body">
+              <strong>Vincent Chopine</strong>
+              <p>"Nous avons fait appel à Orion Studio pour la création de notre site internet et l'expérience a été excellente du début à la fin. L'équipe a su parfaitement comprendre nos besoins."</p>
+              <em>— Membre de l'association AEV</em>
+            </div>
+          </div>
+
+          <div class="hero__slide">
+            <div class="hero__slide-avatar" style="background:#0d1f0d">VL</div>
+            <div class="hero__slide-body">
+              <strong>Virginie Lelong</strong>
+              <p>"Absolument ravie du résultat&nbsp;! Design soigné, navigation fluide et accompagnement très professionnel du début à la fin. À l'écoute, réactif et force de proposition."</p>
+              <em>— Diététicienne nutritionniste</em>
+            </div>
+          </div>
+
+          <div class="hero__slide">
+            <div class="hero__slide-avatar" style="background:#1f0d0d">TC</div>
+            <div class="hero__slide-body">
+              <strong>Thierry Cordier</strong>
+              <p>"Leur expertise sur Webflow et Shopify est impressionnante et ils ont également mis en place plusieurs automatisations qui nous font gagner un temps précieux au quotidien."</p>
+              <em>— Membre de l'association AEV</em>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero__slide-footer">
+          <div class="hero__slide-progress">
+            <div class="hero__slide-bar" id="hero-progress-bar"></div>
+          </div>
+          <button class="hero__slide-next" id="hero-slide-next" aria-label="Avis suivant">→</button>
+        </div>
+      </div>
+
+    </div><!-- /hero__left -->
+
+    <!-- RIGHT COLUMN -->
+    <div class="hero__right">
+      <img src="Image banner.png" alt="Équipe Orion Studio" class="hero__photo">
+      <div class="hero__float-bar">
+        <span class="hero__float-location">Paris &amp; Cannes 🇫🇷</span>
+        <a href="#contact" class="hero__float-cta">Refaire mon site web <span>+</span></a>
+      </div>
+    </div><!-- /hero__right -->
+
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">NOS SERVICES</span>
+        <h2>Ce que nous créons pour vous</h2>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card">
+          <div class="service-card__icon">🌐</div>
+          <h3>Site Vitrine</h3>
+          <p>Attirez, rassurez et convertissez avec un site web conçu pour valoriser votre marque et soutenir votre croissance.</p>
+          <ul class="service-card__list">
+            <li>Développement Webflow</li>
+            <li>Stratégie digitale</li>
+            <li>UX/UI design</li>
+            <li>Animations &amp; interactions</li>
+            <li>Autonomie de gestion des contenus</li>
+            <li>Optimisation SEO / CRO</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">En savoir plus →</a>
+        </div>
+
+        <div class="service-card service-card--featured">
+          <div class="service-card__icon">🛒</div>
+          <h3>Site E-commerce</h3>
+          <p>Transformez votre trafic en chiffre d'affaires grâce à une boutique en ligne performante, fluide et pensée pour vendre.</p>
+          <ul class="service-card__list">
+            <li>Développement Shopify</li>
+            <li>Stratégie e-commerce</li>
+            <li>UX orientée conversion</li>
+            <li>Configuration paiements &amp; logistique</li>
+            <li>Optimisation tunnel d'achat</li>
+            <li>Tracking &amp; analytics</li>
+            <li>Automatisations marketing</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">En savoir plus →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">⚡</div>
+          <h3>Automatisation</h3>
+          <p>Automatisez les tâches répétitives et structurez votre croissance avec des systèmes connectés et intelligents.</p>
+          <ul class="service-card__list">
+            <li>Connexion e-commerce → comptabilité</li>
+            <li>Génération automatique d'articles de blog</li>
+            <li>Génération et envoi de devis automatisés</li>
+            <li>Relance de panier abandonné intelligent</li>
+            <li>Génération facture automatique</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">En savoir plus →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="projects" id="projets">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">NOS PROJETS</span>
+        <h2>Des réalisations qui parlent d'elles-mêmes</h2>
+      </div>
+      <div class="projects__grid">
+
+        <div class="project-card">
+          <div class="project-card__image project-card__image--1">
+            <div class="project-card__overlay">
+              <span>Voir le projet →</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <div>
+              <h3>Association des Entrepreneurs du Vexin</h3>
+              <p>Site vitrine associatif</p>
+            </div>
+            <span class="project-tag">Site Vitrine</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__image project-card__image--2">
+            <div class="project-card__overlay">
+              <span>Voir le projet →</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <div>
+              <h3>Ocha &amp; Co</h3>
+              <p>Boutique en ligne</p>
+            </div>
+            <span class="project-tag">E-commerce</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__image project-card__image--3">
+            <div class="project-card__overlay">
+              <span>Voir le projet →</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <div>
+              <h3>Housses Taxi</h3>
+              <p>Boutique spécialisée</p>
+            </div>
+            <span class="project-tag">E-commerce</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="projects__cta">
+        <a href="/projets" class="btn btn--outline">Voir tous nos projets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TECH STACK ===================== -->
+  <section class="stack">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">NOS OUTILS</span>
+        <h2>Technologies &amp; plateformes</h2>
+      </div>
+      <div class="stack__grid">
+        <div class="stack-item">
+          <div class="stack-item__logo">Shopify</div>
+          <p>La référence mondiale du e-commerce</p>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item__logo">Webflow</div>
+          <p>La nouvelle génération du web sur-mesure</p>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item__logo">Make / N8N</div>
+          <p>Connectez, automatisez, accélérez</p>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item__logo">Figma</div>
+          <p>De l'idée au prototype, sans friction</p>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item__logo">ClickUp</div>
+          <p>Une seule plateforme pour tout piloter</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">NOTRE MÉTHODE</span>
+        <h2>Un processus éprouvé, du diagnostic au lancement</h2>
+      </div>
+      <div class="process__steps">
+
+        <div class="process-step">
+          <div class="process-step__number">01</div>
+          <div class="process-step__content">
+            <h3>Diagnostic &amp; cadrage stratégique</h3>
+            <p>On analyse votre modèle, vos objectifs, vos outils existants et vos blocages actuels. L'idée n'est pas juste de créer, mais de construire quelque chose d'utile et durable.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">02</div>
+          <div class="process-step__content">
+            <h3>Architecture &amp; conception</h3>
+            <p>On définit les parcours utilisateurs, l'architecture des pages ou des flux, les points de conversion et les connexions entre vos outils.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">03</div>
+          <div class="process-step__content">
+            <h3>Design &amp; développement</h3>
+            <p>Interface, e-commerce, automatisation ou intégrations : tout est développé sur mesure, proprement, avec une attention particulière à la rapidité et à la stabilité.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">04</div>
+          <div class="process-step__content">
+            <h3>Tests &amp; optimisation</h3>
+            <p>Avant mise en ligne ou mise en production, on teste les parcours, les paiements, les flux, les performances afin d'éviter les frictions et sécuriser l'expérience.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-step__number">05</div>
+          <div class="process-step__content">
+            <h3>Déploiement &amp; évolution</h3>
+            <p>Une fois lancé, on vous accompagne dans l'analyse des données, les améliorations continues et les évolutions futures. On construit pour aujourd'hui, mais aussi pour demain.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">TÉMOIGNAGES</span>
+        <h2>Ce que disent nos clients</h2>
+      </div>
+      <div class="testimonials__grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Absolument ravie du résultat&nbsp;! Mon site internet correspond parfaitement à mes attentes&nbsp;: design soigné, navigation fluide et accompagnement très professionnel du début à la fin. À l'écoute, réactif et force de proposition. Je recommande sans hésitation&nbsp;!"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">VL</div>
+            <div>
+              <strong>Virginie Lelong</strong>
+              <span>Diététicienne nutritionniste</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Nous avons fait appel à Orion Studio pour la création de notre site internet et l'expérience a été excellente du début à la fin. L'équipe a su parfaitement comprendre nos besoins et nous proposer un site moderne, rapide et surtout très facile à administrer."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">VC</div>
+            <div>
+              <strong>Vincent Chopine</strong>
+              <span>Association AEV</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Orion Studio nous a accompagnés sur la refonte complète de notre présence en ligne. Leur expertise sur Webflow et Shopify est impressionnante et ils ont également mis en place plusieurs automatisations qui nous font gagner un temps précieux au quotidien."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">TC</div>
+            <div>
+              <strong>Thierry Cordier</strong>
+              <span>Association AEV</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2>Questions fréquentes</h2>
+      </div>
+
+      <div class="faq__category">
+        <h3 class="faq__category-title">Général</h3>
+        <div class="faq__list">
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Quelles sont vos modalités de paiement ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>À la signature&nbsp;: 30&nbsp;%, à la validation de la maquette&nbsp;: 30&nbsp;%, à la livraison finale&nbsp;: 30&nbsp;%, 2 semaines après la mise en ligne&nbsp;: 10&nbsp;%. Nous pouvons adapter ces échéances selon vos besoins.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Combien de temps dure une prestation ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>En moyenne, entre 4 et 8 semaines, selon la complexité du site et la réactivité des échanges.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Qui compose l'équipe Orion Studio ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Orion Studio, c'est Julien et Théo, cofondateurs passionnés et experts Webflow &amp; Shopify. Notre structure à taille humaine nous permet de travailler main dans la main avec nos clients et d'assurer une qualité constante du début à la fin.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Proposez-vous un accompagnement après la mise en ligne ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Oui&nbsp;! Nous assurons deux semaines de suivi post-lancement pour garantir la stabilité du site. Nous proposons aussi des formules de maintenance ou d'évolution continue.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Qu'est-ce qui différencie Orion Studio d'une autre agence ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Notre approche repose sur trois piliers&nbsp;: <strong>Clarté</strong> (vous savez toujours où en est votre projet), <strong>Autonomie</strong> (nous formons nos clients à gérer leur site facilement), <strong>Expertise</strong> (nous sommes spécialisés dans Webflow et Shopify).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__category">
+        <h3 class="faq__category-title">Site Vitrine</h3>
+        <div class="faq__list">
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Pourquoi choisir Webflow pour un site vitrine ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Webflow offre une liberté de design totale et une interface visuelle intuitive. C'est la solution idéale pour les entreprises qui veulent un site à la fois rapide, esthétique et facile à gérer.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Quels types de sites créez-vous sur Webflow ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Sites vitrines corporate, landing pages, blogs et magazines, sites à animations sur mesure, pages événementielles.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Puis-je gérer mon site seul après la livraison ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Oui, totalement. Webflow intègre un éditeur de contenu visuel (CMS Editor) qui vous permet de modifier textes, images, articles de blog, etc.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Est-ce bon pour le référencement (SEO) ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Absolument. Webflow génère un code propre et rapide, idéal pour le SEO. Nous optimisons systématiquement les balises méta, les performances, le maillage interne, etc.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Combien coûte un site vitrine Webflow ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Nos projets commencent généralement à 2&nbsp;500&nbsp;€, mais tout dépend de la complexité.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__category">
+        <h3 class="faq__category-title">E-commerce</h3>
+        <div class="faq__list">
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Pourquoi choisir Shopify pour votre boutique ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Shopify est une plateforme clé en main dédiée à la vente en ligne. Elle offre une gestion simplifiée des produits, commandes, paiements et livraisons.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Quels types de boutiques réalisez-vous ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Boutiques classiques, box mensuelles / abonnements, marketplaces spécialisées, boutiques locales avec Click &amp; Collect, sites B2B.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Puis-je connecter Shopify à d'autres outils ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Oui, Shopify s'intègre à de nombreuses solutions&nbsp;: ERP, CRM, outils marketing, ou encore marketplaces comme Amazon.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Quelle est la durée moyenne d'un projet Shopify ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>En moyenne 6 à 10 semaines, selon le nombre de produits, les intégrations logistiques, et la complexité du design.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Proposez-vous des formations sur Shopify ?
+              <span class="faq-item__icon">+</span>
+            </button>
+            <div class="faq-item__answer">
+              <p>Oui, chaque livraison inclut une session de formation personnalisée pour vous apprendre à gérer votre boutique au quotidien.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CONTACT</span>
+        <h2>Parlez-nous de votre projet</h2>
+        <p>Décrivez-nous votre projet et nous vous recontactons rapidement.</p>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="contact-form__services">
+          <label class="checkbox-label">
+            <input type="checkbox" name="service" value="vitrine">
+            <span>Site Vitrine</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="service" value="ecommerce">
+            <span>Site E-commerce</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="service" value="automatisation">
+            <span>Automatisation</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="service" value="autre">
+            <span>Autre</span>
+          </label>
+        </div>
+        <div class="contact-form__fields">
+          <div class="form-group">
+            <label for="company">Nom de votre entreprise</label>
+            <input type="text" id="company" name="company" placeholder="Acme Inc." required>
+          </div>
+          <div class="form-group">
+            <label for="website">Votre site (facultatif)</label>
+            <input type="url" id="website" name="website" placeholder="https://monsite.fr">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="hello@monentreprise.fr" required>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="message">Informations complémentaires</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet, vos objectifs, votre budget estimé..."></textarea>
+          </div>
+        </div>
+        <div class="contact-form__submit">
+          <button type="submit" class="btn btn--white">Envoyer ma demande</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo">ORION STUDIO</a>
+          <p>Agence web spécialisée en création de sites Webflow et Shopify pour entrepreneurs et PME.</p>
+          <div class="footer__social">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://instagram.com/orionstudio.io" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <h4>Services</h4>
+            <a href="#services">Site vitrine</a>
+            <a href="#services">Site e-commerce</a>
+            <a href="#services">Automatisation</a>
+          </div>
+          <div class="footer__column">
+            <h4>L'Agence</h4>
+            <a href="/le-studio">Le studio</a>
+            <a href="/projets">Nos projets</a>
+          </div>
+          <div class="footer__column">
+            <h4>Contact</h4>
+            <a href="mailto:julien@orion-studio.io">julien@orion-studio.io</a>
+          </div>
+        </div>
+        <div class="footer__locations">
+          <div class="footer__location">
+            <div class="footer__location-header">
+              <span class="footer__city">Paris</span>
+              <span class="footer__time" id="paris-time">--:--:--</span>
+            </div>
+            <address>60 Rue François 1er<br>75008 Paris</address>
+          </div>
+          <div class="footer__location">
+            <div class="footer__location-header">
+              <span class="footer__city">Cannes</span>
+              <span class="footer__time" id="cannes-time">--:--:--</span>
+            </div>
+            <address>6 Rue Merle<br>06400 Cannes</address>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2024 Orion Studio. Tous droits réservés.</span>
+        <div class="footer__legal">
+          <a href="/mentions-legales">Mentions légales</a>
+          <a href="/cgv">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
