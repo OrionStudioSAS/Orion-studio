@@ -2,18 +2,60 @@
 import { useState } from 'react'
 import Script from 'next/script'
 
+const WEB3FORMS_KEY = '6d517371-d33d-4ecb-b7a2-eac374506c30'
+
 export default function Contact() {
   const [tab, setTab] = useState('call')
-  const [status, setStatus] = useState('idle')
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [errorMsg, setErrorMsg] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('sending')
-    setTimeout(() => {
-      setStatus('sent')
-      e.target.reset()
-      setTimeout(() => setStatus('idle'), 3000)
-    }, 1000)
+    setErrorMsg('')
+
+    const form = e.target
+    const formData = new FormData(form)
+
+    // Récupérer toutes les cases cochées en une seule string lisible
+    const services = formData.getAll('service').join(', ') || '—'
+
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: `Nouvelle demande — ${formData.get('company') || 'Sans nom'}`,
+      from_name: 'Formulaire Orion Studio',
+      replyto: formData.get('email'),
+      // Champs personnalisés (apparaîtront dans le mail)
+      Entreprise: formData.get('company'),
+      Site: formData.get('website') || '—',
+      Email: formData.get('email'),
+      Services: services,
+      Message: formData.get('message') || '—',
+    }
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+      const data = await res.json()
+
+      if (data.success) {
+        setStatus('sent')
+        form.reset()
+        setTimeout(() => setStatus('idle'), 4000)
+      } else {
+        setStatus('error')
+        setErrorMsg(data.message || "Erreur lors de l'envoi.")
+      }
+    } catch (err) {
+      setStatus('error')
+      setErrorMsg('Connexion impossible. Réessayez dans un instant.')
+    }
   }
 
   return (
@@ -119,13 +161,22 @@ export default function Contact() {
               <div className="contact-form__submit">
                 <button type="submit" className="cta" disabled={status === 'sending'}>
                   <span className="text-cta">
-                    {status === 'sending' ? 'Envoi en cours...' : status === 'sent' ? 'Message envoyé ✓' : 'Envoyer ma demande'}
+                    {status === 'sending'
+                      ? 'Envoi en cours...'
+                      : status === 'sent'
+                      ? 'Message envoyé ✓'
+                      : status === 'error'
+                      ? 'Réessayer'
+                      : 'Envoyer ma demande'}
                   </span>
                   {status !== 'sent' && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src="/images/starblack.png" alt="" className="star" />
                   )}
                 </button>
+                {status === 'error' && (
+                  <p className="contact-form__error">{errorMsg}</p>
+                )}
               </div>
             </form>
           </div>
