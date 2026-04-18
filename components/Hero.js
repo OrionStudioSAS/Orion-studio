@@ -6,21 +6,21 @@ const DURATION = 4000
 
 const slides = [
   {
-    photo: '/images/VincentChopine.png',
+    photo: '/images/VincentChopine.webp',
     initials: 'VC',
     name: 'Vincent Chopine',
     text: '"Nous avons fait appel à Orion Studio pour la création de notre site internet et l\'expérience a été excellente du début à la fin. L\'équipe a su parfaitement comprendre nos besoins."',
     role: '— Membre de l\'association AEV',
   },
   {
-    photo: '/images/VirginieLelong.png',
+    photo: '/images/VirginieLelong.webp',
     initials: 'VL',
     name: 'Virginie Lelong',
     text: '"Absolument ravie du résultat\u00a0! Design soigné, navigation fluide et accompagnement très professionnel du début à la fin. À l\'écoute, réactif et force de proposition."',
     role: '— Diététicienne nutritionniste',
   },
   {
-    photo: '/images/ThierryCordier.png',
+    photo: '/images/ThierryCordier.webp',
     initials: 'TC',
     name: 'Thierry Cordier',
     text: '"Leur expertise sur le développement sur-mesure est impressionnante et ils ont également mis en place plusieurs automatisations qui nous font gagner un temps précieux au quotidien."',
@@ -145,7 +145,7 @@ export default function Hero() {
       {/* RIGHT COLUMN */}
       <div className="hero__right">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/banner.png" alt="Équipe Orion Studio" className="hero__photo" />
+        <img src="/images/banner.webp" alt="Équipe Orion Studio" className="hero__photo" />
         <div className="hero__float-bar">
           <span className="hero__float-location">Paris &amp; Cannes 🇫🇷</span>
           <Link href="#contact" className="hero__float-cta">

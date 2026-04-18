@@ -105,7 +105,7 @@ export default function Automatisation() {
 
             <div className="sv-hero__image">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/bannerAutomation.png" alt="Automatisation Make et n8n par Orion Studio" />
+              <img src="/images/bannerAutomation.webp" alt="Automatisation Make et n8n par Orion Studio" />
             </div>
 
           </div>
