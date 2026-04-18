@@ -34,8 +34,23 @@ export default function LeStudioAnimations() {
 
       // Valeurs
       observe('.ls-values',            0.08, '-3% 0px 0px 0px'),
-      observe('.ls-values__header > *', 0.2),
-      observe('.ls-value-card',        0.12),
+      observe('.ls-values__header',    0.2),
+      observe('.ls-value-row',         0.12),
+
+      // Active state cinématique : déclenche l'anim quand la ligne entre
+      // dans la bande centrale du viewport (~30% au milieu)
+      (() => {
+        const activeObs = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              entry.target.classList.toggle('active', entry.isIntersecting)
+            })
+          },
+          { rootMargin: '-35% 0px -35% 0px', threshold: 0 }
+        )
+        document.querySelectorAll('.ls-value-row').forEach(el => activeObs.observe(el))
+        return activeObs
+      })(),
 
       // Bureaux
       observe('.ls-offices',           0.1, '-3% 0px 0px 0px'),

@@ -45,10 +45,10 @@ const valeurs = [
 ]
 
 const stats = [
-  { value: '50+', label: 'Projets livrés' },
-  { value: '3 ans', label: "D'expérience" },
-  { value: '2', label: 'Bureaux en France' },
-  { value: '98%', label: 'Clients satisfaits' },
+  { value: '50+', unit: '', label: 'Projets livrés' },
+  { value: '3', unit: 'ans', label: "D'expérience" },
+  { value: '2', unit: '', label: 'Bureaux en France' },
+  { value: '98%', unit: '', label: 'Clients satisfaits' },
 ]
 
 const offices = [
@@ -91,13 +91,20 @@ export default function LeStudio() {
                 <img src="/images/starblack.png" alt="" className="star" />
               </Link>
             </div>
+          </div>
+        </section>
 
-            {/* ─── Barre de stats ─── */}
-            <div className="ls-hero__stats">
+        {/* ─── CHIFFRES ─── */}
+        <section className="svt-stats">
+          <div className="container">
+            <div className="svt-stats__grid">
               {stats.map((s, i) => (
-                <div key={i} className="ls-stat">
-                  <span className="ls-stat__value">{s.value}</span>
-                  <span className="ls-stat__label">{s.label}</span>
+                <div key={i} className="svt-stat">
+                  <div className="svt-stat__value">
+                    <span className="gradient-text">{s.value}</span>
+                    {s.unit && <span className="svt-stat__unit">{s.unit}</span>}
+                  </div>
+                  <p className="svt-stat__label">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -130,22 +137,36 @@ export default function LeStudio() {
           </div>
         </section>
 
-        {/* ─── POURQUOI NOUS ─── */}
+        {/* ─── POURQUOI NOUS — liste éditoriale ─── */}
         <section className="ls-values">
           <div className="container">
-            <div className="section-header ls-values__header">
-              <span className="section-tag">POURQUOI ORION STUDIO ?</span>
-              <h2>Six raisons de nous choisir</h2>
+            <div className="ls-values__header">
+              <div className="ls-values__heading">
+                <span className="section-tag">POURQUOI ORION STUDIO&nbsp;?</span>
+                <h2>
+                  Six raisons,{' '}
+                  <span className="gradient-text">une seule conviction.</span>
+                </h2>
+              </div>
+              <p className="ls-values__intro">
+                Un site n&apos;est pas une dépense, c&apos;est un actif. Voici comment nous le concevons pour qu&apos;il travaille pour vous, chaque jour.
+              </p>
             </div>
-            <div className="ls-values__grid">
-              {valeurs.map((v) => (
-                <div key={v.num} className="ls-value-card">
-                  <span className="ls-value-card__num">{v.num}</span>
-                  <h3 className="ls-value-card__title">{v.title}</h3>
-                  <p className="ls-value-card__desc">{v.desc}</p>
-                </div>
+
+            <ol className="ls-values__list">
+              {valeurs.map((v, i) => (
+                <li key={v.num} className="ls-value-row">
+                  <span className="ls-value-row__num" aria-hidden="true">{v.num}</span>
+                  <div className="ls-value-row__body">
+                    <h3 className="ls-value-row__title">{v.title}</h3>
+                    <p className="ls-value-row__desc">{v.desc}</p>
+                  </div>
+                  <span className="ls-value-row__total" aria-hidden="true">
+                    / 0{valeurs.length}
+                  </span>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 

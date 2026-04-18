@@ -69,18 +69,46 @@ export default function Process() {
     const track = trackRef.current
     if (!wrapper || !track) return
 
+    // Sur mobile/tablette : pas de scroll horizontal, layout vertical
+    const MOBILE_BP = 1024
+    const isMobile = () => window.innerWidth < MOBILE_BP
+
     const setHeight = () => {
+      if (isMobile()) {
+        wrapper.style.height = ''
+        track.style.transform = ''
+        return
+      }
       const extra = Math.max(0, track.scrollWidth - window.innerWidth)
       wrapper.style.height = `calc(100vh + ${extra}px)`
     }
 
     const handleScroll = () => {
+      if (isMobile()) return
       const rect = wrapper.getBoundingClientRect()
       const total = wrapper.offsetHeight - window.innerHeight
       if (total <= 0) return
       const progress = Math.max(0, Math.min(1, -rect.top / total))
       const maxTranslate = track.scrollWidth - window.innerWidth
       track.style.transform = `translateX(-${progress * maxTranslate}px)`
+
+      // Détermine la carte la plus proche du centre horizontal du viewport
+      const cards = track.querySelectorAll('.process-card')
+      const viewportCenter = window.innerWidth / 2
+      let closest = null
+      let closestDist = Infinity
+      cards.forEach((card) => {
+        const r = card.getBoundingClientRect()
+        const cardCenter = r.left + r.width / 2
+        const dist = Math.abs(cardCenter - viewportCenter)
+        if (dist < closestDist) {
+          closestDist = dist
+          closest = card
+        }
+      })
+      cards.forEach((card) => {
+        card.classList.toggle('is-active', card === closest)
+      })
     }
 
     setHeight()

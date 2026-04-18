@@ -7,6 +7,7 @@ import Contact from '@/components/Contact'
 import ScrollObserver from '@/components/ScrollObserver'
 import SiteVitrineAnimations from '@/components/SiteVitrineAnimations'
 import HomepageAnimations from '@/components/HomepageAnimations'
+import SpotlightCards from '@/components/SpotlightCards'
 import Link from 'next/link'
 
 export const metadata = {
@@ -243,6 +244,7 @@ export default function SiteEcommerce() {
       <ScrollObserver />
       <SiteVitrineAnimations />
       <HomepageAnimations />
+      <SpotlightCards />
     </>
   )
 }
