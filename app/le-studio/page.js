@@ -88,7 +88,7 @@ export default function LeStudio() {
               <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>
                 <span className="text-cta">Parlez-nous de votre projet</span>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/starblack.png" alt="" className="star" />
+                <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
               </Link>
             </div>
           </div>

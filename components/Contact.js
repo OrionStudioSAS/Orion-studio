@@ -94,6 +94,8 @@ export default function Contact() {
                 src={tab === 'call' ? '/images/starblack.png' : '/images/starwhite.png'}
                 alt=""
                 className="star"
+                width="14"
+                height="14"
               />
               <span className="text-cta">Réserver un call</span>
             </button>
@@ -106,6 +108,8 @@ export default function Contact() {
                 src={tab === 'form' ? '/images/starblack.png' : '/images/starwhite.png'}
                 alt=""
                 className="star"
+                width="14"
+                height="14"
               />
               <span className="text-cta">Nous écrire</span>
             </button>
@@ -198,7 +202,7 @@ export default function Contact() {
                   </span>
                   {status !== 'sent' && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src="/images/starblack.png" alt="" className="star" />
+                    <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
                   )}
                 </button>
                 {status === 'error' && (

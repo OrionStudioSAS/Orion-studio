@@ -98,14 +98,14 @@ export default function SiteEcommerce() {
                 <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>
                   <span className="text-cta">Parlez-nous de votre projet</span>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/starblack.png" alt="" className="star" />
+                  <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
                 </Link>
               </div>
             </div>
 
             <div className="sv-hero__image">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/bannerSiteEcommerce.webp" alt="Site e-commerce Shopify par Orion Studio" />
+              <img src="/images/bannerSiteEcommerce.webp" alt="Site e-commerce Shopify par Orion Studio" width="1920" height="1080" />
             </div>
 
           </div>
@@ -145,7 +145,7 @@ export default function SiteEcommerce() {
                 <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>
                   <span className="text-cta">Démarrer un projet</span>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/starblack.png" alt="" className="star" />
+                  <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
                 </Link>
               </div>
 

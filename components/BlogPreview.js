@@ -23,7 +23,7 @@ export default function BlogPreview() {
           <Link href="/blog" className="cta">
             <span className="text-cta">Voir tous les articles</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/starblack.png" alt="" className="star" />
+            <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
           </Link>
         </div>
 
@@ -37,7 +37,7 @@ export default function BlogPreview() {
               <div className="bp-card__image">
                 {article.cover
                   // eslint-disable-next-line @next/next/no-img-element
-                  ? <img src={article.cover} alt={article.title} />
+                  ? <img src={article.cover} alt={article.title} width="900" height="600" />
                   : <div style={{ background: article.coverGradient, width: '100%', height: '100%' }} />
                 }
               </div>

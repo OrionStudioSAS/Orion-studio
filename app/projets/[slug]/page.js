@@ -51,7 +51,7 @@ export default function ProjectDetail({ params }) {
                 <a href={project.url} target="_blank" rel="noopener noreferrer" className="cta">
                   <span className="text-cta">Voir le site</span>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/starblack.png" alt="" className="star" />
+                  <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
                 </a>
               )}
             </div>
@@ -64,7 +64,7 @@ export default function ProjectDetail({ params }) {
             <div className="pd-banner__image" style={project.cover ? {} : { background: project.gradient }}>
               {project.cover && (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={project.cover} alt={project.title} className="pd-banner__cover" />
+                <img src={project.cover} alt={project.title} className="pd-banner__cover" width="464" height="619" />
               )}
             </div>
           </div>
