@@ -81,7 +81,7 @@ export default function Nav() {
         <Link href="#contact" className="nav__cta">
           Parlez-nous de votre projet
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/starwhite.png" alt="" className="star" />
+          <img src="/images/starwhite.png" alt="" className="star" width="14" height="14" />
         </Link>
 
         <button

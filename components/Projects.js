@@ -21,7 +21,7 @@ export default function Projects() {
               >
                 {project.cover && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={project.cover} alt={project.title} className="project-card__cover" />
+                  <img src={project.cover} alt={project.title} className="project-card__cover" width="464" height="619" />
                 )}
                 {/* Overlay gradient bas */}
                 <div className="project-card__gradient" />
@@ -41,7 +41,7 @@ export default function Projects() {
           <Link href="/projets" className="cta">
             <span className="text-cta">Voir tous nos projets</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/starblack.png" alt="" className="star" />
+            <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
           </Link>
         </div>
       </div>

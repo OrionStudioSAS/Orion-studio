@@ -59,7 +59,7 @@ export default function ArticlePage({ params }) {
             <div className="article-cover__image" style={article.cover ? {} : { background: article.coverGradient }}>
               {article.cover && (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={article.cover} alt={article.title} />
+                <img src={article.cover} alt={article.title} width="900" height="600" />
               )}
             </div>
           </div>

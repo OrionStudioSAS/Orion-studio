@@ -70,7 +70,7 @@ export default function Expertises() {
 
         <div className="expertises__heading">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/starwhite.png" alt="" className="star" />
+          <img src="/images/starwhite.png" alt="" className="star" width="14" height="14" />
           <span>NOS EXPERTISES</span>
         </div>
 
@@ -97,7 +97,7 @@ export default function Expertises() {
             <Link href={service.href} className="cta" style={{ alignSelf: 'flex-start' }}>
               <span className="text-cta">Découvrir</span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/starblack.png" alt="" className="star" />
+              <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
             </Link>
 
           </div>

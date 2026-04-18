@@ -38,7 +38,7 @@ export default function ProjectsGrid() {
               >
                 {project.cover && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={project.cover} alt={project.title} className="project-card__cover" />
+                  <img src={project.cover} alt={project.title} className="project-card__cover" width="464" height="619" />
                 )}
                 <div className="project-card__gradient" />
                 <div className="project-card__content">
