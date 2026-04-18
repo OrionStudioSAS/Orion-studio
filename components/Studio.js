@@ -27,7 +27,7 @@ export default function Studio() {
 
             {/* Image de fond */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/basePlanet.png" alt="" className="image-4" />
+            <img src="/images/basePlanet.webp" alt="" className="image-4" />
 
             {/* Orbites rotatives */}
             <div className="rotating _1">

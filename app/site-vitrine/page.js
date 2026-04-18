@@ -100,7 +100,7 @@ export default function SiteVitrine() {
 
             <div className="sv-hero__image">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/bannerSiteVitrine.png" alt="Site vitrine sur-mesure par Orion Studio" />
+              <img src="/images/bannerSiteVitrine.webp" alt="Site vitrine sur-mesure par Orion Studio" />
             </div>
 
           </div>
