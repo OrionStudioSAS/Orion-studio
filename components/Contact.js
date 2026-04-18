@@ -2,12 +2,21 @@
 import { useState } from 'react'
 import Script from 'next/script'
 
+// Mémorise si l'utilisateur a déjà ouvert le tab "Réserver un call"
+// pour ne charger le widget iClosed qu'à la demande (~2MB de JS tiers)
+
 const WEB3FORMS_KEY = '6d517371-d33d-4ecb-b7a2-eac374506c30'
 
 export default function Contact() {
   const [tab, setTab] = useState('call')
+  const [callOpened, setCallOpened] = useState(false) // déclenche le chargement iClosed
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
   const [errorMsg, setErrorMsg] = useState('')
+
+  const openCall = () => {
+    setTab('call')
+    setCallOpened(true)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -60,8 +69,10 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact">
-      {/* Script iClosed chargé une seule fois, après le rendu */}
-      <Script src="https://app.iclosed.io/assets/widget.js" strategy="lazyOnload" />
+      {/* Script iClosed chargé uniquement quand l'utilisateur ouvre le tab "Réserver un call" */}
+      {callOpened && (
+        <Script src="https://app.iclosed.io/assets/widget.js" strategy="lazyOnload" />
+      )}
 
       <div className="container">
 
@@ -76,7 +87,7 @@ export default function Contact() {
           <div className="contact__switcher">
             <button
               className={`contact__switch-btn ${tab === 'call' ? 'active' : ''}`}
-              onClick={() => setTab('call')}
+              onClick={openCall}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -106,12 +117,28 @@ export default function Contact() {
 
           {/* ── CALL ── */}
           <div className={`contact__panel ${tab === 'call' ? 'active' : ''}`}>
-            <div
-              className="iclosed-widget"
-              data-url="https://app.iclosed.io/e/orion-studio/reservez-un-call-1-to-1"
-              title="Réservez un call 1-to-1"
-              style={{ width: '100%', height: '620px' }}
-            />
+            {callOpened ? (
+              <div
+                className="iclosed-widget"
+                data-url="https://app.iclosed.io/e/orion-studio/reservez-un-call-1-to-1"
+                title="Réservez un call 1-to-1"
+                style={{ width: '100%', height: '620px' }}
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={openCall}
+                className="contact__call-placeholder"
+                aria-label="Charger le calendrier de réservation"
+              >
+                <span className="contact__call-placeholder-title">
+                  Choisissez un créneau
+                </span>
+                <span className="contact__call-placeholder-desc">
+                  Cliquez pour afficher le calendrier de réservation
+                </span>
+              </button>
+            )}
           </div>
 
           {/* ── FORMULAIRE ── */}

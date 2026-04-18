@@ -7,7 +7,7 @@ export const articles = [
     category: 'Webflow',
     author: 'Julien',
     readTime: '6 min',
-    cover: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1600&q=80",
+    cover: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&q=75",
     coverGradient: 'linear-gradient(135deg, #0f1520 0%, #1a2540 100%)',
     content: [
       {
@@ -48,7 +48,7 @@ export const articles = [
     category: 'E-commerce',
     author: 'Théo',
     readTime: '5 min',
-    cover: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&q=80",
+    cover: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=75",
     coverGradient: 'linear-gradient(135deg, #0d1f1a 0%, #1a3530 100%)',
     content: [
       {
@@ -89,7 +89,7 @@ export const articles = [
     category: 'Automatisation',
     author: 'Julien',
     readTime: '8 min',
-    cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80",
+    cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=75",
     coverGradient: 'linear-gradient(135deg, #080e1f 0%, #151f3a 100%)',
     content: [
       {
@@ -122,7 +122,7 @@ export const articles = [
     category: 'Design',
     author: 'Théo',
     readTime: '5 min',
-    cover: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1600&q=80",
+    cover: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=75",
     coverGradient: 'linear-gradient(135deg, #1a1020 0%, #2a1535 100%)',
     content: [
       {
@@ -163,7 +163,7 @@ export const articles = [
     category: 'SEO',
     author: 'Julien',
     readTime: '7 min',
-    cover: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1600&q=80",
+    cover: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=900&q=75",
     coverGradient: 'linear-gradient(135deg, #0e1a0e 0%, #152815 100%)',
     content: [
       {
@@ -204,7 +204,7 @@ export const articles = [
     category: 'Design',
     author: 'Théo',
     readTime: '6 min',
-    cover: "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1600&q=80",
+    cover: "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=900&q=75",
     coverGradient: 'linear-gradient(135deg, #1a0f15 0%, #2e1828 100%)',
     content: [
       {
