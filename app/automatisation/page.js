@@ -7,69 +7,68 @@ import Contact from '@/components/Contact'
 import ScrollObserver from '@/components/ScrollObserver'
 import SiteVitrineAnimations from '@/components/SiteVitrineAnimations'
 import HomepageAnimations from '@/components/HomepageAnimations'
-import SpotlightCards from '@/components/SpotlightCards'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Automatisation Make & n8n — Orion Studio',
-  description: 'Nous construisons des workflows automatisés sur mesure avec Make et n8n pour connecter vos outils, éliminer les tâches répétitives et libérer vos équipes.',
+  title: 'Automatisation n8n — Orion Studio',
+  description: "On identifie les tâches répétitives qui freinent votre équipe et on les automatise. Moins de saisie manuelle, moins d'erreurs, plus de temps pour ce qui compte.",
+  robots: 'noindex',
 }
+
+const exemplesSite = [
+  { label: "Formulaire rempli → lead créé dans votre CRM automatiquement" },
+  { label: "Article publié depuis Orion Admin → partagé sur LinkedIn" },
+  { label: "Nouvelle commande → client ajouté à votre newsletter" },
+  { label: "Devis accepté → dossier créé + email de bienvenue envoyé" },
+]
+
+const exemplesProcess = [
+  { label: "Données saisies dans Monday → client créé + email envoyé automatiquement" },
+  { label: "Nouveau contrat signé → onboarding déclenché sans intervention" },
+  { label: "Stock bas détecté → alerte équipe + bon de commande généré" },
+  { label: "Lead qualifié → assigné au bon commercial selon des règles définies" },
+]
+
+const chiffres = [
+  { value: '1h', unit: '', label: 'Pour cartographier vos process' },
+  { value: 'J+30', unit: '', label: 'Premiers gains de temps mesurables' },
+  { value: '0', unit: '', label: 'Ligne de code à écrire pour vous' },
+]
 
 const services = [
   {
     num: '01',
-    title: 'Audit & cartographie de vos workflows',
-    desc: "Avant d'automatiser, nous analysons vos processus existants : quelles tâches sont répétitives, quels outils ne communiquent pas entre eux, où se trouvent les goulots d'étranglement. Un audit clair pour des automatisations utiles et ciblées.",
+    title: 'Audit & cartographie',
+    desc: "On commence par 1h avec vous. On passe en revue vos outils, vos tâches quotidiennes, vos process. On identifie ce qui est répétitif, manuel, source d'erreurs. À la fin, vous avez une liste concrète de ce qu'on peut automatiser et ce que ça vous fait gagner.",
   },
   {
     num: '02',
-    title: 'Automatisations Make',
-    desc: "Make est la plateforme no-code la plus puissante du marché pour créer des automatisations visuelles et complexes. Nous concevons et déployons vos scénarios : synchronisation de données, déclencheurs conditionnels, boucles et gestion d'erreurs.",
+    title: 'Automatisations liées à votre site',
+    desc: "Votre site devient le déclencheur d'actions automatiques : formulaire soumis, commande passée, article publié — chaque événement peut enchaîner une série d'actions dans vos outils sans que vous ayez à intervenir.",
   },
   {
     num: '03',
-    title: 'Automatisations n8n (open source)',
-    desc: "n8n est la solution idéale pour les entreprises qui souhaitent garder le contrôle total sur leurs données. Auto-hébergé sur vos serveurs, il offre une flexibilité maximale, des coûts maîtrisés et une personnalisation illimitée via du code.",
+    title: 'Optimisation de vos process internes',
+    desc: "Les tâches répétitives de vos équipes — saisie de données, mises à jour manuelles, envois d'emails de routine — on les automatise. Votre équipe se concentre sur ce qui crée vraiment de la valeur.",
   },
   {
     num: '04',
-    title: 'Intégrations CRM & marketing automation',
-    desc: "Synchronisez vos leads, automatisez vos séquences d'emails, mettez à jour votre CRM en temps réel. Nous connectons HubSpot, Salesforce, Klaviyo, Mailchimp et bien d'autres à votre écosystème existant.",
+    title: 'Connexions entre vos outils',
+    desc: "CRM, Monday, Notion, Google Sheets, Slack, emails, ERP — vos outils ne se parlent pas toujours. On crée les ponts qui manquent pour que l'information circule automatiquement là où elle doit aller.",
   },
   {
     num: '05',
-    title: 'Automatisations e-commerce & opérations',
-    desc: "De la commande à la livraison, automatisez votre chaîne opérationnelle : gestion des stocks, notifications clients, synchronisation ERP, rapports de vente, gestion des retours et des remboursements.",
+    title: 'Flows intégrés à Orion Admin',
+    desc: "Directement depuis votre back-office, déclenchez des automatisations en un clic. Générez un article complet en saisissant juste un titre, envoyez une campagne, mettez à jour plusieurs outils en même temps — sans quitter votre interface.",
   },
   {
     num: '06',
-    title: 'Maintenance & évolution des scénarios',
-    desc: "Les workflows évoluent avec votre business. Nous assurons la maintenance de vos scénarios Make et n8n, la gestion des erreurs, les mises à jour lors de changements d'API et l'ajout de nouvelles automatisations.",
+    title: 'Maintenance & évolution',
+    desc: "Vos outils évoluent, vos process aussi. On assure la maintenance de vos workflows n8n, on gère les erreurs et on ajoute de nouvelles automatisations au fil de votre croissance.",
   },
 ]
 
-const avantages = [
-  { label: 'Workflows 100% sur-mesure, zéro générique' },
-  { label: 'Compatible avec +1 000 outils & APIs' },
-  { label: 'Réduction des erreurs humaines' },
-  { label: 'Économies de temps mesurables dès J+30' },
-  { label: 'Données hébergées sur vos serveurs (n8n)' },
-  { label: 'Scalable et évolutif avec votre croissance' },
-]
-
-const chiffres = [
-  { value: 'J+30', unit: '', label: 'Premiers gains de temps mesurables' },
-  { value: '+1000', unit: 'outils', label: 'Connectables nativement' },
-  { value: '0', unit: 'tâche', label: 'Répétitive non automatisable' },
-]
-
-const outils = [
-  { icon: '✦', title: 'Make — la puissance visuelle', desc: "Interface drag & drop, scénarios complexes, gestion d'erreurs avancée. Idéal pour les workflows métier sans code." },
-  { icon: '✦', title: 'n8n — la liberté open source', desc: "Auto-hébergé, vos données ne quittent jamais vos serveurs. Personnalisable à l'infini via du code JavaScript." },
-  { icon: '✦', title: 'Sur mesure via API', desc: "Quand Make et n8n ne suffisent pas, on code directement les intégrations via les APIs de vos outils." },
-]
-
-export default function Automatisation() {
+export default function AutomatisationTest() {
   return (
     <>
       <Cursor />
@@ -79,21 +78,18 @@ export default function Automatisation() {
         {/* ─── HERO ─── */}
         <section className="sv-hero" id="home">
           <div className="container">
-
             <div className="sv-hero__top">
               <h1 className="sv-hero__title">
-                Automatisez.{' '}
-                <span className="gradient-text">Connectez.</span>{' '}
-                Gagnez du{' '}
-                <span className="gradient-text">temps.</span>
+                Vos tâches{' '}
+                <span className="gradient-text">répétitives</span>{' '}
+                ont une solution.
               </h1>
-
               <div className="sv-hero__side">
                 <p className="sv-hero__desc">
-                  Les tâches répétitives coûtent du temps, de l&apos;argent et de l&apos;énergie. Avec Make et n8n, nous construisons des workflows automatisés sur mesure qui connectent vos outils, éliminent les frictions opérationnelles et libèrent vos équipes pour ce qui compte vraiment.
+                  Votre comptable passe des heures à copier des données d&apos;un outil à l&apos;autre. Votre commercial oublie de relancer parce que son CRM n&apos;est pas à jour. Votre équipe fait manuellement ce qu&apos;un workflow pourrait faire en deux secondes.
                 </p>
                 <p className="sv-hero__desc sv-hero__desc--bold">
-                  Une infrastructure automatisée, au service de votre croissance.
+                  On identifie ce qui freine vos équipes. On l&apos;automatise.
                 </p>
                 <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>
                   <span className="text-cta">Parlez-nous de votre projet</span>
@@ -102,12 +98,10 @@ export default function Automatisation() {
                 </Link>
               </div>
             </div>
-
             <div className="sv-hero__image">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/bannerAutomation.webp" alt="Automatisation Make et n8n par Orion Studio" width="1920" height="1080" />
+              <img src="/images/bannerAutomation.webp" alt="Automatisation n8n par Orion Studio" width="1920" height="1080" />
             </div>
-
           </div>
         </section>
 
@@ -128,33 +122,48 @@ export default function Automatisation() {
           </div>
         </section>
 
-        {/* ─── POURQUOI AUTOMATISER ─── */}
-        <section className="sv-why">
+        {/* ─── DEUX AXES ─── */}
+        <section className="svt-axes">
           <div className="container">
-            <div className="sv-why__grid">
+            <div className="section-header">
+              <span className="section-tag">CE QU&apos;ON AUTOMATISE</span>
+              <h2>Votre site. Vos process. Les deux.</h2>
+            </div>
+            <div className="svt-axes__grid">
 
-              <div className="sv-why__left">
-                <span className="section-tag">POURQUOI AUTOMATISER ?</span>
-                <h2>Libérez vos équipes des tâches répétitives.</h2>
-                <p>
-                  Chaque heure passée à copier-coller des données, envoyer des emails manuellement ou mettre à jour des tableaux est une heure de moins sur votre cœur de métier. L&apos;automatisation n&apos;est plus un luxe, c&apos;est un avantage concurrentiel.
-                </p>
-                <p>
-                  Nous cartographions vos processus, identifions ce qui peut être automatisé, et déployons des workflows fiables qui tournent 24h/24 sans intervention humaine.
-                </p>
-                <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>
-                  <span className="text-cta">Démarrer un projet</span>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
-                </Link>
+              {/* Axe 1 — Site */}
+              <div className="svt-axe">
+                <div className="svt-axe__header">
+                  <span className="svt-axe__num">01</span>
+                  <div>
+                    <h3>Les automatisations liées à votre site</h3>
+                    <p>Chaque action sur votre site déclenche ce qui doit se passer dans vos outils — sans que vous ayez à intervenir.</p>
+                  </div>
+                </div>
+                <ul className="svt-axe__list">
+                  {exemplesSite.map((e, i) => (
+                    <li key={i}>
+                      <span className="svt-axe__arrow">→</span>
+                      {e.label}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <div className="sv-why__right">
-                <ul className="sv-why__list">
-                  {avantages.map((a, i) => (
-                    <li key={i} className="sv-why__item">
-                      <span className="sv-why__check">✓</span>
-                      {a.label}
+              {/* Axe 2 — Process */}
+              <div className="svt-axe">
+                <div className="svt-axe__header">
+                  <span className="svt-axe__num">02</span>
+                  <div>
+                    <h3>L&apos;optimisation de vos process internes</h3>
+                    <p>Les tâches manuelles et répétitives de vos équipes, on les automatise pour libérer du temps sur ce qui compte vraiment.</p>
+                  </div>
+                </div>
+                <ul className="svt-axe__list">
+                  {exemplesProcess.map((e, i) => (
+                    <li key={i}>
+                      <span className="svt-axe__arrow">→</span>
+                      {e.label}
                     </li>
                   ))}
                 </ul>
@@ -164,7 +173,7 @@ export default function Automatisation() {
           </div>
         </section>
 
-        {/* ─── NOS OUTILS ─── */}
+        {/* ─── ORION ADMIN + FLOWS ─── */}
         <section className="svt-admin">
           <div className="container">
             <div className="svt-admin__grid">
@@ -176,38 +185,84 @@ export default function Automatisation() {
                   </div>
                   <div className="svt-admin__screen-body">
                     <div className="svt-admin__row svt-admin__row--header" />
-                    <div className="svt-admin__row" style={{ width: '80%' }} />
-                    <div className="svt-admin__row svt-admin__row--short" />
-                    <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
-                      <div className="svt-admin__row" style={{ flex: 1, height: '60px', borderRadius: '8px' }} />
-                      <div className="svt-admin__row" style={{ flex: 1, height: '60px', borderRadius: '8px', background: 'rgba(175,56,255,0.15)' }} />
-                      <div className="svt-admin__row" style={{ flex: 1, height: '60px', borderRadius: '8px' }} />
+                    <div className="svt-admin__row" style={{ width: '70%' }} />
+                    <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem' }}>
+                      <div className="svt-admin__row" style={{ flex: 1, height: '52px', borderRadius: '8px' }} />
+                      <div className="svt-admin__row" style={{ flex: 1, height: '52px', borderRadius: '8px', background: 'rgba(175,56,255,0.2)' }} />
                     </div>
-                    <div className="svt-admin__row svt-admin__row--short" style={{ marginTop: '0.75rem' }} />
+                    <div className="svt-admin__row svt-admin__row--short" style={{ marginTop: '1rem' }} />
                     <div className="svt-admin__row svt-admin__row--btn" />
                   </div>
                 </div>
               </div>
 
               <div className="svt-admin__content">
-                <span className="section-tag">NOS OUTILS</span>
-                <h2>Make, n8n ou sur-mesure — on choisit le bon outil pour votre cas.</h2>
+                <span className="section-tag">ORION ADMIN + FLOWS</span>
+                <h2>Des automatisations accessibles directement depuis votre back-office.</h2>
                 <p>
-                  Pas une seule solution pour tout le monde. Selon votre volume de données, votre infrastructure et vos exigences de confidentialité, on vous recommande l&apos;outil le plus adapté — et on le déploie.
+                  Pas besoin de passer par un outil externe. Certaines automatisations sont directement intégrées dans Orion Admin, votre interface de gestion.
+                </p>
+                <p>
+                  Vous saisissez un titre d&apos;article, le flow n8n se charge du reste : génération du contenu, mise en forme, publication sur votre site. D&apos;autres flows peuvent être ajoutés selon vos besoins.
                 </p>
                 <div className="svt-admin__features">
-                  {outils.map((o, i) => (
-                    <div key={i} className="svt-admin__feature">
-                      <span className="svt-admin__feature-icon">{o.icon}</span>
-                      <div>
-                        <strong>{o.title}</strong>
-                        <p>{o.desc}</p>
-                      </div>
+                  <div className="svt-admin__feature">
+                    <span className="svt-admin__feature-icon">✦</span>
+                    <div>
+                      <strong>Génération d&apos;articles en un clic</strong>
+                      <p>Saisissez un titre, le flow crée et publie l&apos;article sur votre site</p>
                     </div>
-                  ))}
+                  </div>
+                  <div className="svt-admin__feature">
+                    <span className="svt-admin__feature-icon">✦</span>
+                    <div>
+                      <strong>Flows sur mesure selon vos besoins</strong>
+                      <p>On intègre les automatisations les plus utiles à votre activité</p>
+                    </div>
+                  </div>
+                  <div className="svt-admin__feature">
+                    <span className="svt-admin__feature-icon">✦</span>
+                    <div>
+                      <strong>Tout depuis une seule interface</strong>
+                      <p>Site, contenu, automatisations — géré depuis Orion Admin</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
+            </div>
+          </div>
+        </section>
+
+        {/* ─── LE DIAGNOSTIC ─── */}
+        <section className="svt-diagnostic">
+          <div className="container">
+            <div className="svt-diagnostic__inner">
+              <div className="svt-diagnostic__text">
+                <span className="section-tag">NOTRE APPROCHE</span>
+                <h2>On commence toujours par comprendre votre quotidien.</h2>
+                <p>
+                  Vous n&apos;avez pas à savoir ce qui peut être automatisé chez vous — c&apos;est notre boulot. On passe une heure avec vous à passer en revue vos outils et vos tâches du quotidien. À la fin, vous avez une liste claire de ce qu&apos;on peut automatiser, et ce que ça vous fait gagner concrètement chaque semaine.
+                </p>
+                <p>
+                  Ensuite seulement on construit. Rien de générique, tout est taillé pour votre façon de travailler.
+                </p>
+              </div>
+              <div className="svt-diagnostic__steps">
+                {[
+                  { n: '01', t: 'Audit de vos process', d: "1h avec vous pour cartographier vos outils et identifier les tâches automatisables" },
+                  { n: '02', t: 'On vous dit ce que ça vaut', d: "Gain de temps estimé par semaine, retour sur investissement, priorités" },
+                  { n: '03', t: 'On construit & on déploie', d: "Workflows n8n sur mesure, testés, documentés et livrés opérationnels" },
+                ].map((s) => (
+                  <div key={s.n} className="svt-diagnostic__step">
+                    <span className="svt-diagnostic__step-num">{s.n}</span>
+                    <div>
+                      <strong>{s.t}</strong>
+                      <p>{s.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -245,7 +300,6 @@ export default function Automatisation() {
       <ScrollObserver />
       <SiteVitrineAnimations />
       <HomepageAnimations />
-      <SpotlightCards />
     </>
   )
 }
