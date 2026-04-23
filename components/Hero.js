@@ -76,11 +76,13 @@ export default function Hero() {
         {/* Nav links — top right */}
         <nav className="hero__nav-links">
           <Link href="/le-studio">Le studio</Link>
+          <Link href="/orion-admin">Orion Admin</Link>
           <Link href="/projets">Nos projets</Link>
           <Link href="/blog">Blog</Link>
-          <Link href="/site-vitrine">Site vitrine</Link>
+          <Link href="/site-internet">Site internet</Link>
           <Link href="/site-e-commerce">E-commerce</Link>
           <Link href="/automatisation">Automatisation</Link>
+          <Link href="/saas">SaaS</Link>
         </nav>
 
         <div className="hero__left-content">

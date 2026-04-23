@@ -7,6 +7,7 @@ import Projects from '@/components/Projects'
 import Stack from '@/components/Stack'
 import Process from '@/components/Process'
 import BlogPreview from '@/components/BlogPreview'
+import OrionAdminSection from '@/components/OrionAdminSection'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -25,6 +26,7 @@ export default function Home() {
         <Projects />
         <Stack />
         <Process />
+        <OrionAdminSection />
         <BlogPreview />
         <FAQ />
         <Contact />

@@ -10,40 +10,40 @@ import LeStudioAnimations from '@/components/LeStudioAnimations'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Boutique en ligne Shopify — Orion Studio',
-  description: "Une boutique en ligne sur-mesure avec Shopify. Pensée pour vendre, simple à gérer, et livrée en quelques semaines.",
+  title: 'Création de SAAS — Orion Studio',
+  description: "On crée votre application web sur-mesure, du concept au lancement. Pensée pour vos utilisateurs, prête à grandir avec vous.",
 }
 
 const chiffres = [
-  { value: '3 à 6', unit: 'semaines', label: 'Pour livrer votre boutique' },
-  { value: '100%', unit: 'sur-mesure', label: 'Pas un thème acheté en ligne' },
-  { value: '24/7', unit: '', label: 'Votre boutique vend même la nuit' },
+  { value: '4 à 8', unit: 'semaines', label: 'Pour la première version utilisable' },
+  { value: '100%', unit: '', label: 'À vous, propriétaire du code' },
+  { value: '10k+', unit: 'utilisateurs', label: 'Votre appli tient la charge' },
 ]
 
 const etapes = [
   {
     num: '01',
-    title: 'On parle de vos produits',
-    desc: "Un appel pour comprendre ce que vous vendez, à qui, et comment vous voulez le vendre. On vous fait un devis clair en moins de 48h, sans baratin.",
+    title: 'On comprend votre idée',
+    desc: "Un appel pour parler de votre projet, de vos futurs utilisateurs et de votre modèle économique. On vous dit honnêtement si c'est faisable et combien ça coûte.",
   },
   {
     num: '02',
-    title: 'On dessine votre boutique',
-    desc: "On vous envoie une maquette de votre page d'accueil, d'une fiche produit et du tunnel de paiement. Vous nous dites ce qui va, on ajuste jusqu'à ce que ça vous plaise.",
+    title: 'On dessine votre application',
+    desc: "On vous envoie les maquettes des écrans clés, le parcours utilisateur et les fonctionnalités principales. Vous voyez précisément ce qu'on va construire.",
   },
   {
     num: '03',
-    title: 'On construit et on connecte',
-    desc: "On crée votre boutique sur Shopify et on branche tout : paiement, livraison, emails, comptabilité. Vous suivez l'avancement en direct depuis Orion Admin.",
+    title: 'On développe par étapes',
+    desc: "On livre une première version utilisable rapidement, puis on enrichit au fur et à mesure. Vous suivez tout depuis Orion Admin et vous testez à chaque étape.",
   },
   {
     num: '04',
-    title: 'On la met en ligne',
-    desc: "Votre boutique est ouverte, vous savez la gérer. On vous forme, on vous accompagne, et on reste là quand vous avez besoin de nous.",
+    title: 'On lance et on fait grandir',
+    desc: "Mise en ligne, suivi technique, ajout de nouvelles fonctionnalités. On reste votre partenaire technique sur la durée.",
   },
 ]
 
-export default function SiteEcommerce() {
+export default function SaaS() {
   return (
     <>
       <Cursor />
@@ -54,15 +54,15 @@ export default function SiteEcommerce() {
         <section className="ls-hero ls-hero--full">
           <div className="container">
             <div className="ls-hero__inner">
-              <span className="section-tag ls-hero__tag">E-COMMERCE</span>
+              <span className="section-tag ls-hero__tag">SAAS</span>
               <h1 className="ls-hero__title">
-                Une{' '}
-                <span className="gradient-text">boutique en ligne</span>{' '}
-                pensée pour{' '}
-                <span className="gradient-text">vendre</span>.
+                Votre{' '}
+                <span className="gradient-text">application web</span>{' '}
+                sur-mesure, du concept au{' '}
+                <span className="gradient-text">lancement</span>.
               </h1>
               <p className="ls-hero__desc">
-                On crée votre boutique sur Shopify, la plateforme la plus simple et la plus fiable pour vendre en ligne. Pas de prise de tête technique, vous vous concentrez sur vos produits et on s&apos;occupe du reste. Une boutique simple à utiliser, prête à vendre dès le lancement.
+                Vous avez une idée d&apos;application ou de logiciel pour vos clients ou vos équipes ? On la transforme en produit fini, simple à utiliser, et prêt à se faire utiliser au quotidien. De l&apos;idée à votre premier utilisateur, on s&apos;occupe de tout.
               </p>
               <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>
                 <span className="text-cta">Parlez-nous de votre projet</span>
@@ -94,12 +94,12 @@ export default function SiteEcommerce() {
               <div className="ls-values__heading">
                 <span className="section-tag">COMMENT ÇA SE PASSE</span>
                 <h2>
-                  De votre idée à votre première vente,{' '}
+                  De votre idée à votre application en ligne,{' '}
                   <span className="gradient-text">4 étapes simples.</span>
                 </h2>
               </div>
               <p className="ls-values__intro">
-                Vous suivez chaque étape depuis Orion Admin. Vous validez les maquettes, vous voyez la boutique se construire, et vous savez la gérer le jour du lancement.
+                On livre vite une première version utilisable, puis on enrichit avec vous. Vous suivez chaque étape en direct depuis Orion Admin.
               </p>
             </div>
 
@@ -143,12 +143,12 @@ export default function SiteEcommerce() {
 
               <div className="svt-admin__content">
                 <span className="section-tag">ORION ADMIN INCLUS</span>
-                <h2>Votre projet et votre boutique, au même endroit.</h2>
+                <h2>Suivez le développement de votre appli en direct.</h2>
                 <p>
-                  Vos produits se gèrent sur Shopify, qui est très simple. Tout le reste se passe sur Orion Admin : suivi du projet, maquettes, factures, devis, échanges avec notre équipe.
+                  Construire une application, c&apos;est plusieurs semaines de travail. Avec Orion Admin, vous suivez l&apos;avancement à tout moment : ce qui est fait, ce qui arrive, où on en est.
                 </p>
                 <p>
-                  Pas besoin d&apos;ouvrir 5 applications différentes ou de fouiller dans vos emails. Tout est au même endroit, tout est clair.
+                  Vos maquettes, factures, devis et vos échanges avec notre équipe sont au même endroit. Vous gardez le contrôle de bout en bout.
                 </p>
                 <Link href="/orion-admin" className="cta" style={{ alignSelf: 'flex-start', marginTop: '1rem' }}>
                   <span className="text-cta">En savoir plus sur Orion Admin</span>
@@ -165,7 +165,7 @@ export default function SiteEcommerce() {
         <Projects />
 
         {/* ─── FAQ ─── */}
-        <FAQ defaultTab={2} />
+        <FAQ defaultTab={1} />
 
         {/* ─── CONTACT ─── */}
         <Contact />
