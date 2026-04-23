@@ -3725,12 +3725,25 @@ section[id] {
   .hero__right {
     height: 50vh;
     min-height: 280px;
-    order: -1;
   }
 
   .hero__float-bar {
-    top: 1rem;
-    right: 1rem;
+    display: none;
+  }
+
+  /* Nav toujours visible sur mobile (pas d'attente du scroll) */
+  .nav__bg {
+    transform: translateY(0);
+  }
+
+  /* Studio — empile et place l'image sous le texte */
+  .studio .container {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .studio__left,
+  .studio__right {
+    width: 100%;
   }
 
   .services__grid {
@@ -3799,6 +3812,41 @@ section[id] {
     grid-column: auto;
     max-width: none;
     justify-self: stretch;
+  }
+
+  /* Studio — orbital system réduit sur petits écrans */
+  .orbital-system,
+  .image-4 {
+    width: 350px;
+    height: 350px;
+  }
+  .rotating._1 {
+    width: 146px; height: 146px;
+    margin-top: -73px; margin-left: -73px;
+  }
+  .rotating._2 {
+    width: 187px; height: 182px;
+    margin-top: -91px; margin-left: -93.5px;
+  }
+  .rotating._3 {
+    width: 226px; height: 219px;
+    margin-top: -109.5px; margin-left: -113px;
+  }
+  .rotating._4 {
+    width: 263px; height: 255px;
+    margin-top: -127.5px; margin-left: -131.5px;
+  }
+  .rotating._5 {
+    width: 299px; height: 292px;
+    margin-top: -146px; margin-left: -149.5px;
+  }
+  .rotating._6 {
+    width: 350px; height: 350px;
+    margin-top: -175px; margin-left: -175px;
+  }
+  .planet {
+    width: 35px;
+    height: 35px;
   }
 
   .contact-form { padding: 1.5rem; }
