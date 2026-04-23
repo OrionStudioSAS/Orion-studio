@@ -5,15 +5,15 @@ export default function Projects() {
   const featured = projects.slice(0, 3)
 
   return (
-    <section className="projects" id="projets">
+    <section className="projects" id="realisations">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">NOS PROJETS</span>
+          <span className="section-tag">NOS RÉALISATIONS</span>
           <h2>Des réalisations qui parlent d&apos;elles-mêmes</h2>
         </div>
         <div className="projects__grid">
           {featured.map((project, i) => (
-            <Link key={project.slug} href={`/projets/${project.slug}`} className="project-card">
+            <Link key={project.slug} href={`/realisations/${project.slug}`} className="project-card">
               {/* Image plein format */}
               <div
                 className="project-card__image"
@@ -38,8 +38,8 @@ export default function Projects() {
           ))}
         </div>
         <div className="projects__cta">
-          <Link href="/projets" className="cta">
-            <span className="text-cta">Voir tous nos projets</span>
+          <Link href="/realisations" className="cta">
+            <span className="text-cta">Voir toutes nos réalisations</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
           </Link>

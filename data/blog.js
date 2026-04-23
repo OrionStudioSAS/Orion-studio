@@ -1,10 +1,10 @@
 export const articles = [
   {
-    slug: 'webflow-vs-wordpress-2025',
-    title: 'Webflow vs WordPress : lequel choisir en 2025 ?',
-    excerpt: 'Deux plateformes, deux philosophies. On compare Webflow et WordPress sur les critères qui comptent vraiment : performance, SEO, autonomie et coût total.',
+    slug: 'site-sur-mesure-vs-wordpress-2025',
+    title: 'Site sur-mesure vs WordPress : lequel choisir en 2025 ?',
+    excerpt: "Deux approches, deux philosophies. On compare le sur-mesure et WordPress sur les critères qui comptent vraiment : performance, SEO, autonomie et coût total de possession.",
     date: '2025-03-28',
-    category: 'Webflow',
+    category: 'Sur-mesure',
     author: 'Julien',
     readTime: '6 min',
     cover: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&q=75",
@@ -12,7 +12,7 @@ export const articles = [
     content: [
       {
         type: 'intro',
-        text: "La question revient dans chaque premier appel client : \"On est sur WordPress, est-ce que ça vaut le coup de migrer sur Webflow ?\" La réponse courte : ça dépend. La réponse longue : voici notre analyse après avoir livré des dizaines de sites sur les deux plateformes.",
+        text: "La question revient dans chaque premier appel client : \"On est sur WordPress, est-ce que ça vaut le coup de passer sur du sur-mesure ?\" La réponse courte : ça dépend. La réponse longue : voici notre analyse après avoir livré des dizaines de sites des deux côtés.",
       },
       {
         type: 'h2',
@@ -20,7 +20,7 @@ export const articles = [
       },
       {
         type: 'p',
-        text: "WordPress est une plateforme puissante mais qui souffre d'une dette technique structurelle. Les plugins s'accumulent, le code se fragmente, et les scores Lighthouse peinent souvent à dépasser 70/100 sans optimisation agressive. Webflow, lui, génère un code propre nativement. Pas de plugin de cache à configurer, pas de conflit jQuery. Les sites Webflow atteignent régulièrement des scores 90+ sans effort particulier.",
+        text: "WordPress est une plateforme puissante mais qui souffre d'une dette technique structurelle. Les plugins s'accumulent, le code se fragmente, et les scores Lighthouse peinent souvent à dépasser 70/100 sans optimisation agressive. Un site sur-mesure développé proprement (Next.js, code optimisé, hébergement moderne) atteint régulièrement des scores 95+ sans effort particulier. Pas de plugin de cache à configurer, pas de conflit JavaScript à gérer.",
       },
       {
         type: 'h2',
@@ -28,7 +28,7 @@ export const articles = [
       },
       {
         type: 'p',
-        text: "WordPress domine grâce à son écosystème : Yoast, Rank Math, des années de contenu indexé. Webflow rattrape son retard avec une architecture sémantique native, des temps de chargement excellents et une intégration simple des données structurées. Pour un nouveau site, Webflow part aujourd'hui avec un avantage technique réel.",
+        text: "WordPress domine grâce à son écosystème : Yoast, Rank Math, des années de contenu indexé. Le sur-mesure prend l'avantage avec une architecture sémantique parfaite, des temps de chargement excellents et un contrôle total des données structurées. Pour un nouveau site, le sur-mesure part aujourd'hui avec un avantage technique réel.",
       },
       {
         type: 'h2',
@@ -36,7 +36,7 @@ export const articles = [
       },
       {
         type: 'p',
-        text: "Choisissez WordPress si vous avez un blog à fort volume (100+ articles), un écosystème de plugins spécifiques, ou une équipe déjà formée. Choisissez Webflow si vous voulez un site vitrine ou landing page rapide, beau, maintenable sans développeur, et que la performance SEO est prioritaire.",
+        text: "Choisissez WordPress si vous avez un blog à très fort volume (500+ articles) et une équipe déjà formée. Choisissez le sur-mesure si vous voulez un site rapide, parfaitement adapté à votre marque, sans abonnement à payer chaque mois, et que vous voulez être propriétaire à 100% du code.",
       },
     ],
   },
@@ -82,9 +82,9 @@ export const articles = [
     ],
   },
   {
-    slug: 'automatiser-prospection-make',
-    title: 'Comment automatiser votre prospection avec Make',
-    excerpt: "De la détection d'un lead à l'envoi du premier email personnalisé : découvrez comment construire un workflow de prospection 100% automatisé avec Make.",
+    slug: 'automatiser-prospection-n8n',
+    title: 'Comment automatiser votre prospection avec n8n',
+    excerpt: "De la détection d'un lead à l'envoi du premier email personnalisé : découvrez comment construire un workflow de prospection 100% automatisé avec n8n.",
     date: '2025-02-27',
     category: 'Automatisation',
     author: 'Julien',
@@ -94,7 +94,7 @@ export const articles = [
     content: [
       {
         type: 'intro',
-        text: "Prospecter manuellement, c'est chronophage et peu scalable. Avec Make (ex-Integromat), on peut construire un workflow complet qui détecte les leads entrants, les qualifie automatiquement et déclenche la bonne séquence au bon moment. Voici comment on l'a construit pour plusieurs clients.",
+        text: "Prospecter manuellement, c'est chronophage et peu scalable. Avec n8n, on peut construire un workflow complet qui détecte les leads entrants, les qualifie automatiquement et déclenche la bonne séquence au bon moment. Comme c'est open source et auto-hébergeable, vos données restent chez vous. Voici comment on l'a construit pour plusieurs clients.",
       },
       {
         type: 'h2',
@@ -102,7 +102,7 @@ export const articles = [
       },
       {
         type: 'p',
-        text: "Étape 1 : Déclencheur (Trigger). Dès qu'un formulaire est soumis (Typeform, HubSpot, site web), Make intercepte les données. Étape 2 : Qualification. Un module Filter vérifie les critères de votre ICP (budget, taille d'entreprise, secteur). Étape 3 : Enrichissement. Connexion à Clearbit ou Apollo pour enrichir le profil du lead. Étape 4 : Action. Si qualifié → création dans le CRM + email personnalisé envoyé dans l'heure.",
+        text: "Étape 1 : Déclencheur (Trigger). Dès qu'un formulaire est soumis (Typeform, HubSpot, site web), n8n intercepte les données via un webhook. Étape 2 : Qualification. Un nœud IF vérifie les critères de votre ICP (budget, taille d'entreprise, secteur). Étape 3 : Enrichissement. Connexion à Clearbit ou Apollo pour enrichir le profil du lead. Étape 4 : Action. Si qualifié → création dans le CRM + email personnalisé envoyé dans l'heure.",
       },
       {
         type: 'h2',
@@ -156,9 +156,9 @@ export const articles = [
     ],
   },
   {
-    slug: 'seo-technique-webflow-erreurs',
-    title: 'SEO technique sur Webflow : les 7 erreurs qui pénalisent votre site',
-    excerpt: "Webflow est excellent pour le SEO… si on l'utilise correctement. Voici les 7 erreurs que l'on corrige systématiquement sur les sites de nos nouveaux clients.",
+    slug: 'seo-technique-erreurs',
+    title: 'SEO technique : les 7 erreurs qui pénalisent votre site',
+    excerpt: "Un bon SEO commence par les bases techniques. Voici les 7 erreurs que l'on corrige systématiquement sur les sites de nos nouveaux clients, peu importe la techno utilisée.",
     date: '2025-01-22',
     category: 'SEO',
     author: 'Julien',
@@ -168,7 +168,7 @@ export const articles = [
     content: [
       {
         type: 'intro',
-        text: "Webflow est souvent vendu comme \"SEO-friendly par nature\". C'est vrai — mais seulement si vous évitez quelques pièges classiques. Voici les 7 erreurs que l'on retrouve sur 80% des sites Webflow qu'on audite.",
+        text: "Beaucoup de sites perdent du trafic à cause de petites erreurs techniques que personne n'a vérifiées. Voici les 7 erreurs que l'on retrouve sur 80% des sites qu'on audite, et la façon dont on les corrige.",
       },
       {
         type: 'h2',
@@ -176,7 +176,7 @@ export const articles = [
       },
       {
         type: 'p',
-        text: "Webflow vous laisse mettre autant de H1 que vous voulez. Beaucoup d'agences en abusent. Chaque page doit avoir exactement un H1, qui reprend le mot-clé principal. Vérifiez systématiquement avec un outil comme Screaming Frog.",
+        text: "Beaucoup de sites mettent plusieurs H1 par page, ou aucun. Chaque page doit avoir exactement un H1, qui reprend le mot-clé principal. Vérifiez systématiquement avec un outil comme Screaming Frog.",
       },
       {
         type: 'h2',
@@ -184,7 +184,7 @@ export const articles = [
       },
       {
         type: 'p',
-        text: "Webflow intègre nativement un champ alt text pour chaque image. Pourtant, 70% des sites que nous auditons ont des images orphelines. Les alt texts sont essentiels pour le SEO d'image et l'accessibilité — et Webflow rend ça trivial à configurer.",
+        text: "Les attributs alt sont essentiels pour le SEO d'image et pour l'accessibilité. Pourtant, 70% des sites que nous auditons ont des images orphelines. C'est trivial à corriger et l'impact est direct sur Google Images.",
       },
       {
         type: 'h2',
@@ -192,7 +192,7 @@ export const articles = [
       },
       {
         type: 'p',
-        text: "Sur les sites avec des pages de collection Webflow, les URLs peuvent se dupliquer avec des paramètres de filtre. Sans canonical correctement configuré, vous créez du contenu dupliqué. Vérifiez que chaque template de collection Webflow a son canonical dynamique bien configuré.",
+        text: "Sur les sites avec des pages filtrées (catalogue produits, articles par catégorie), les URLs peuvent se dupliquer avec des paramètres. Sans canonical correctement configuré, vous créez du contenu dupliqué. Vérifiez que chaque template a son canonical dynamique bien configuré.",
       },
     ],
   },

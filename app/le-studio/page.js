@@ -8,39 +8,39 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Le Studio — Orion Studio',
-  description: 'Découvrez Orion Studio, agence web française spécialisée Webflow & Shopify. Chaque projet est une mission sur mesure, avec une méthodologie claire et des résultats mesurables.',
+  description: "Découvrez Orion Studio, agence web française spécialisée en sites sur-mesure, e-commerce Shopify, automatisations n8n et applications SaaS. Une équipe à taille humaine, une méthodologie claire, des résultats mesurables.",
 }
 
 const valeurs = [
   {
     num: '01',
-    title: 'Gagnez en performance',
-    desc: "Webflow offre une architecture propre et rapide qui améliore le référencement naturel. Son code optimisé et son hébergement ultra-rapide garantissent fluidité, sécurité et bon positionnement sur Google.",
+    title: 'Du sur-mesure, pas du template',
+    desc: "Chaque projet est conçu spécifiquement pour vous. On ne pose pas un thème acheté en ligne sur votre marque : on développe ce qui correspond à votre activité, vos clients et vos objectifs.",
   },
   {
     num: '02',
-    title: 'Réduisez vos coûts d\'acquisition',
-    desc: "Grâce à ses performances SEO natives, Webflow permet de générer des leads organiques sans dépendre en permanence de la publicité payante. Vous investissez pour un trafic qualifié et durable.",
+    title: 'Vous êtes propriétaire à 100%',
+    desc: "Le code, les contenus, les données : tout vous appartient. Pas d'abonnement obligatoire, pas de plateforme qui peut changer ses règles du jour au lendemain. Vous payez une fois, c'est à vous pour de bon.",
   },
   {
     num: '03',
-    title: 'Renforcez votre image de marque',
-    desc: "Webflow combine design sur-mesure et stabilité technique. Vous bénéficiez d'un outil professionnel, élégant et cohérent, fidèle à votre identité et pensé pour convertir vos visiteurs en clients.",
+    title: 'Une livraison rapide',
+    desc: "Un site internet en 1 à 2 semaines, une boutique e-commerce en 3 à 6 semaines, une première version d'application en 4 à 8 semaines. On va vite parce qu'on est concentrés et bien organisés.",
   },
   {
     num: '04',
-    title: 'Accélérez votre mise en ligne',
-    desc: "Webflow réunit design, développement et hébergement dans une seule plateforme. Vous réduisez les allers-retours et lancez votre site plus vite, sans compromettre la qualité ni le référencement.",
+    title: 'Tout votre projet sur Orion Admin',
+    desc: "Suivi de projet, maquettes, factures, devis, échanges avec notre équipe : tout est centralisé sur votre espace personnel. Pas besoin de fouiller dans vos emails ou de relancer pour savoir où on en est.",
   },
   {
     num: '05',
-    title: 'Gagnez en autonomie',
-    desc: "L'éditeur visuel de Webflow simplifie la gestion quotidienne. Modifiez vos pages, publiez du contenu et ajustez votre stratégie sans dépendre d'un développeur, grâce à notre formation incluse.",
+    title: 'Une équipe joignable, jamais sous-traitée',
+    desc: "Vous parlez directement avec Julien et Théo, les deux cofondateurs. Pas de chef de projet intermédiaire, pas de prestataire à l'autre bout du monde. La même équipe du devis à l'évolution du site, deux ans plus tard.",
   },
   {
     num: '06',
-    title: 'Bâtissez un site durable',
-    desc: "Webflow repose sur une base technique évolutive et maintenable. Vous profitez d'un outil stable, facilement scalable et compatible avec les standards du web moderne, sans refonte à moyen terme.",
+    title: 'On reste là après la livraison',
+    desc: "Le projet ne s'arrête pas à la mise en ligne. Formation à Orion Admin, accompagnement, évolutions : on construit une relation sur la durée, pas une prestation one-shot.",
   },
 ]
 

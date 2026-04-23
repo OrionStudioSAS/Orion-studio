@@ -15,7 +15,7 @@ export default function Services() {
             <h3>Site Vitrine</h3>
             <p>Attirez, rassurez et convertissez avec un site web conçu pour valoriser votre marque et soutenir votre croissance.</p>
             <ul className="service-card__list">
-              <li>Développement Webflow</li>
+              <li>Développement sur-mesure</li>
               <li>Stratégie digitale</li>
               <li>UX/UI design</li>
               <li>Animations &amp; interactions</li>

@@ -17,7 +17,7 @@ const services = [
     href: '/site-e-commerce',
   },
   {
-    tag: 'Make · n8n',
+    tag: 'n8n',
     title: 'Automatisation',
     desc: 'Vos outils communiquent, vos tâches répétitives disparaissent.',
     href: '/automatisation',
@@ -70,7 +70,7 @@ export default function Nav() {
           <span className="nav__brand">Agence web 🇫🇷</span>
           <span className="nav__sep">|</span>
           <Link href="/le-studio" className="nav__link">Le studio</Link>
-          <Link href="/projets" className="nav__link">Nos projets</Link>
+          <Link href="/realisations" className="nav__link">Nos réalisations</Link>
           <Link href="/orion-admin" className="nav__link">Orion Admin</Link>
 
           {/* Trigger — hover géré en JS, pas en CSS */}
@@ -129,7 +129,7 @@ export default function Nav() {
       {/* Mobile */}
       <div className={`nav__mobile${mobileOpen ? ' open' : ''}`}>
         <Link href="/le-studio" onClick={closeMobile}>Le studio</Link>
-        <Link href="/projets" onClick={closeMobile}>Nos projets</Link>
+        <Link href="/realisations" onClick={closeMobile}>Nos réalisations</Link>
         <Link href="/orion-admin" onClick={closeMobile}>Orion Admin</Link>
         <span className="nav__mobile-label">Services</span>
         <Link href="/site-internet" onClick={closeMobile}>Site internet</Link>

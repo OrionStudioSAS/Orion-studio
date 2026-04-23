@@ -110,7 +110,7 @@ export default function Footer() {
             <nav className="footer__col-links">
               <Link href="/le-studio">Le Studio</Link>
               <Link href="/orion-admin">Orion Admin</Link>
-              <Link href="/projets">Nos Projets</Link>
+              <Link href="/realisations">Nos Réalisations</Link>
               <Link href="/blog">Blog</Link>
             </nav>
           </div>

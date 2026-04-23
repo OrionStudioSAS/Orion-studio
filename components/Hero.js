@@ -77,7 +77,7 @@ export default function Hero() {
         <nav className="hero__nav-links">
           <Link href="/le-studio">Le studio</Link>
           <Link href="/orion-admin">Orion Admin</Link>
-          <Link href="/projets">Nos projets</Link>
+          <Link href="/realisations">Nos réalisations</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/site-internet">Site internet</Link>
           <Link href="/site-e-commerce">E-commerce</Link>
