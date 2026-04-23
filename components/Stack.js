@@ -8,13 +8,8 @@ const tools = [
     desc: 'La référence mondiale du e-commerce',
   },
   {
-    icon: '/images/logo-webflow.svg',
-    name: 'Webflow',
-    desc: 'La nouvelle génération du web sur-mesure',
-  },
-  {
     icon: '/images/logo-make.svg',
-    name: 'Make / N8N',
+    name: 'n8n',
     desc: 'Connectez, automatisez, accélérez',
   },
   {

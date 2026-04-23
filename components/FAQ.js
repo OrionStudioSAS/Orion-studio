@@ -31,7 +31,7 @@ const categories = [
     title: 'Site internet',
     items: [
       {
-        q: "Pourquoi un site sur-mesure plutôt que Wix, WordPress ou Webflow ?",
+        q: "Pourquoi un site sur-mesure plutôt que Wix, WordPress ou Squarespace ?",
         a: "Avec un site sur-mesure, vous êtes propriétaire à 100% : pas d'abonnement chaque mois, pas de plateforme qui change ses tarifs, pas de plugin qui casse votre site. Vous payez une fois, et votre site est à vous pour de bon.",
       },
       {
@@ -81,8 +81,8 @@ const categories = [
     title: 'Automatisation',
     items: [
       {
-        q: 'Quelle est la différence entre Make et n8n ?',
-        a: "Make est une plateforme cloud no-code, idéale pour des automatisations visuelles et rapides à déployer. n8n est open source et auto-hébergeable, parfait pour les entreprises qui souhaitent garder le contrôle total de leurs données et bénéficier d'une flexibilité maximale. Nous vous conseillons la solution la plus adaptée à votre contexte.",
+        q: 'Pourquoi avoir choisi n8n pour vos automatisations ?',
+        a: "n8n est open source et auto-hébergeable, ce qui veut dire que vos données restent chez vous. C'est aussi extrêmement flexible : on peut créer des workflows complexes, brancher n'importe quelle API, et faire évoluer le système sans dépendre d'une plateforme qui change ses tarifs ou ses limites du jour au lendemain.",
       },
       {
         q: 'Faut-il avoir des compétences techniques pour utiliser vos automatisations ?',
@@ -102,7 +102,7 @@ const categories = [
       },
       {
         q: 'Peut-on automatiser des processus métiers complexes avec des conditions ?',
-        a: "Absolument. Make et n8n permettent de gérer des logiques conditionnelles avancées, des boucles, des branchements multiples et des transformations de données. Nous avons déployé des workflows à 20+ étapes intégrant des règles métier spécifiques à chaque client.",
+        a: "Absolument. n8n permet de gérer des logiques conditionnelles avancées, des boucles, des branchements multiples et des transformations de données. Nous avons déployé des workflows à 20+ étapes intégrant des règles métier spécifiques à chaque client.",
       },
     ],
   },

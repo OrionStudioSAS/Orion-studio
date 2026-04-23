@@ -34,7 +34,7 @@ export default function ProjectDetail({ params }) {
         {/* ─── Hero ─── */}
         <section className="pd-hero">
           <div className="container">
-            <Link href="/projets" className="pd-back">← Tous les projets</Link>
+            <Link href="/realisations" className="pd-back">← Toutes les réalisations</Link>
             <div className="pd-hero__meta">
               <span className="project-tag">{project.category}</span>
               <span className="pd-hero__year">{project.year}</span>
@@ -108,8 +108,8 @@ export default function ProjectDetail({ params }) {
         {/* ─── Navigation entre projets ─── */}
         <section className="pd-nav-projects">
           <div className="container">
-            <Link href="/projets" className="pd-all-projects">
-              Voir tous nos projets →
+            <Link href="/realisations" className="pd-all-projects">
+              Voir toutes nos réalisations →
             </Link>
           </div>
         </section>

@@ -7,8 +7,8 @@ import HomepageAnimations from '@/components/HomepageAnimations'
 import ProjectsGrid from '@/components/ProjectsGrid'
 
 export const metadata = {
-  title: 'Nos Projets — Orion Studio',
-  description: 'Découvrez nos réalisations Webflow et Shopify : sites vitrines, boutiques e-commerce et automatisations pour des marques ambitieuses.',
+  title: 'Nos Réalisations — Orion Studio',
+  description: 'Découvrez nos réalisations sur-mesure et Shopify : sites internet, boutiques e-commerce, automatisations n8n et applications SaaS pour des marques ambitieuses.',
 }
 
 export default function ProjetsPage() {
@@ -19,12 +19,12 @@ export default function ProjetsPage() {
       <main>
         <section className="pg-hero">
           <div className="container">
-            <span className="section-tag">NOS PROJETS</span>
+            <span className="section-tag">NOS RÉALISATIONS</span>
             <h1 className="pg-hero__title">
               Des réalisations qui <span className="gradient-text">parlent d&apos;elles-mêmes.</span>
             </h1>
             <p className="pg-hero__desc">
-              Chaque projet est le fruit d&apos;une collaboration étroite avec nos clients. Voici une sélection de nos réalisations récentes sur Webflow, Shopify et Make.
+              Chaque projet est le fruit d&apos;une collaboration étroite avec nos clients. Voici une sélection de nos réalisations récentes : sites sur-mesure, boutiques Shopify et automatisations n8n.
             </p>
           </div>
         </section>

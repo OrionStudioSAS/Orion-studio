@@ -5,16 +5,16 @@ export const projects = [
     client: 'AEV',
     category: 'Site Vitrine',
     year: '2024',
-    tags: ['Webflow', 'Figma', 'Make', 'Memberstack', 'Monday'],
+    tags: ['Sur-mesure', 'Figma', 'n8n', 'Memberstack', 'Monday'],
     cover: '/images/cover_aev.webp',
     url: 'https://association-ev.fr',
-    excerpt: "Plateforme communautaire complète pour l'association des entrepreneurs du Vexin : espace membres, blog, événements et automatisation des adhésions via Make & Memberstack.",
+    excerpt: "Plateforme communautaire complète pour l'association des entrepreneurs du Vexin : espace membres, blog, événements et automatisation des adhésions via n8n et Memberstack.",
     gradient: 'linear-gradient(135deg, #12152a 0%, #1e2545 50%, #2a1f4e 100%)',
     steps: [
       {
         num: '01', phase: 'Découverte',
         title: 'Brief & architecture de la plateforme',
-        desc: "Ateliers avec le bureau de l'association pour cartographier les besoins : annuaire des 57 membres, gestion des adhésions, blog, événements et espace communautaire. Définition de l'architecture technique en croisant Webflow, Memberstack et Monday comme base de données.",
+        desc: "Ateliers avec le bureau de l'association pour cartographier les besoins : annuaire des 57 membres, gestion des adhésions, blog, événements et espace communautaire. Définition de l'architecture technique en croisant un site sur-mesure, Memberstack et Monday comme base de données.",
         duration: '1 semaine',
         deliverables: ['Brief validé', 'Architecture technique', 'Arborescence du site'],
       },
@@ -27,10 +27,10 @@ export const projects = [
       },
       {
         num: '03', phase: 'Développement',
-        title: 'Intégration Webflow & connexions Make / Memberstack',
-        desc: "Développement Webflow fidèle aux maquettes, avec mise en place de l'authentification Memberstack (rôles admin / membre / visiteur), connexion à Monday via Make pour la gestion centralisée des données membres, et automatisation des workflows d'adhésion et de validation.",
+        title: 'Développement sur-mesure & connexions n8n / Memberstack',
+        desc: "Développement sur-mesure fidèle aux maquettes, avec mise en place de l'authentification Memberstack (rôles admin / membre / visiteur), connexion à Monday via n8n pour la gestion centralisée des données membres, et automatisation des workflows d'adhésion et de validation.",
         duration: '4 semaines',
-        deliverables: ['Site Webflow complet', 'Scénarios Make actifs', 'Espace membres sécurisé'],
+        deliverables: ['Site sur-mesure complet', 'Scénarios n8n actifs', 'Espace membres sécurisé'],
       },
       {
         num: '04', phase: 'Lancement',
@@ -89,10 +89,10 @@ export const projects = [
     client: 'Housses Taxi',
     category: 'Site Vitrine',
     year: '2024',
-    tags: ['Webflow', 'Figma', 'UX', 'B2B'],
+    tags: ['Sur-mesure', 'Figma', 'UX', 'B2B'],
     cover: '/images/cover_housses_taxi.webp',
     url: 'https://www.houssestaxi.com',
-    excerpt: "Site vitrine conçu sur Figma et développé sur Webflow pour un fabricant français de housses de siège sur mesure — filtres avancés par modèle de véhicule et expérience pensée pour les chauffeurs professionnels.",
+    excerpt: "Site internet conçu sur Figma et développé sur-mesure pour un fabricant français de housses de siège sur mesure : filtres avancés par modèle de véhicule et expérience pensée pour les chauffeurs professionnels.",
     gradient: 'linear-gradient(135deg, #1a1210 0%, #2d1f1a 50%, #241815 100%)',
     steps: [
       {
@@ -111,10 +111,10 @@ export const projects = [
       },
       {
         num: '03', phase: 'Développement',
-        title: 'Intégration Webflow & filtres dynamiques',
-        desc: "Développement Webflow avec intégration du système de filtres multi-critères (marque, modèle, type de véhicule), CMS Webflow pour la gestion du catalogue, formulaire de prise de rendez-vous et optimisation mobile pour les chauffeurs en déplacement.",
+        title: 'Développement sur-mesure & filtres dynamiques',
+        desc: "Développement sur-mesure avec intégration du système de filtres multi-critères (marque, modèle, type de véhicule), CMS personnalisé pour la gestion du catalogue, formulaire de prise de rendez-vous et optimisation mobile pour les chauffeurs en déplacement.",
         duration: '3 semaines',
-        deliverables: ['Site Webflow complet', 'Filtres dynamiques', 'CMS catalogue'],
+        deliverables: ['Site sur-mesure complet', 'Filtres dynamiques', 'CMS catalogue'],
       },
       {
         num: '04', phase: 'Lancement',

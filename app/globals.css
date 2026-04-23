@@ -787,7 +787,7 @@ strong {
 
 /* Mobile menu */
 .nav__mobile {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 12px 28px 24px;
   background: #ffffff;
@@ -799,6 +799,11 @@ strong {
               opacity 0.3s ease,
               padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
+}
+@media (max-width: 991px) {
+  .nav__mobile {
+    display: flex;
+  }
 }
 .nav__mobile.open {
   max-height: 80vh;

@@ -15,7 +15,7 @@ const testimonials = [
     initials: 'TC',
     name: 'Thierry Cordier',
     role: 'Association AEV',
-    text: '"Orion Studio nous a accompagnés sur la refonte complète de notre présence en ligne. Leur expertise sur Webflow et Shopify est impressionnante et ils ont également mis en place plusieurs automatisations qui nous font gagner un temps précieux au quotidien."',
+    text: '"Orion Studio nous a accompagnés sur la refonte complète de notre présence en ligne. Leur expertise sur le développement sur-mesure et Shopify est impressionnante, et ils ont également mis en place plusieurs automatisations qui nous font gagner un temps précieux au quotidien."',
   },
 ]
 

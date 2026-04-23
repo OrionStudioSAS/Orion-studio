@@ -28,7 +28,7 @@ export default function ProjectsGrid() {
           {filtered.map((project, i) => (
             <Link
               key={project.slug}
-              href={`/projets/${project.slug}`}
+              href={`/realisations/${project.slug}`}
               className="project-card"
               style={{ animationDelay: `${i * 0.07}s` }}
             >
