@@ -6,21 +6,27 @@ import Link from 'next/link'
 const services = [
   {
     tag: 'Sur-mesure',
-    title: 'Site Vitrine',
-    desc: 'Un site 100% propriétaire, livré en 2–4 semaines, sans abonnement plateforme.',
-    href: '/site-vitrine',
+    title: 'Site internet',
+    desc: 'Un site simple et beau, livré en 1 à 2 semaines. À vous, à 100%.',
+    href: '/site-internet',
   },
   {
     tag: 'Shopify',
     title: 'E-commerce',
-    desc: "Transformez votre trafic en chiffre d'affaires avec une boutique performante.",
+    desc: "Une boutique en ligne pensée pour vendre, simple à gérer.",
     href: '/site-e-commerce',
   },
   {
-    tag: 'Make · N8N',
+    tag: 'Make · n8n',
     title: 'Automatisation',
-    desc: 'Connectez vos outils, éliminez les tâches répétitives, gagnez du temps.',
+    desc: 'Vos outils communiquent, vos tâches répétitives disparaissent.',
     href: '/automatisation',
+  },
+  {
+    tag: 'Application web',
+    title: 'SaaS',
+    desc: "Votre application sur-mesure, du concept au lancement.",
+    href: '/saas',
   },
 ]
 
@@ -65,6 +71,7 @@ export default function Nav() {
           <span className="nav__sep">|</span>
           <Link href="/le-studio" className="nav__link">Le studio</Link>
           <Link href="/projets" className="nav__link">Nos projets</Link>
+          <Link href="/orion-admin" className="nav__link">Orion Admin</Link>
 
           {/* Trigger — hover géré en JS, pas en CSS */}
           <span
@@ -123,10 +130,12 @@ export default function Nav() {
       <div className={`nav__mobile${mobileOpen ? ' open' : ''}`}>
         <Link href="/le-studio" onClick={closeMobile}>Le studio</Link>
         <Link href="/projets" onClick={closeMobile}>Nos projets</Link>
+        <Link href="/orion-admin" onClick={closeMobile}>Orion Admin</Link>
         <span className="nav__mobile-label">Services</span>
-        <Link href="/site-vitrine" onClick={closeMobile}>Site Vitrine</Link>
-        <Link href="/site-e-commerce" onClick={closeMobile}>Site E-commerce</Link>
+        <Link href="/site-internet" onClick={closeMobile}>Site internet</Link>
+        <Link href="/site-e-commerce" onClick={closeMobile}>E-commerce</Link>
         <Link href="/automatisation" onClick={closeMobile}>Automatisation</Link>
+        <Link href="/saas" onClick={closeMobile}>SaaS</Link>
         <Link href="/blog" onClick={closeMobile}>Blog</Link>
         <Link href="#contact" onClick={closeMobile}>Parlez-nous de votre projet</Link>
       </div>

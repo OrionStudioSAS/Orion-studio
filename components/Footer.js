@@ -97,9 +97,10 @@ export default function Footer() {
           <div className="footer__col">
             <h4 className="footer__col-title">Services</h4>
             <nav className="footer__col-links">
-              <Link href="/site-vitrine">Site Vitrine</Link>
-              <Link href="/site-e-commerce">Site E-commerce</Link>
+              <Link href="/site-internet">Site internet</Link>
+              <Link href="/site-e-commerce">E-commerce</Link>
               <Link href="/automatisation">Automatisation</Link>
+              <Link href="/saas">SaaS</Link>
             </nav>
           </div>
 
@@ -108,6 +109,7 @@ export default function Footer() {
             <h4 className="footer__col-title">L&apos;Agence</h4>
             <nav className="footer__col-links">
               <Link href="/le-studio">Le Studio</Link>
+              <Link href="/orion-admin">Orion Admin</Link>
               <Link href="/projets">Nos Projets</Link>
               <Link href="/blog">Blog</Link>
             </nav>

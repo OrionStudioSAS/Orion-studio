@@ -73,8 +73,8 @@ export default function LeStudio() {
       <Nav />
       <main>
 
-        {/* ─── HERO ─── */}
-        <section className="ls-hero">
+        {/* ─── HERO (texte + stats intégrés, plein écran) ─── */}
+        <section className="ls-hero ls-hero--full">
           <div className="container">
             <div className="ls-hero__inner">
               <span className="section-tag ls-hero__tag">LE STUDIO</span>
@@ -91,22 +91,19 @@ export default function LeStudio() {
                 <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
               </Link>
             </div>
-          </div>
-        </section>
 
-        {/* ─── CHIFFRES ─── */}
-        <section className="svt-stats">
-          <div className="container">
-            <div className="svt-stats__grid">
-              {stats.map((s, i) => (
-                <div key={i} className="svt-stat">
-                  <div className="svt-stat__value">
-                    <span className="gradient-text">{s.value}</span>
-                    {s.unit && <span className="svt-stat__unit">{s.unit}</span>}
+            <div className="ls-hero__stats-bar">
+              <div className="svt-stats__grid">
+                {stats.map((s, i) => (
+                  <div key={i} className="svt-stat">
+                    <div className="svt-stat__value">
+                      <span className="gradient-text">{s.value}</span>
+                      {s.unit && <span className="svt-stat__unit">{s.unit}</span>}
+                    </div>
+                    <p className="svt-stat__label">{s.label}</p>
                   </div>
-                  <p className="svt-stat__label">{s.label}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>

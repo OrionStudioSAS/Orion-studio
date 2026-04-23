@@ -10,40 +10,40 @@ import LeStudioAnimations from '@/components/LeStudioAnimations'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Boutique en ligne Shopify — Orion Studio',
-  description: "Une boutique en ligne sur-mesure avec Shopify. Pensée pour vendre, simple à gérer, et livrée en quelques semaines.",
+  title: 'Site internet sur-mesure — Orion Studio',
+  description: "Un site internet pensé pour vous, livré en 1 à 2 semaines. Vous êtes propriétaire à 100%, sans abonnement, et vous le gérez vous-même grâce à Orion Admin.",
 }
 
 const chiffres = [
-  { value: '3 à 6', unit: 'semaines', label: 'Pour livrer votre boutique' },
-  { value: '100%', unit: 'sur-mesure', label: 'Pas un thème acheté en ligne' },
-  { value: '24/7', unit: '', label: 'Votre boutique vend même la nuit' },
+  { value: '1 à 2', unit: 'semaines', label: 'Pour livrer votre site' },
+  { value: '100%', unit: '', label: 'À vous, propriétaire du code' },
+  { value: '0€', unit: 'par mois', label: "D'abonnement à payer" },
 ]
 
 const etapes = [
   {
     num: '01',
-    title: 'On parle de vos produits',
-    desc: "Un appel pour comprendre ce que vous vendez, à qui, et comment vous voulez le vendre. On vous fait un devis clair en moins de 48h, sans baratin.",
+    title: 'On discute de votre projet',
+    desc: "Un appel gratuit pour comprendre votre activité, ce que vous voulez faire et ce dont vous avez besoin. On vous fait un devis clair en moins de 48h, sans baratin.",
   },
   {
     num: '02',
-    title: 'On dessine votre boutique',
-    desc: "On vous envoie une maquette de votre page d'accueil, d'une fiche produit et du tunnel de paiement. Vous nous dites ce qui va, on ajuste jusqu'à ce que ça vous plaise.",
+    title: 'On dessine votre site',
+    desc: "On vous envoie une maquette de votre futur site. Vous la regardez, vous nous dites ce qui va et ce qui ne va pas, on ajuste jusqu'à ce que ça vous plaise vraiment.",
   },
   {
     num: '03',
-    title: 'On construit et on connecte',
-    desc: "On crée votre boutique sur Shopify et on branche tout : paiement, livraison, emails, comptabilité. Vous suivez l'avancement en direct depuis Orion Admin.",
+    title: 'On le construit',
+    desc: "Notre équipe développe votre site sur-mesure en quelques jours. Vous suivez l'avancement en direct depuis votre espace Orion Admin, sans avoir à nous relancer.",
   },
   {
     num: '04',
-    title: 'On la met en ligne',
-    desc: "Votre boutique est ouverte, vous savez la gérer. On vous forme, on vous accompagne, et on reste là quand vous avez besoin de nous.",
+    title: 'On le met en ligne',
+    desc: "Votre site est en ligne, vous récupérez tout (code, accès, formation à Orion Admin). Et si vous avez une question, on reste joignables, sans frais cachés.",
   },
 ]
 
-export default function SiteEcommerce() {
+export default function SiteInternet() {
   return (
     <>
       <Cursor />
@@ -54,15 +54,14 @@ export default function SiteEcommerce() {
         <section className="ls-hero ls-hero--full">
           <div className="container">
             <div className="ls-hero__inner">
-              <span className="section-tag ls-hero__tag">E-COMMERCE</span>
+              <span className="section-tag ls-hero__tag">SITE INTERNET</span>
               <h1 className="ls-hero__title">
-                Une{' '}
-                <span className="gradient-text">boutique en ligne</span>{' '}
-                pensée pour{' '}
-                <span className="gradient-text">vendre</span>.
+                Un site internet{' '}
+                <span className="gradient-text">sur-mesure</span>, livré en{' '}
+                <span className="gradient-text">1 à 2 semaines</span>.
               </h1>
               <p className="ls-hero__desc">
-                On crée votre boutique sur Shopify, la plateforme la plus simple et la plus fiable pour vendre en ligne. Pas de prise de tête technique, vous vous concentrez sur vos produits et on s&apos;occupe du reste. Une boutique simple à utiliser, prête à vendre dès le lancement.
+                On crée des sites simples à utiliser, beaux à regarder et faits pour vous appartenir vraiment. Pas d&apos;abonnement, pas de dépendance, pas de surprise. Vous payez une fois, votre site est à vous pour de bon.
               </p>
               <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>
                 <span className="text-cta">Parlez-nous de votre projet</span>
@@ -71,6 +70,7 @@ export default function SiteEcommerce() {
               </Link>
             </div>
 
+            {/* Bandeau stats intégré dans le hero */}
             <div className="ls-hero__stats-bar">
               <div className="svt-stats__grid">
                 {chiffres.map((c, i) => (
@@ -87,19 +87,19 @@ export default function SiteEcommerce() {
           </div>
         </section>
 
-        {/* ─── COMMENT ÇA SE PASSE ─── */}
+        {/* ─── COMMENT ÇA SE PASSE (liste éditoriale) ─── */}
         <section className="ls-values">
           <div className="container">
             <div className="ls-values__header">
               <div className="ls-values__heading">
                 <span className="section-tag">COMMENT ÇA SE PASSE</span>
                 <h2>
-                  De votre idée à votre première vente,{' '}
+                  De l&apos;idée à votre site en ligne,{' '}
                   <span className="gradient-text">4 étapes simples.</span>
                 </h2>
               </div>
               <p className="ls-values__intro">
-                Vous suivez chaque étape depuis Orion Admin. Vous validez les maquettes, vous voyez la boutique se construire, et vous savez la gérer le jour du lancement.
+                Pas de jargon, pas de surprise. Vous voyez tout, vous validez chaque étape, et vous suivez l&apos;avancement en direct depuis Orion Admin.
               </p>
             </div>
 
@@ -143,12 +143,12 @@ export default function SiteEcommerce() {
 
               <div className="svt-admin__content">
                 <span className="section-tag">ORION ADMIN INCLUS</span>
-                <h2>Votre projet et votre boutique, au même endroit.</h2>
+                <h2>Gérez votre site sans toucher au code.</h2>
                 <p>
-                  Vos produits se gèrent sur Shopify, qui est très simple. Tout le reste se passe sur Orion Admin : suivi du projet, maquettes, factures, devis, échanges avec notre équipe.
+                  Une interface simple, faite pour vous. Vous changez un texte, une photo, vous ajoutez un article de blog : c&apos;est aussi facile que d&apos;envoyer un email. Pas besoin d&apos;être à l&apos;aise avec l&apos;informatique.
                 </p>
                 <p>
-                  Pas besoin d&apos;ouvrir 5 applications différentes ou de fouiller dans vos emails. Tout est au même endroit, tout est clair.
+                  Et vous suivez aussi tout votre projet en direct. Vos maquettes, factures, devis, échanges avec notre équipe : tout est centralisé au même endroit.
                 </p>
                 <Link href="/orion-admin" className="cta" style={{ alignSelf: 'flex-start', marginTop: '1rem' }}>
                   <span className="text-cta">En savoir plus sur Orion Admin</span>
@@ -165,7 +165,7 @@ export default function SiteEcommerce() {
         <Projects />
 
         {/* ─── FAQ ─── */}
-        <FAQ defaultTab={2} />
+        <FAQ defaultTab={1} />
 
         {/* ─── CONTACT ─── */}
         <Contact />

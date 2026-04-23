@@ -28,27 +28,27 @@ const categories = [
     ],
   },
   {
-    title: 'Site Vitrine',
+    title: 'Site internet',
     items: [
       {
-        q: 'Pourquoi choisir un site sur-mesure plutôt que Webflow, WordPress ou Wix ?',
-        a: "Un site sur-mesure vous appartient à 100%. Pas d'abonnement plateforme, pas de plugins instables, pas de dépendance à un tiers. Si les tarifs Webflow augmentent, si WordPress sort une mise à jour qui casse votre site, ou si Wix change ses conditions — vous ne subissez rien. Votre code est exportable, hébergeable où vous voulez.",
+        q: "Pourquoi un site sur-mesure plutôt que Wix, WordPress ou Webflow ?",
+        a: "Avec un site sur-mesure, vous êtes propriétaire à 100% : pas d'abonnement chaque mois, pas de plateforme qui change ses tarifs, pas de plugin qui casse votre site. Vous payez une fois, et votre site est à vous pour de bon.",
       },
       {
-        q: 'Quels types de sites réalisez-vous ?',
-        a: 'Sites vitrines corporate, landing pages haute conversion, blogs et magazines, sites avec espace membres, pages événementielles et portfolios.',
+        q: "Quels types de sites faites-vous ?",
+        a: "Sites de présentation pour entreprises, landing pages, blogs, sites avec espace client, portfolios. Si vous voulez un site, on peut le faire.",
       },
       {
-        q: 'Puis-je gérer mon site seul après la livraison ?',
-        a: "Oui, totalement. Chaque site est livré avec Orion Admin, notre back-office sur-mesure. Vous modifiez vos textes, images et articles de blog sans toucher une ligne de code, sans abonnement supplémentaire.",
+        q: "Est-ce que je peux modifier mon site moi-même ?",
+        a: "Oui, complètement. Chaque site est livré avec Orion Admin : vous changez vos textes, vos photos, ajoutez des articles de blog comme dans un Word. Pas besoin d'être à l'aise avec l'informatique.",
       },
       {
-        q: 'Est-ce bon pour le référencement (SEO) ?',
-        a: "Absolument. Code sémantique propre, Core Web Vitals optimisés, balisage schema, métadonnées — les bonnes pratiques SEO sont intégrées dès la conception, pas ajoutées en option.",
+        q: "Mon site sera-t-il bien référencé sur Google ?",
+        a: "Oui. On optimise votre site pour Google dès le départ : code propre, vitesse de chargement, descriptions, balises. Pas en option, pas en supplément.",
       },
       {
-        q: 'Combien coûte un site vitrine sur-mesure ?',
-        a: "Nos projets commencent généralement à 2 500 €, mais tout dépend de la complexité et des fonctionnalités souhaitées. Contactez-nous pour un devis personnalisé.",
+        q: "Combien coûte un site internet ?",
+        a: "Nos sites commencent généralement à 2 500 €. Le prix exact dépend du nombre de pages et des fonctionnalités. On vous fait un devis clair en moins de 48h après notre premier appel.",
       },
     ],
   },
