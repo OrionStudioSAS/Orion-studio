@@ -158,10 +158,6 @@ export default function Contact() {
                   <span>Site E-commerce</span>
                 </label>
                 <label className="checkbox-label">
-                  <input type="checkbox" name="service" value="automatisation" />
-                  <span>Automatisation</span>
-                </label>
-                <label className="checkbox-label">
                   <input type="checkbox" name="service" value="autre" />
                   <span>Autre</span>
                 </label>

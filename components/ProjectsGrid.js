@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { projects } from '@/data/projects'
 
-const filters = ['Tous', 'Site Vitrine', 'E-commerce', 'Design', 'Automatisation']
+const filters = ['Tous', 'Site Vitrine', 'E-commerce', 'Design']
 
 export default function ProjectsGrid() {
   const [active, setActive] = useState('Tous')

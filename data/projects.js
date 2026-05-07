@@ -5,10 +5,10 @@ export const projects = [
     client: 'AEV',
     category: 'Site Vitrine',
     year: '2024',
-    tags: ['Sur-mesure', 'Figma', 'n8n', 'Memberstack', 'Monday'],
+    tags: ['Sur-mesure', 'Figma', 'Memberstack', 'Monday'],
     cover: '/images/cover_aev.webp',
     url: 'https://association-ev.fr',
-    excerpt: "Plateforme communautaire complète pour l'association des entrepreneurs du Vexin : espace membres, blog, événements et automatisation des adhésions via n8n et Memberstack.",
+    excerpt: "Plateforme communautaire complète pour l'association des entrepreneurs du Vexin : espace membres, blog, événements et gestion des adhésions via Memberstack et Monday.",
     gradient: 'linear-gradient(135deg, #12152a 0%, #1e2545 50%, #2a1f4e 100%)',
     steps: [
       {
@@ -27,15 +27,15 @@ export const projects = [
       },
       {
         num: '03', phase: 'Développement',
-        title: 'Développement sur-mesure & connexions n8n / Memberstack',
-        desc: "Développement sur-mesure fidèle aux maquettes, avec mise en place de l'authentification Memberstack (rôles admin / membre / visiteur), connexion à Monday via n8n pour la gestion centralisée des données membres, et automatisation des workflows d'adhésion et de validation.",
+        title: 'Développement sur-mesure & intégration Memberstack',
+        desc: "Développement sur-mesure fidèle aux maquettes, avec mise en place de l'authentification Memberstack (rôles admin / membre / visiteur) et connexion à Monday pour la gestion centralisée des données membres et des adhésions.",
         duration: '4 semaines',
-        deliverables: ['Site sur-mesure complet', 'Scénarios n8n actifs', 'Espace membres sécurisé'],
+        deliverables: ['Site sur-mesure complet', 'Espace membres sécurisé', 'Synchronisation Monday'],
       },
       {
         num: '04', phase: 'Lancement',
         title: "Mise en ligne & formation de l'équipe",
-        desc: "Déploiement sur le domaine client, configuration DNS/HTTPS, tests de bout en bout sur tous les workflows d'automatisation. Formation du bureau de l'association à l'administration du site et à la gestion des membres depuis Monday.",
+        desc: "Déploiement sur le domaine client, configuration DNS/HTTPS, tests de bout en bout sur tous les parcours utilisateurs. Formation du bureau de l'association à l'administration du site et à la gestion des membres depuis Monday.",
         duration: '1 semaine',
         deliverables: ['Site en ligne', 'Formation équipe', "Guide d'administration"],
       },

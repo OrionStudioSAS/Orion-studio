@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
 const features = [
-  { title: "Suivi de projet", desc: "De la maquette à la mise en ligne, vous voyez tout en direct." },
-  { title: "Centre de documents", desc: "Devis, factures, contrats, maquettes : tout au même endroit." },
-  { title: "Chat avec notre équipe", desc: "Une conversation continue, sans email, sans WhatsApp." },
-  { title: "Gestion de votre site", desc: "Modifiez vos textes, photos et articles sans toucher au code." },
+  "Suivi de projet",
+  "Centre de documents",
+  "Chat avec notre équipe",
+  "Gestion de votre site",
 ]
 
 export default function OrionAdminSection() {
@@ -20,13 +20,15 @@ export default function OrionAdminSection() {
               <span className="gradient-text">inclus dans tous nos projets</span>.
             </h2>
             <p>
+              Nous avons développé une solution interne pensée pour vous simplifier la vie et centraliser tous vos besoins en un seul endroit.
+            </p>
+            <p>
               Suivre votre projet, retrouver une facture, échanger avec notre équipe ou modifier votre site : tout se passe au même endroit. Simple, clair, fait pour vous.
             </p>
             <ul className="oa-home__features">
-              {features.map((f, i) => (
+              {features.map((title, i) => (
                 <li key={i} className="oa-home__feature">
-                  <span className="oa-home__feature-icon">✓</span>
-                  <span><strong>{f.title}.</strong> {f.desc}</span>
+                  <span>{title}</span>
                 </li>
               ))}
             </ul>
@@ -48,7 +50,6 @@ export default function OrionAdminSection() {
                   <div className="oa-mockup__nav-item">Documents</div>
                   <div className="oa-mockup__nav-item">Messages</div>
                   <div className="oa-mockup__nav-item">Mon site</div>
-                  <div className="oa-mockup__nav-item">Automatisations</div>
                 </div>
                 <div className="oa-mockup__main">
                   <div className="oa-mockup__title" />

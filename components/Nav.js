@@ -17,12 +17,6 @@ const services = [
     href: '/site-e-commerce',
   },
   {
-    tag: 'n8n',
-    title: 'Automatisation',
-    desc: 'Vos outils communiquent, vos tâches répétitives disparaissent.',
-    href: '/automatisation',
-  },
-  {
     tag: 'Application web',
     title: 'SaaS',
     desc: "Votre application sur-mesure, du concept au lancement.",
@@ -134,7 +128,6 @@ export default function Nav() {
         <span className="nav__mobile-label">Services</span>
         <Link href="/site-internet" onClick={closeMobile}>Site internet</Link>
         <Link href="/site-e-commerce" onClick={closeMobile}>E-commerce</Link>
-        <Link href="/automatisation" onClick={closeMobile}>Automatisation</Link>
         <Link href="/saas" onClick={closeMobile}>SaaS</Link>
         <Link href="/blog" onClick={closeMobile}>Blog</Link>
         <Link href="#contact" onClick={closeMobile}>Parlez-nous de votre projet</Link>

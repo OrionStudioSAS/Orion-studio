@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="footer__col">
             <Link href="/" className="footer__col-brand">ORION STUDIO.</Link>
             <p className="footer__col-desc">
-              Agence web 100&nbsp;% française spécialisée en création de sites sur-mesure et automatisations pour entrepreneurs et PME ambitieuses.
+              Agence web 100&nbsp;% française spécialisée en création de sites sur-mesure, boutiques Shopify et applications SaaS pour entrepreneurs et PME ambitieuses.
             </p>
             <div className="footer__socials">
               <a
@@ -99,7 +99,6 @@ export default function Footer() {
             <nav className="footer__col-links">
               <Link href="/site-internet">Site internet</Link>
               <Link href="/site-e-commerce">E-commerce</Link>
-              <Link href="/automatisation">Automatisation</Link>
               <Link href="/saas">SaaS</Link>
             </nav>
           </div>

@@ -18,8 +18,8 @@ const steps = [
     title: 'Architecture & conception',
     desc: "On définit les parcours utilisateurs, l'architecture des pages ou des flux, les points de conversion et les connexions entre vos outils.",
     items: [
-      "Arborescence ou schéma de flux",
-      "Wireframes ou blueprint d'automatisation",
+      "Arborescence du site",
+      "Wireframes & maquettes basse fidélité",
       "Définition des indicateurs clés",
       "Planning de production",
     ],
@@ -27,11 +27,11 @@ const steps = [
   {
     label: 'Étape 3',
     title: 'Design & développement',
-    desc: "Interface, e-commerce, automatisation ou intégrations : tout est développé sur mesure, avec une attention particulière à la rapidité et à la stabilité.",
+    desc: "Interface, e-commerce ou intégrations : tout est développé sur mesure, avec une attention particulière à la rapidité et à la stabilité.",
     items: [
       "Maquettes ou prototypes",
       "Développement sur-mesure",
-      "Mise en place des automatisations",
+      "Intégration de l'identité visuelle",
       "Connexions aux outils tiers",
     ],
   },
@@ -160,11 +160,6 @@ export default function Process() {
                   <h3 className="process-card__title">{step.title}</h3>
                   <p className="process-card__desc">{step.desc}</p>
                 </div>
-                <ul className="process-card__list">
-                  {step.items.map((item, j) => (
-                    <li key={j}>{item}</li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))}

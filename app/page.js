@@ -4,8 +4,6 @@ import Hero from '@/components/Hero'
 import Studio from '@/components/Studio'
 import Expertises from '@/components/Expertises'
 import Projects from '@/components/Projects'
-import Stack from '@/components/Stack'
-import Process from '@/components/Process'
 import BlogPreview from '@/components/BlogPreview'
 import OrionAdminSection from '@/components/OrionAdminSection'
 import FAQ from '@/components/FAQ'
@@ -24,8 +22,6 @@ export default function Home() {
         <Studio />
         <Expertises />
         <Projects />
-        <Stack />
-        <Process />
         <OrionAdminSection />
         <BlogPreview />
         <FAQ />

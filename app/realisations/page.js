@@ -8,7 +8,7 @@ import ProjectsGrid from '@/components/ProjectsGrid'
 
 export const metadata = {
   title: 'Nos Réalisations — Orion Studio',
-  description: 'Découvrez nos réalisations sur-mesure et Shopify : sites internet, boutiques e-commerce, automatisations n8n et applications SaaS pour des marques ambitieuses.',
+  description: 'Découvrez nos réalisations sur-mesure et Shopify : sites internet, boutiques e-commerce et applications SaaS pour des marques ambitieuses.',
 }
 
 export default function ProjetsPage() {
@@ -24,7 +24,7 @@ export default function ProjetsPage() {
               Des réalisations qui <span className="gradient-text">parlent d&apos;elles-mêmes.</span>
             </h1>
             <p className="pg-hero__desc">
-              Chaque projet est le fruit d&apos;une collaboration étroite avec nos clients. Voici une sélection de nos réalisations récentes : sites sur-mesure, boutiques Shopify et automatisations n8n.
+              Chaque projet est le fruit d&apos;une collaboration étroite avec nos clients. Voici une sélection de nos réalisations récentes : sites sur-mesure, boutiques Shopify et applications SaaS.
             </p>
           </div>
         </section>

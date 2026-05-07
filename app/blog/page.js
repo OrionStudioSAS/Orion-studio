@@ -8,7 +8,7 @@ import { articles } from '@/data/blog'
 
 export const metadata = {
   title: 'Blog — Orion Studio',
-  description: "Conseils, guides et analyses sur le web, le design, le SEO et l'automatisation par l'équipe Orion Studio.",
+  description: "Conseils, guides et analyses sur le web, le design et le SEO par l'équipe Orion Studio.",
 }
 
 const formatDate = (dateStr) =>
@@ -34,7 +34,7 @@ export default function BlogPage() {
               Expertise, <span className="gradient-text">partagée.</span>
             </h1>
             <p className="blog-hero__desc">
-              Web, design, SEO, automatisation — notre équipe partage ses apprentissages terrain pour vous aider à prendre de meilleures décisions digitales.
+              Web, design, SEO, e-commerce — notre équipe partage ses apprentissages terrain pour vous aider à prendre de meilleures décisions digitales.
             </p>
           </div>
         </section>
