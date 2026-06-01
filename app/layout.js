@@ -3,8 +3,8 @@ import PageTransition from '@/components/PageTransition'
 import SmoothScroll from '@/components/SmoothScroll'
 
 export const metadata = {
-  title: 'Orion Studio — Agence Web & Automatisations',
-  description: 'Agence web spécialisée en création de sites sur-mesure, boutiques Shopify, automatisations n8n et applications SaaS pour entrepreneurs et PME. Paris & Cannes.',
+  title: 'Orion Studio — Agence Web sur-mesure',
+  description: 'Agence web spécialisée en création de sites sur-mesure, boutiques Shopify et applications SaaS pour entrepreneurs et PME. Paris & Cannes.',
   icons: {
     icon: '/images/favicon.png',
     shortcut: '/images/favicon.png',

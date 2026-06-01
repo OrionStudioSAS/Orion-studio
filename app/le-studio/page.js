@@ -8,47 +8,37 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Le Studio — Orion Studio',
-  description: "Découvrez Orion Studio, agence web française spécialisée en sites sur-mesure, e-commerce Shopify, automatisations n8n et applications SaaS. Une équipe à taille humaine, une méthodologie claire, des résultats mesurables.",
+  description: "Découvrez Orion Studio, agence web française spécialisée en sites sur-mesure, e-commerce Shopify et applications SaaS. Une équipe à taille humaine, une méthodologie claire, des résultats mesurables.",
 }
-
-const valeurs = [
-  {
-    num: '01',
-    title: 'Du sur-mesure, pas du template',
-    desc: "Chaque projet est conçu spécifiquement pour vous. On ne pose pas un thème acheté en ligne sur votre marque : on développe ce qui correspond à votre activité, vos clients et vos objectifs.",
-  },
-  {
-    num: '02',
-    title: 'Vous êtes propriétaire à 100%',
-    desc: "Le code, les contenus, les données : tout vous appartient. Pas d'abonnement obligatoire, pas de plateforme qui peut changer ses règles du jour au lendemain. Vous payez une fois, c'est à vous pour de bon.",
-  },
-  {
-    num: '03',
-    title: 'Une livraison rapide',
-    desc: "Un site internet en 1 à 2 semaines, une boutique e-commerce en 3 à 6 semaines, une première version d'application en 4 à 8 semaines. On va vite parce qu'on est concentrés et bien organisés.",
-  },
-  {
-    num: '04',
-    title: 'Tout votre projet sur Orion Admin',
-    desc: "Suivi de projet, maquettes, factures, devis, échanges avec notre équipe : tout est centralisé sur votre espace personnel. Pas besoin de fouiller dans vos emails ou de relancer pour savoir où on en est.",
-  },
-  {
-    num: '05',
-    title: 'Une équipe joignable, jamais sous-traitée',
-    desc: "Vous parlez directement avec Julien et Théo, les deux cofondateurs. Pas de chef de projet intermédiaire, pas de prestataire à l'autre bout du monde. La même équipe du devis à l'évolution du site, deux ans plus tard.",
-  },
-  {
-    num: '06',
-    title: 'On reste là après la livraison',
-    desc: "Le projet ne s'arrête pas à la mise en ligne. Formation à Orion Admin, accompagnement, évolutions : on construit une relation sur la durée, pas une prestation one-shot.",
-  },
-]
 
 const stats = [
   { value: '50+', unit: '', label: 'Projets livrés' },
   { value: '3', unit: 'ans', label: "D'expérience" },
   { value: '2', unit: '', label: 'Bureaux en France' },
   { value: '98%', unit: '', label: 'Clients satisfaits' },
+]
+
+const partners = [
+  {
+    name: 'Shopify',
+    role: 'Partner officiel',
+    logo: '/images/logo-shopify.svg',
+    desc: "Référencés au programme Shopify Partners, nous concevons et déployons des boutiques performantes en bénéficiant d'un accès direct à la roadmap et au support de la plateforme.",
+  },
+  {
+    name: 'Stripe',
+    role: 'Partenaire intégrations',
+    logo: '/images/logo-figma.svg',
+    desc: "Intégrations Stripe natives sur l'ensemble de nos boutiques et SaaS : paiements, abonnements, facturation. Une expérience de paiement fluide pour vos clients, une comptabilité claire pour vous.",
+  },
+]
+
+const photos = [
+  { src: '/images/studio/team.webp', alt: "Julien et Théo, cofondateurs d'Orion Studio", className: 'ls-photos__item--main' },
+  { src: '/images/studio/team-event.webp', alt: "L'équipe Orion Studio en événement" },
+  { src: '/images/studio/cannes.webp', alt: 'Cannes, bureau Sud' },
+  { src: '/images/studio/paris.webp', alt: 'Paris, bureau Nord' },
+  { src: '/images/studio/dog.webp', alt: 'La mascotte du studio' },
 ]
 
 const offices = [
@@ -134,36 +124,78 @@ export default function LeStudio() {
           </div>
         </section>
 
-        {/* ─── POURQUOI NOUS — liste éditoriale ─── */}
-        <section className="ls-values">
+        {/* ─── NOTRE HISTOIRE ─── */}
+        <section className="ls-story">
           <div className="container">
-            <div className="ls-values__header">
-              <div className="ls-values__heading">
-                <span className="section-tag">POURQUOI ORION STUDIO&nbsp;?</span>
+            <div className="ls-story__grid">
+              <div className="ls-story__left">
+                <span className="section-tag">NOTRE HISTOIRE</span>
                 <h2>
-                  Six raisons,{' '}
-                  <span className="gradient-text">une seule conviction.</span>
+                  Deux amis,{' '}
+                  <span className="gradient-text">une obsession commune.</span>
                 </h2>
               </div>
-              <p className="ls-values__intro">
-                Un site n&apos;est pas une dépense, c&apos;est un actif. Voici comment nous le concevons pour qu&apos;il travaille pour vous, chaque jour.
-              </p>
+              <div className="ls-story__right">
+                <p>
+                  Orion Studio est née d&apos;un constat partagé entre Julien et Théo : trop d&apos;entreprises payaient cher pour des sites qui ne leur ressemblaient pas, livrés en retard et impossibles à modifier sans appeler un développeur.
+                </p>
+                <p>
+                  En 2023, on décide de monter notre propre structure pour faire les choses autrement : du sur-mesure rapide, des clients propriétaires de leur site à 100%, et un espace personnel — Orion Admin — pour que chaque projet reste clair du brief à la mise en ligne.
+                </p>
+                <p>
+                  Trois ans plus tard, nous avons accompagné plus de 50 marques depuis nos bureaux de Paris et Cannes. La structure est restée volontairement à taille humaine : c&apos;est ce qui nous permet de rester proches, réactifs et exigeants sur chaque livraison.
+                </p>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <ol className="ls-values__list">
-              {valeurs.map((v, i) => (
-                <li key={v.num} className="ls-value-row">
-                  <span className="ls-value-row__num" aria-hidden="true">{v.num}</span>
-                  <div className="ls-value-row__body">
-                    <h3 className="ls-value-row__title">{v.title}</h3>
-                    <p className="ls-value-row__desc">{v.desc}</p>
-                  </div>
-                  <span className="ls-value-row__total" aria-hidden="true">
-                    / 0{valeurs.length}
-                  </span>
-                </li>
+        {/* ─── COLLAGE PHOTOS ─── */}
+        <section className="ls-photos">
+          <div className="container">
+            <div className="ls-photos__header">
+              <span className="section-tag">DANS LES COULISSES</span>
+              <h2>
+                Une équipe,{' '}
+                <span className="gradient-text">deux villes, mille moments.</span>
+              </h2>
+            </div>
+            <div className="ls-photos__grid">
+              {photos.map((p, i) => (
+                <div key={i} className={`ls-photos__item ${p.className || ''}`.trim()}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.src} alt={p.alt} loading="lazy" />
+                </div>
               ))}
-            </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── PARTENAIRES ─── */}
+        <section className="ls-partners">
+          <div className="container">
+            <div className="ls-partners__header">
+              <span className="section-tag">NOS PARTENAIRES</span>
+              <h2>
+                Les plateformes{' '}
+                <span className="gradient-text">avec qui nous construisons.</span>
+              </h2>
+            </div>
+            <div className="ls-partners__grid">
+              {partners.map((p, i) => (
+                <div key={i} className="ls-partner">
+                  <div className="ls-partner__head">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={p.logo} alt={p.name} className="ls-partner__logo" />
+                    <div className="ls-partner__meta">
+                      <span className="ls-partner__name">{p.name}</span>
+                      <span className="ls-partner__role">{p.role}</span>
+                    </div>
+                  </div>
+                  <p className="ls-partner__desc">{p.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

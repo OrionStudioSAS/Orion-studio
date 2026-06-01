@@ -82,39 +82,6 @@ export const articles = [
     ],
   },
   {
-    slug: 'automatiser-prospection-n8n',
-    title: 'Comment automatiser votre prospection avec n8n',
-    excerpt: "De la détection d'un lead à l'envoi du premier email personnalisé : découvrez comment construire un workflow de prospection 100% automatisé avec n8n.",
-    date: '2025-02-27',
-    category: 'Automatisation',
-    author: 'Julien',
-    readTime: '8 min',
-    cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=75",
-    coverGradient: 'linear-gradient(135deg, #080e1f 0%, #151f3a 100%)',
-    content: [
-      {
-        type: 'intro',
-        text: "Prospecter manuellement, c'est chronophage et peu scalable. Avec n8n, on peut construire un workflow complet qui détecte les leads entrants, les qualifie automatiquement et déclenche la bonne séquence au bon moment. Comme c'est open source et auto-hébergeable, vos données restent chez vous. Voici comment on l'a construit pour plusieurs clients.",
-      },
-      {
-        type: 'h2',
-        text: 'Le workflow en 4 étapes',
-      },
-      {
-        type: 'p',
-        text: "Étape 1 : Déclencheur (Trigger). Dès qu'un formulaire est soumis (Typeform, HubSpot, site web), n8n intercepte les données via un webhook. Étape 2 : Qualification. Un nœud IF vérifie les critères de votre ICP (budget, taille d'entreprise, secteur). Étape 3 : Enrichissement. Connexion à Clearbit ou Apollo pour enrichir le profil du lead. Étape 4 : Action. Si qualifié → création dans le CRM + email personnalisé envoyé dans l'heure.",
-      },
-      {
-        type: 'h2',
-        text: 'Résultats observés',
-      },
-      {
-        type: 'p',
-        text: "Chez nos clients qui ont mis en place ce workflow, le temps de réponse moyen est passé de 4 heures à 12 minutes. Le taux de réponse aux premiers emails a augmenté de 40% grâce à la personnalisation automatisée. Et 100% des leads qualifiés sont maintenant tracés dans le CRM, sans aucune saisie manuelle.",
-      },
-    ],
-  },
-  {
     slug: 'tendances-design-web-2025',
     title: "Les tendances design web à ne pas manquer en 2025",
     excerpt: "Bento grids, glassmorphisme 2.0, typographies cinétiques… Le design web évolue vite. Voici ce qu'on voit émerger en 2025 et comment l'appliquer intelligemment.",

@@ -15,7 +15,7 @@ const categories = [
       },
       {
         q: "Qui compose l'équipe Orion Studio ?",
-        a: "Orion Studio, c'est Julien et Théo, cofondateurs passionnés, experts en développement web sur-mesure et automatisations. Notre structure à taille humaine nous permet de travailler main dans la main avec nos clients.",
+        a: "Orion Studio, c'est Julien et Théo, cofondateurs passionnés, experts en développement web sur-mesure et e-commerce Shopify. Notre structure à taille humaine nous permet de travailler main dans la main avec nos clients.",
       },
       {
         q: 'Proposez-vous un accompagnement après la mise en ligne ?',
@@ -23,7 +23,7 @@ const categories = [
       },
       {
         q: "Qu'est-ce qui différencie Orion Studio d'une autre agence ?",
-        a: "Notre approche repose sur trois piliers : Clarté (vous savez toujours où en est votre projet), Autonomie (vous gérez votre contenu via Orion Admin sans dépendance externe), Expertise (développement sur-mesure, Shopify et automatisations).",
+        a: "Notre approche repose sur trois piliers : Clarté (vous savez toujours où en est votre projet), Autonomie (vous gérez votre contenu via Orion Admin sans dépendance externe), Expertise (développement sur-mesure, Shopify et SaaS).",
       },
     ],
   },
@@ -74,35 +74,6 @@ const categories = [
       {
         q: 'Proposez-vous des formations sur Shopify ?',
         a: "Oui, chaque livraison inclut une session de formation personnalisée pour vous apprendre à gérer votre boutique au quotidien.",
-      },
-    ],
-  },
-  {
-    title: 'Automatisation',
-    items: [
-      {
-        q: 'Pourquoi avoir choisi n8n pour vos automatisations ?',
-        a: "n8n est open source et auto-hébergeable, ce qui veut dire que vos données restent chez vous. C'est aussi extrêmement flexible : on peut créer des workflows complexes, brancher n'importe quelle API, et faire évoluer le système sans dépendre d'une plateforme qui change ses tarifs ou ses limites du jour au lendemain.",
-      },
-      {
-        q: 'Faut-il avoir des compétences techniques pour utiliser vos automatisations ?',
-        a: "Non. Nos workflows sont conçus pour être supervisés simplement, via des dashboards clairs. Nous formons vos équipes à la prise en main et documentons chaque scénario. Vous restez autonomes au quotidien sans avoir besoin de coder.",
-      },
-      {
-        q: 'Quels outils pouvez-vous connecter ?',
-        a: "Nous connectons plus de 1 000 applications : CRM (HubSpot, Salesforce, Pipedrive), emailing (Klaviyo, Mailchimp, Brevo), e-commerce (Shopify, WooCommerce), facturation (Pennylane, Stripe), productivité (Notion, Airtable, Slack, Google Workspace) et bien d'autres via API.",
-      },
-      {
-        q: "Combien de temps faut-il pour mettre en place une automatisation ?",
-        a: "Un workflow simple (ex : notification Slack à chaque nouveau lead) peut être opérationnel en quelques jours. Un projet complet incluant audit, conception et déploiement de plusieurs scénarios prend entre 3 et 6 semaines selon la complexité.",
-      },
-      {
-        q: 'Que se passe-t-il si un workflow tombe en panne ?',
-        a: "Nos scénarios intègrent une gestion native des erreurs : alertes automatiques, tentatives de relance et logs détaillés. Nous proposons également des contrats de maintenance pour surveiller, corriger et faire évoluer vos automatisations dans la durée.",
-      },
-      {
-        q: 'Peut-on automatiser des processus métiers complexes avec des conditions ?',
-        a: "Absolument. n8n permet de gérer des logiques conditionnelles avancées, des boucles, des branchements multiples et des transformations de données. Nous avons déployé des workflows à 20+ étapes intégrant des règles métier spécifiques à chaque client.",
       },
     ],
   },

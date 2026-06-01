@@ -32,13 +32,12 @@ export default function LeStudioAnimations() {
       observe('.ls-mission__left > *',  0.2),
       observe('.ls-mission__right > *', 0.15),
 
-      // Valeurs
-      observe('.ls-values',            0.08, '-3% 0px 0px 0px'),
-      observe('.ls-values__header',    0.2),
-      observe('.ls-value-row',         0.12),
+      // Valeurs (utilisé sur /site-internet, /site-e-commerce, /saas)
+      observe('.ls-values',         0.08, '-3% 0px 0px 0px'),
+      observe('.ls-values__header', 0.2),
+      observe('.ls-value-row',      0.12),
 
-      // Active state cinématique : déclenche l'anim quand la ligne entre
-      // dans la bande centrale du viewport (~30% au milieu)
+      // Active state cinématique
       (() => {
         const activeObs = new IntersectionObserver(
           (entries) => {
@@ -51,6 +50,20 @@ export default function LeStudioAnimations() {
         document.querySelectorAll('.ls-value-row').forEach(el => activeObs.observe(el))
         return activeObs
       })(),
+
+      // Tarifs
+      observe('.ls-pricing',           0.1, '-3% 0px 0px 0px'),
+
+      // Histoire
+      observe('.ls-story',             0.08, '-3% 0px 0px 0px'),
+      observe('.ls-story__left > *',   0.2),
+      observe('.ls-story__right > *',  0.15),
+
+      // Photos
+      observe('.ls-photos',            0.08, '-3% 0px 0px 0px'),
+
+      // Partenaires
+      observe('.ls-partners',          0.08, '-3% 0px 0px 0px'),
 
       // Bureaux
       observe('.ls-offices',           0.1, '-3% 0px 0px 0px'),

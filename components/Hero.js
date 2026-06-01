@@ -23,7 +23,7 @@ const slides = [
     photo: '/images/ThierryCordier.webp',
     initials: 'TC',
     name: 'Thierry Cordier',
-    text: '"Leur expertise sur le développement sur-mesure est impressionnante et ils ont également mis en place plusieurs automatisations qui nous font gagner un temps précieux au quotidien."',
+    text: '"Leur expertise sur le développement sur-mesure est impressionnante. Une équipe à l\'écoute, professionnelle et qui livre dans les temps. Nous recommandons vivement Orion Studio."',
     role: '— Membre de l\'association AEV',
   },
 ]
@@ -76,13 +76,9 @@ export default function Hero() {
         {/* Nav links — top right */}
         <nav className="hero__nav-links">
           <Link href="/le-studio">Le studio</Link>
-          <Link href="/orion-admin">Orion Admin</Link>
           <Link href="/realisations">Nos réalisations</Link>
           <Link href="/blog">Blog</Link>
-          <Link href="/site-internet">Site internet</Link>
-          <Link href="/site-e-commerce">E-commerce</Link>
-          <Link href="/automatisation">Automatisation</Link>
-          <Link href="/saas">SaaS</Link>
+          <Link href="#contact">Contact</Link>
         </nav>
 
         <div className="hero__left-content">
@@ -96,12 +92,12 @@ export default function Hero() {
           </div>
 
           <h1 className="hero__title">
-            AGENCE <span className="gradient-text">WEB</span> &amp;<br />
-            <span className="gradient-text">AUTOMATISATIONS</span>.
+            AGENCE <span className="gradient-text">WEB</span><br />
+            <span className="gradient-text">SUR-MESURE</span>.
           </h1>
 
           <p className="hero__subtitle">
-            Que vous soyez entrepreneur, dirigeant de PME ou marque en développement, nous concevons des sites vitrines et boutiques en ligne sur-mesure qui renforcent votre visibilité, votre crédibilité et transforment votre présence en ligne en véritable levier de croissance.
+            Que vous soyez entrepreneur, dirigeant de PME ou marque en développement, nous concevons des sites internet, boutiques en ligne et applications SaaS sur-mesure qui renforcent votre visibilité, votre crédibilité et transforment votre présence en ligne en véritable levier de croissance.
           </p>
 
           <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>

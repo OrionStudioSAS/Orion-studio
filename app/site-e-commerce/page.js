@@ -161,6 +161,30 @@ export default function SiteEcommerce() {
           </div>
         </section>
 
+        {/* ─── TARIFS ─── */}
+        <section className="ls-pricing">
+          <div className="container">
+            <div className="ls-pricing__card">
+              <span className="section-tag">TARIFS</span>
+              <div className="ls-pricing__price">
+                <span className="ls-pricing__label">À partir de</span>
+                <span className="ls-pricing__amount">
+                  <span className="gradient-text">3&nbsp;000&nbsp;€</span>
+                  <span className="ls-pricing__unit">HT</span>
+                </span>
+              </div>
+              <p className="ls-pricing__desc">
+                Le tarif final dépend du catalogue, des intégrations (paiements, livraison, ERP) et du design. On vous fait un devis clair et détaillé en moins de 48h après notre premier appel.
+              </p>
+              <Link href="#contact" className="cta">
+                <span className="text-cta">Demander un devis gratuit</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* ─── PROJETS ─── */}
         <Projects />
 

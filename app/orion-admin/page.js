@@ -31,8 +31,8 @@ const points = [
   },
   {
     num: '04',
-    title: 'Gérez votre site et vos automatisations',
-    desc: "Modifiez vos textes, ajoutez un article de blog, voyez vos automatisations tourner. Tout depuis une interface simple, sans toucher au code.",
+    title: 'Gérez votre site',
+    desc: "Modifiez vos textes, ajoutez un article de blog, mettez à jour vos photos. Tout depuis une interface simple, sans toucher au code.",
   },
 ]
 
@@ -56,11 +56,6 @@ const fonctionnalites = [
     icon: '✦',
     title: 'Gestion de contenu',
     desc: "Modifiez vos textes, photos, articles de blog sans toucher au code.",
-  },
-  {
-    icon: '✦',
-    title: 'Suivi des automatisations',
-    desc: "Voyez ce qui tourne, combien d'actions effectuées, combien de temps gagné.",
   },
   {
     icon: '✦',
@@ -113,7 +108,6 @@ export default function OrionAdmin() {
                     <div className="oa-mockup__nav-item">Documents</div>
                     <div className="oa-mockup__nav-item">Messages</div>
                     <div className="oa-mockup__nav-item">Mon site</div>
-                    <div className="oa-mockup__nav-item">Automatisations</div>
                   </div>
                   <div className="oa-mockup__main">
                     <div className="oa-mockup__title" />
@@ -205,7 +199,7 @@ export default function OrionAdmin() {
                 <span className="section-tag">INCLUS DANS TOUS NOS PROJETS</span>
                 <h2>Pas un produit à part. Une promesse.</h2>
                 <p>
-                  Que vous fassiez appel à nous pour un site internet, une boutique en ligne, des automatisations ou une application web : Orion Admin est inclus, dès le premier jour.
+                  Que vous fassiez appel à nous pour un site internet, une boutique en ligne ou une application web : Orion Admin est inclus, dès le premier jour.
                 </p>
                 <p>
                   Pas d&apos;abonnement, pas de surprise. C&apos;est notre façon de vous dire que votre projet ne s&apos;arrête pas à la livraison. C&apos;est là qu&apos;il commence vraiment.
@@ -221,7 +215,6 @@ export default function OrionAdmin() {
                 <ul className="sv-why__list">
                   <li className="sv-why__item"><span className="sv-why__check">✓</span>Inclus avec votre site internet</li>
                   <li className="sv-why__item"><span className="sv-why__check">✓</span>Inclus avec votre boutique e-commerce</li>
-                  <li className="sv-why__item"><span className="sv-why__check">✓</span>Inclus avec vos automatisations</li>
                   <li className="sv-why__item"><span className="sv-why__check">✓</span>Inclus avec votre application SaaS</li>
                   <li className="sv-why__item"><span className="sv-why__check">✓</span>0€ supplémentaire, à vie</li>
                   <li className="sv-why__item"><span className="sv-why__check">✓</span>Mises à jour régulières et nouvelles fonctionnalités</li>
