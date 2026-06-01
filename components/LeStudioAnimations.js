@@ -32,6 +32,25 @@ export default function LeStudioAnimations() {
       observe('.ls-mission__left > *',  0.2),
       observe('.ls-mission__right > *', 0.15),
 
+      // Valeurs (utilisé sur /site-internet, /site-e-commerce, /saas)
+      observe('.ls-values',         0.08, '-3% 0px 0px 0px'),
+      observe('.ls-values__header', 0.2),
+      observe('.ls-value-row',      0.12),
+
+      // Active state cinématique
+      (() => {
+        const activeObs = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              entry.target.classList.toggle('active', entry.isIntersecting)
+            })
+          },
+          { rootMargin: '-35% 0px -35% 0px', threshold: 0 }
+        )
+        document.querySelectorAll('.ls-value-row').forEach(el => activeObs.observe(el))
+        return activeObs
+      })(),
+
       // Histoire
       observe('.ls-story',             0.08, '-3% 0px 0px 0px'),
       observe('.ls-story__left > *',   0.2),
