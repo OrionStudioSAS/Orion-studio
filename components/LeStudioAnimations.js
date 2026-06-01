@@ -51,6 +51,9 @@ export default function LeStudioAnimations() {
         return activeObs
       })(),
 
+      // Tarifs
+      observe('.ls-pricing',           0.1, '-3% 0px 0px 0px'),
+
       // Histoire
       observe('.ls-story',             0.08, '-3% 0px 0px 0px'),
       observe('.ls-story__left > *',   0.2),

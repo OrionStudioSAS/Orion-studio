@@ -4905,6 +4905,81 @@ section[id] {
   .ls-location { padding: 1.5rem 0; }
 }
 
+/* ─── Tarifs (carte centrée) ─────────────────────────────────── */
+.ls-pricing {
+  padding: 7rem 0;
+  border-top: 1px solid transparent;
+}
+.ls-pricing.in-view {
+  animation: sv-border-illuminate 2s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+             shimmer-border-top-section 4s 2s ease-in-out infinite;
+}
+.ls-pricing__card {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem 2.5rem;
+  background:
+    radial-gradient(60% 80% at 50% 0%, rgba(168, 85, 247, 0.08), transparent 70%),
+    rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ls-pricing.in-view .ls-pricing__card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ls-pricing__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+.ls-pricing__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.45);
+}
+.ls-pricing__amount {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: clamp(2.75rem, 6.5vw, 4.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.ls-pricing__amount--text {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+.ls-pricing__unit {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.ls-pricing__desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 460px;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .ls-pricing { padding: 4.5rem 0; }
+  .ls-pricing__card { padding: 2.5rem 1.5rem; }
+}
+
 /* ─── Notre histoire ─────────────────────────────────────────── */
 .ls-story {
   padding: 7rem 0;
