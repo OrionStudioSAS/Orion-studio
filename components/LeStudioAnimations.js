@@ -24,13 +24,6 @@ export default function LeStudioAnimations() {
       observe('.ls-hero__tag',   0.3),
       observe('.ls-hero__title', 0.3),
       observe('.ls-hero__desc',  0.2),
-      observe('.ls-hero__stats', 0.2),
-      observe('.ls-stat',        0.2),
-
-      // Mission
-      observe('.ls-mission',       0.1, '-3% 0px 0px 0px'),
-      observe('.ls-mission__left > *',  0.2),
-      observe('.ls-mission__right > *', 0.15),
 
       // Valeurs (utilisé sur /site-internet, /site-e-commerce, /saas)
       observe('.ls-values',         0.08, '-3% 0px 0px 0px'),
@@ -64,9 +57,6 @@ export default function LeStudioAnimations() {
 
       // Photos
       observe('.ls-photos',            0.08, '-3% 0px 0px 0px'),
-
-      // Partenaires
-      observe('.ls-partners',          0.08, '-3% 0px 0px 0px'),
 
       // Bureaux
       observe('.ls-offices',           0.1, '-3% 0px 0px 0px'),
