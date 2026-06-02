@@ -59,6 +59,9 @@ export default function LeStudioAnimations() {
       observe('.ls-story__left > *',   0.2),
       observe('.ls-story__right > *',  0.15),
 
+      // Cofondateurs
+      observe('.ls-founders',          0.1, '-3% 0px 0px 0px'),
+
       // Photos
       observe('.ls-photos',            0.08, '-3% 0px 0px 0px'),
 

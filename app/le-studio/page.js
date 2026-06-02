@@ -8,44 +8,45 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Le Studio',
-  description: "Découvrez Orion Studio, agence web française spécialisée en sites sur-mesure, e-commerce Shopify et applications SaaS. Une équipe à taille humaine, une méthodologie claire, des résultats mesurables.",
+  description: "Julien et Théo, deux passionnés du web, racontent comment et pourquoi ils ont fondé Orion Studio après plusieurs années en agence.",
   alternates: { canonical: '/le-studio' },
   openGraph: {
     title: 'Le Studio — Orion Studio',
-    description: "Agence web française. Paris & Cannes. Une équipe à taille humaine, des résultats mesurables.",
+    description: "Notre histoire, nos profils, et la raison pour laquelle on a monté Orion Studio.",
     url: '/le-studio',
     type: 'website',
   },
 }
 
-const stats = [
-  { value: '50+', unit: '', label: 'Projets livrés' },
-  { value: '3', unit: 'ans', label: "D'expérience" },
-  { value: '2', unit: '', label: 'Bureaux en France' },
-  { value: '98%', unit: '', label: 'Clients satisfaits' },
+const agences = [
+  'Le Monde des 5 Fleurs',
+  'Colorz',
+  "Agen'cy Com",
+  'Studio Zerance',
+  'Axome',
 ]
 
-const partners = [
+const founders = [
   {
-    name: 'Shopify',
-    role: 'Partner officiel',
-    logo: '/images/logo-shopify.svg',
-    desc: "Référencés au programme Shopify Partners, nous concevons et déployons des boutiques performantes en bénéficiant d'un accès direct à la roadmap et au support de la plateforme.",
+    initials: 'JP',
+    name: 'Julien',
+    role: 'Chef de projet & Web-designer',
+    bio: "Sept ans à piloter des projets en agence, à dessiner des sites, à comprendre les vraies attentes des clients. Mon rôle chez Orion : faire en sorte que ce qui sort de notre studio ait du sens, soit beau, et respecte les délais.",
   },
   {
-    name: 'Stripe',
-    role: 'Partenaire intégrations',
-    logo: '/images/logo-figma.svg',
-    desc: "Intégrations Stripe natives sur l'ensemble de nos boutiques et SaaS : paiements, abonnements, facturation. Une expérience de paiement fluide pour vos clients, une comptabilité claire pour vous.",
+    initials: 'TM',
+    name: 'Théo',
+    role: 'Développeur',
+    bio: "Cinq ans à coder pour des marques exigeantes en agence. Sur chaque projet : du code propre, performant, et maintenable. Mon rôle chez Orion : tout ce qui touche au technique, du développement à la mise en ligne.",
   },
 ]
 
 const photos = [
-  { src: '/images/studio/team.webp', alt: "Julien et Théo, cofondateurs d'Orion Studio", className: 'ls-photos__item--main' },
-  { src: '/images/studio/team-event.webp', alt: "L'équipe Orion Studio en événement" },
-  { src: '/images/studio/cannes.webp', alt: 'Cannes, bureau Sud' },
-  { src: '/images/studio/paris.webp', alt: 'Paris, bureau Nord' },
-  { src: '/images/studio/dog.webp', alt: 'La mascotte du studio' },
+  { src: '/images/banner.webp', alt: "Julien et Théo, cofondateurs d'Orion Studio", className: 'ls-photos__item--main' },
+  { src: '/images/Lequipe.jpg', alt: "L'équipe Orion Studio" },
+  { src: '/images/Cannes.png', alt: 'Cannes, bureau Sud' },
+  { src: '/images/Paris.png', alt: 'Paris, bureau Nord' },
+  { src: '/images/Mascotte.png', alt: 'La mascotte du studio' },
 ]
 
 const offices = [
@@ -70,89 +71,107 @@ export default function LeStudio() {
       <Nav />
       <main>
 
-        {/* ─── HERO (texte + stats intégrés, plein écran) ─── */}
+        {/* ─── HERO ─── */}
         <section className="ls-hero ls-hero--full">
           <div className="container">
             <div className="ls-hero__inner">
               <span className="section-tag ls-hero__tag">LE STUDIO</span>
               <h1 className="ls-hero__title">
-                Chaque projet{' '}
-                <span className="gradient-text">est une mission.</span>
+                Deux passionnés du web,{' '}
+                <span className="gradient-text">une agence à taille humaine</span>.
               </h1>
               <p className="ls-hero__desc">
-                Nous concevons des sites qui ne se contentent pas d&apos;être beaux : ils convertissent, fidélisent et propulsent votre marque vers la croissance. Chaque projet est pensé comme une mission sur mesure, avec une méthodologie claire et des objectifs mesurables. Notre rôle est de simplifier votre trajectoire digitale, de vous faire gagner du temps et d&apos;augmenter vos résultats de manière durable et efficace.
+                Orion Studio, c&apos;est Julien et Théo. Deux profils complémentaires qui ont passé plusieurs années en agence avant de se lancer ensemble. Cette page existe pour vous expliquer simplement qui nous sommes et pourquoi on a monté ce studio.
               </p>
               <Link href="#contact" className="cta" style={{ alignSelf: 'flex-start' }}>
-                <span className="text-cta">Parlez-nous de votre projet</span>
+                <span className="text-cta">Discutons de votre projet</span>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
               </Link>
             </div>
-
-            <div className="ls-hero__stats-bar">
-              <div className="svt-stats__grid">
-                {stats.map((s, i) => (
-                  <div key={i} className="svt-stat">
-                    <div className="svt-stat__value">
-                      <span className="gradient-text">{s.value}</span>
-                      {s.unit && <span className="svt-stat__unit">{s.unit}</span>}
-                    </div>
-                    <p className="svt-stat__label">{s.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
 
-        {/* ─── MISSION ─── */}
-        <section className="ls-mission">
-          <div className="container">
-            <div className="ls-mission__grid">
-              <div className="ls-mission__left">
-                <span className="section-tag">NOTRE MISSION</span>
-                <h2>
-                  Nous ne fabriquons pas des sites.{' '}
-                  <span className="gradient-text">Nous construisons des outils de croissance.</span>
-                </h2>
-              </div>
-              <div className="ls-mission__right">
-                <p>
-                  Orion Studio est une agence web française fondée avec une conviction simple : un site web doit travailler pour vous, pas l&apos;inverse. Trop d&apos;entreprises investissent dans des sites qui ne convertissent pas, qui sont lents à maintenir, ou qui ne reflètent pas leur valeur réelle.
-                </p>
-                <p>
-                  Notre approche est différente. Nous associons design de haut niveau, performance technique et stratégie éditoriale pour créer des expériences digitales qui génèrent des résultats concrets — plus de leads, plus de confiance, plus de croissance.
-                </p>
-                <p>
-                  Basés à Paris et Cannes, nous travaillons avec des marques ambitieuses qui refusent la médiocrité digitale.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── NOTRE HISTOIRE ─── */}
+        {/* ─── NOTRE PARCOURS ─── */}
         <section className="ls-story">
           <div className="container">
             <div className="ls-story__grid">
               <div className="ls-story__left">
-                <span className="section-tag">NOTRE HISTOIRE</span>
+                <span className="section-tag">NOTRE PARCOURS</span>
                 <h2>
-                  Deux amis,{' '}
-                  <span className="gradient-text">une obsession commune.</span>
+                  Plusieurs années d&apos;agence,{' '}
+                  <span className="gradient-text">avant de monter la nôtre.</span>
                 </h2>
               </div>
               <div className="ls-story__right">
                 <p>
-                  Orion Studio est née d&apos;un constat partagé entre Julien et Théo : trop d&apos;entreprises payaient cher pour des sites qui ne leur ressemblaient pas, livrés en retard et impossibles à modifier sans appeler un développeur.
+                  Avant Orion Studio, on a chacun fait nos armes dans des agences web et e-commerce reconnues. Des structures différentes, des clients différents, des méthodes différentes. Mais à chaque fois, le même métier&nbsp;: créer des sites qui fonctionnent vraiment pour ceux qui les utilisent.
                 </p>
                 <p>
-                  En 2023, on décide de monter notre propre structure pour faire les choses autrement : du sur-mesure rapide, des clients propriétaires de leur site à 100%, et un espace personnel — Orion Admin — pour que chaque projet reste clair du brief à la mise en ligne.
+                  Nos parcours nous ont fait passer par&nbsp;:
                 </p>
+                <ul className="ls-story__agencies">
+                  {agences.map((a) => (
+                    <li key={a}>{a}</li>
+                  ))}
+                </ul>
                 <p>
-                  Trois ans plus tard, nous avons accompagné plus de 50 marques depuis nos bureaux de Paris et Cannes. La structure est restée volontairement à taille humaine : c&apos;est ce qui nous permet de rester proches, réactifs et exigeants sur chaque livraison.
+                  C&apos;est chez <strong>Axome</strong> qu&apos;on s&apos;est rencontrés. On a vite réalisé qu&apos;on partageait la même vision du métier&nbsp;: faire les choses bien, avec une relation directe et franche avec le client.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── POURQUOI ORION ─── */}
+        <section className="ls-story">
+          <div className="container">
+            <div className="ls-story__grid">
+              <div className="ls-story__left">
+                <span className="section-tag">POURQUOI ORION STUDIO</span>
+                <h2>
+                  L&apos;envie de faire les choses{' '}
+                  <span className="gradient-text">à notre manière.</span>
+                </h2>
+              </div>
+              <div className="ls-story__right">
+                <p>
+                  À un moment, deux envies se sont rejointes. Celle de tenter l&apos;aventure entrepreneuriale, de construire quelque chose qui nous appartient et de choisir nous-mêmes nos clients et nos projets. Et celle de proposer le service qu&apos;on aurait aimé recevoir quand on était de l&apos;autre côté&nbsp;: des sites livrés rapidement, avec un interlocuteur direct et un vrai suivi.
+                </p>
+                <p>
+                  En agence, on a vu beaucoup de clients payer cher pour des projets qui traînaient, des sites livrés et puis plus de nouvelles, ou des outils impossibles à modifier sans rappeler une équipe. On voulait faire l&apos;inverse. C&apos;est de cette envie qu&apos;est né <strong>Orion Studio</strong>, en 2025.
+                </p>
+                <p>
+                  Nos profils sont complémentaires&nbsp;: Julien sur la partie design et gestion de projet, Théo sur la partie technique. Ensemble, on couvre tout le cycle d&apos;un projet, sans avoir besoin de sous-traiter quoi que ce soit. C&apos;est ce qui nous permet d&apos;aller vite, et de vous parler directement à chaque étape.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── LES PROFILS ─── */}
+        <section className="ls-founders">
+          <div className="container">
+            <div className="ls-founders__header">
+              <span className="section-tag">QUI SOMMES-NOUS</span>
+              <h2>
+                Deux profils,{' '}
+                <span className="gradient-text">une équipe.</span>
+              </h2>
+            </div>
+            <div className="ls-founders__grid">
+              {founders.map((f) => (
+                <div key={f.name} className="ls-founder">
+                  <div className="ls-founder__avatar" aria-hidden="true">{f.initials}</div>
+                  <div className="ls-founder__body">
+                    <div className="ls-founder__head">
+                      <h3 className="ls-founder__name">{f.name}</h3>
+                      <span className="ls-founder__role">{f.role}</span>
+                    </div>
+                    <p className="ls-founder__bio">{f.bio}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -178,34 +197,6 @@ export default function LeStudio() {
           </div>
         </section>
 
-        {/* ─── PARTENAIRES ─── */}
-        <section className="ls-partners">
-          <div className="container">
-            <div className="ls-partners__header">
-              <span className="section-tag">NOS PARTENAIRES</span>
-              <h2>
-                Les plateformes{' '}
-                <span className="gradient-text">avec qui nous construisons.</span>
-              </h2>
-            </div>
-            <div className="ls-partners__grid">
-              {partners.map((p, i) => (
-                <div key={i} className="ls-partner">
-                  <div className="ls-partner__head">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.logo} alt={p.name} className="ls-partner__logo" />
-                    <div className="ls-partner__meta">
-                      <span className="ls-partner__name">{p.name}</span>
-                      <span className="ls-partner__role">{p.role}</span>
-                    </div>
-                  </div>
-                  <p className="ls-partner__desc">{p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ─── BUREAUX ─── */}
         <section className="ls-offices">
           <div className="container">
@@ -218,18 +209,8 @@ export default function LeStudio() {
                   <span className="gradient-text">présente sur deux fronts.</span>
                 </h2>
                 <p>
-                  Paris pour la dynamique business, Cannes pour la créativité méditerranéenne. Nous intervenons partout en France et à l&apos;international.
+                  Paris pour la dynamique business, Cannes pour la créativité méditerranéenne. On intervient partout en France et à l&apos;international.
                 </p>
-                <div className="ls-offices__emails">
-                  <a href="mailto:julien@orion-studio.io" className="ls-email">
-                    <span className="ls-email__name">Julien</span>
-                    <span className="ls-email__addr">julien@orion-studio.io</span>
-                  </a>
-                  <a href="mailto:theo@orion-studio.io" className="ls-email">
-                    <span className="ls-email__name">Théo</span>
-                    <span className="ls-email__addr">theo@orion-studio.io</span>
-                  </a>
-                </div>
               </div>
 
               <div className="ls-offices__right">

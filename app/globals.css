@@ -5032,6 +5032,113 @@ section[id] {
   .ls-story__left { position: static; }
 }
 
+/* ─── Liste des agences traversées ───────────────────────────── */
+.ls-story__agencies {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ls-story__agencies li {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+/* ─── Cofondateurs ───────────────────────────────────────────── */
+.ls-founders {
+  padding: 7rem 0;
+  border-top: 1px solid transparent;
+}
+.ls-founders.in-view {
+  animation: sv-border-illuminate 2s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+             shimmer-border-top-section 4s 2s ease-in-out infinite;
+}
+.ls-founders__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  max-width: 720px;
+}
+.ls-founders__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.ls-founder {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s, background 0.3s;
+}
+.ls-founders.in-view .ls-founder { opacity: 1; transform: translateY(0); }
+.ls-founders.in-view .ls-founder:nth-child(2) { transition-delay: 0.12s; }
+.ls-founder:hover {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+.ls-founder__avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4F8EF7, #A855F7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.03em;
+}
+.ls-founder__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ls-founder__head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ls-founder__name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+.ls-founder__role {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.45);
+}
+.ls-founder__bio {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0.25rem 0 0;
+}
+@media (max-width: 700px) {
+  .ls-founders { padding: 4.5rem 0; }
+  .ls-founders__grid { grid-template-columns: 1fr; }
+  .ls-founder { padding: 1.5rem; }
+}
+
 /* ─── Collage photos ─────────────────────────────────────────── */
 .ls-photos {
   padding: 7rem 0;
