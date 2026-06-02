@@ -21,7 +21,7 @@ export default function Projects() {
               >
                 {project.cover && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={project.cover} alt={project.title} className="project-card__cover" width="464" height="619" />
+                  <img src={project.cover} alt={project.title} className="project-card__cover" width="464" height="619" loading="lazy" />
                 )}
                 {/* Overlay gradient bas */}
                 <div className="project-card__gradient" />

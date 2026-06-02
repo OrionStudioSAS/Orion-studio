@@ -7,8 +7,15 @@ import LeStudioAnimations from '@/components/LeStudioAnimations'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Le Studio — Orion Studio',
+  title: 'Le Studio',
   description: "Découvrez Orion Studio, agence web française spécialisée en sites sur-mesure, e-commerce Shopify et applications SaaS. Une équipe à taille humaine, une méthodologie claire, des résultats mesurables.",
+  alternates: { canonical: '/le-studio' },
+  openGraph: {
+    title: 'Le Studio — Orion Studio',
+    description: "Agence web française. Paris & Cannes. Une équipe à taille humaine, des résultats mesurables.",
+    url: '/le-studio',
+    type: 'website',
+  },
 }
 
 const stats = [

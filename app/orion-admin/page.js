@@ -11,6 +11,13 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Orion Admin — Votre espace client tout-en-un',
   description: "Suivez votre projet, gérez votre site, échangez avec notre équipe et retrouvez tous vos documents au même endroit. Orion Admin, c'est votre espace personnel chez Orion Studio.",
+  alternates: { canonical: '/orion-admin' },
+  openGraph: {
+    title: 'Orion Admin — Votre espace client tout-en-un',
+    description: "Suivez votre projet, gérez votre site, échangez avec notre équipe.",
+    url: '/orion-admin',
+    type: 'website',
+  },
 }
 
 const points = [

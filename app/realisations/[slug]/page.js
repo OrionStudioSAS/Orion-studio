@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Contact from '@/components/Contact'
 import ScrollObserver from '@/components/ScrollObserver'
 import HomepageAnimations from '@/components/HomepageAnimations'
+import JsonLd from '@/components/JsonLd'
 import Link from 'next/link'
 
 export async function generateStaticParams() {
@@ -15,9 +16,24 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const project = projects.find(p => p.slug === params.slug)
   if (!project) return {}
+  const url = `/realisations/${project.slug}`
   return {
-    title: `${project.title} — Orion Studio`,
+    title: project.title,
     description: project.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${project.title} — Orion Studio`,
+      description: project.excerpt,
+      url,
+      type: 'article',
+      images: project.cover ? [{ url: project.cover, alt: project.title }] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: project.title,
+      description: project.excerpt,
+      images: project.cover ? [project.cover] : undefined,
+    },
   }
 }
 
@@ -25,8 +41,22 @@ export default function ProjectDetail({ params }) {
   const project = projects.find(p => p.slug === params.slug)
   if (!project) notFound()
 
+  const projectSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: project.title,
+    description: project.excerpt,
+    creator: { '@type': 'Organization', name: 'Orion Studio', url: 'https://orion-studio.io' },
+    image: project.cover ? `https://orion-studio.io${project.cover}` : undefined,
+    url: project.url,
+    inLanguage: 'fr-FR',
+    keywords: project.tags?.join(', '),
+    datePublished: project.year,
+  }
+
   return (
     <>
+      <JsonLd data={projectSchema} />
       <Cursor />
       <Nav />
       <main>
@@ -64,7 +94,7 @@ export default function ProjectDetail({ params }) {
             <div className="pd-banner__image" style={project.cover ? {} : { background: project.gradient }}>
               {project.cover && (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={project.cover} alt={project.title} className="pd-banner__cover" width="464" height="619" />
+                <img src={project.cover} alt={project.title} className="pd-banner__cover" width="464" height="619" fetchPriority="high" />
               )}
             </div>
           </div>

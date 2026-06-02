@@ -7,8 +7,15 @@ import Link from 'next/link'
 import { articles } from '@/data/blog'
 
 export const metadata = {
-  title: 'Blog — Orion Studio',
+  title: 'Blog',
   description: "Conseils, guides et analyses sur le web, le design et le SEO par l'équipe Orion Studio.",
+  alternates: { canonical: '/blog' },
+  openGraph: {
+    title: 'Blog — Orion Studio',
+    description: "Conseils, guides et analyses sur le web, le design et le SEO.",
+    url: '/blog',
+    type: 'website',
+  },
 }
 
 const formatDate = (dateStr) =>

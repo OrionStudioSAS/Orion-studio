@@ -85,6 +85,16 @@ const hours = [
   { day: 'Dimanche',         time: 'Fermé' },
 ]
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: categories.flatMap(cat => cat.items.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  }))),
+}
+
 export default function FAQ({ defaultTab = 0 }) {
   const [activeTab, setActiveTab]   = useState(defaultTab)
   const [openItem, setOpenItem]     = useState(null)
@@ -100,6 +110,10 @@ export default function FAQ({ defaultTab = 0 }) {
 
   return (
     <section className="faq" id="faq">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container">
 
         {/* ── Colonne gauche ── */}

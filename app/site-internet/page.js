@@ -7,11 +7,41 @@ import Contact from '@/components/Contact'
 import ScrollObserver from '@/components/ScrollObserver'
 import SiteVitrineAnimations from '@/components/SiteVitrineAnimations'
 import LeStudioAnimations from '@/components/LeStudioAnimations'
+import JsonLd from '@/components/JsonLd'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Site internet sur-mesure — Orion Studio',
+  title: 'Site internet sur-mesure',
   description: "Un site internet pensé pour vous, livré en 1 à 2 semaines. Vous êtes propriétaire à 100%, sans abonnement, et vous le gérez vous-même grâce à Orion Admin.",
+  alternates: { canonical: '/site-internet' },
+  openGraph: {
+    title: 'Site internet sur-mesure — Orion Studio',
+    description: "Un site internet pensé pour vous, livré en 1 à 2 semaines. Vous êtes propriétaire à 100%, sans abonnement.",
+    url: '/site-internet',
+    type: 'website',
+  },
+}
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Création de site internet sur-mesure',
+  name: 'Site internet sur-mesure',
+  description: "Site internet sur-mesure livré en 1 à 2 semaines. Propriété à 100% du client, sans abonnement.",
+  provider: { '@type': 'Organization', name: 'Orion Studio', url: 'https://orion-studio.io' },
+  areaServed: { '@type': 'Country', name: 'France' },
+  offers: {
+    '@type': 'Offer',
+    price: '1000',
+    priceCurrency: 'EUR',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      price: '1000',
+      priceCurrency: 'EUR',
+      valueAddedTaxIncluded: false,
+      description: 'À partir de 1 000 € HT',
+    },
+  },
 }
 
 const chiffres = [
@@ -46,6 +76,7 @@ const etapes = [
 export default function SiteInternet() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
       <Cursor />
       <Nav />
       <main>

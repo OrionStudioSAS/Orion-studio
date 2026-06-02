@@ -115,7 +115,7 @@ export default function Hero() {
               <div key={i} className={`hero__slide${current === i ? ' active' : ''}`}>
                 <div className="hero__slide-avatar">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={slide.photo} alt={slide.name} width="80" height="80" />
+                  <img src={slide.photo} alt={slide.name} width="80" height="80" loading="lazy" />
                 </div>
                 <div className="hero__slide-body">
                   <strong>{slide.name}</strong>
@@ -143,7 +143,7 @@ export default function Hero() {
       {/* RIGHT COLUMN */}
       <div className="hero__right">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/banner.webp" alt="Équipe Orion Studio" className="hero__photo" width="1024" height="1536" />
+        <img src="/images/banner.webp" alt="Équipe Orion Studio" className="hero__photo" width="1024" height="1536" fetchPriority="high" />
         <div className="hero__float-bar">
           <span className="hero__float-location">Paris &amp; Cannes 🇫🇷</span>
           <Link href="#contact" className="hero__float-cta">

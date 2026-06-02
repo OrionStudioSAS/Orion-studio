@@ -7,11 +7,36 @@ import Contact from '@/components/Contact'
 import ScrollObserver from '@/components/ScrollObserver'
 import SiteVitrineAnimations from '@/components/SiteVitrineAnimations'
 import LeStudioAnimations from '@/components/LeStudioAnimations'
+import JsonLd from '@/components/JsonLd'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Création de SAAS — Orion Studio',
+  title: 'Création de SaaS sur-mesure',
   description: "On crée votre application web sur-mesure, du concept au lancement. Pensée pour vos utilisateurs, prête à grandir avec vous.",
+  alternates: { canonical: '/saas' },
+  openGraph: {
+    title: 'Création de SaaS sur-mesure — Orion Studio',
+    description: "On crée votre application web sur-mesure, du concept au lancement.",
+    url: '/saas',
+    type: 'website',
+  },
+}
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: "Création d'application SaaS sur-mesure",
+  name: "Application SaaS sur-mesure",
+  description: "Application web sur-mesure : comptes utilisateurs, paiements, abonnements, dashboard. V1 livrée en 4 à 8 semaines.",
+  provider: { '@type': 'Organization', name: 'Orion Studio', url: 'https://orion-studio.io' },
+  areaServed: { '@type': 'Country', name: 'France' },
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      description: 'Sur devis',
+    },
+  },
 }
 
 const chiffres = [
@@ -46,6 +71,7 @@ const etapes = [
 export default function SaaS() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
       <Cursor />
       <Nav />
       <main>

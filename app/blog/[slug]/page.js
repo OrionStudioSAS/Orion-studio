@@ -4,6 +4,7 @@ import Cursor from '@/components/Cursor'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ScrollObserver from '@/components/ScrollObserver'
+import JsonLd from '@/components/JsonLd'
 import Link from 'next/link'
 
 export async function generateStaticParams() {
@@ -13,9 +14,26 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const article = articles.find(a => a.slug === params.slug)
   if (!article) return {}
+  const url = `/blog/${article.slug}`
   return {
-    title: `${article.title} — Orion Studio`,
+    title: article.title,
     description: article.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url,
+      type: 'article',
+      publishedTime: article.date,
+      authors: [article.author],
+      images: article.cover ? [{ url: article.cover, alt: article.title }] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.excerpt,
+      images: article.cover ? [article.cover] : undefined,
+    },
   }
 }
 
@@ -30,8 +48,28 @@ export default function ArticlePage({ params }) {
 
   const others = articles.filter(a => a.slug !== article.slug).slice(0, 3)
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: article.date,
+    dateModified: article.date,
+    author: { '@type': 'Person', name: article.author },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Orion Studio',
+      logo: { '@type': 'ImageObject', url: 'https://orion-studio.io/images/favicon.png' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://orion-studio.io/blog/${article.slug}` },
+    image: article.cover || 'https://orion-studio.io/images/banner.webp',
+    articleSection: article.category,
+    inLanguage: 'fr-FR',
+  }
+
   return (
     <>
+      <JsonLd data={articleSchema} />
       <Cursor />
       <Nav />
       <main>
@@ -59,7 +97,7 @@ export default function ArticlePage({ params }) {
             <div className="article-cover__image" style={article.cover ? {} : { background: article.coverGradient }}>
               {article.cover && (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={article.cover} alt={article.title} width="900" height="600" />
+                <img src={article.cover} alt={article.title} width="900" height="600" fetchPriority="high" />
               )}
             </div>
           </div>

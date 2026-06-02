@@ -1,0 +1,41 @@
+# Orion Studio
+
+> Agence web française fondée par Julien et Théo. Spécialisée en création de sites internet sur-mesure, boutiques e-commerce Shopify et applications SaaS pour entrepreneurs, PME et marques ambitieuses. Bureaux à Paris et Cannes.
+
+Orion Studio développe des sites internet livrés en 1 à 2 semaines, sans abonnement mensuel, dont le code et les données appartiennent à 100% au client. Chaque projet est accompagné d'Orion Admin, une plateforme propriétaire développée en interne qui centralise suivi de projet, documents, échanges avec l'équipe et gestion du site.
+
+## Positionnement
+- 50+ projets livrés depuis 2023
+- 98% de clients satisfaits
+- Équipe à taille humaine : Julien et Théo, cofondateurs, en contact direct (jamais de sous-traitance)
+- Délais réels : site internet 1-2 semaines, e-commerce 3-6 semaines, SaaS 4-8 semaines (V1)
+
+## Services et tarifs
+- **Site internet sur-mesure** : à partir de 1 000 € HT — https://orion-studio.io/site-internet
+- **Boutique e-commerce Shopify** : à partir de 3 000 € HT — https://orion-studio.io/site-e-commerce
+- **Application SaaS** : sur devis — https://orion-studio.io/saas
+- **Orion Admin** : inclus gratuitement dans chaque projet — https://orion-studio.io/orion-admin
+
+## Pages principales
+- [Accueil](https://orion-studio.io/) : présentation générale, services, témoignages
+- [Le Studio](https://orion-studio.io/le-studio) : histoire, équipe, valeurs, bureaux, partenaires
+- [Nos réalisations](https://orion-studio.io/realisations) : portfolio (AEV, Ocha & Co, Housses Taxi)
+- [Site internet](https://orion-studio.io/site-internet) : détail du service site vitrine
+- [E-commerce](https://orion-studio.io/site-e-commerce) : détail du service Shopify
+- [SaaS](https://orion-studio.io/saas) : détail du service application web
+- [Orion Admin](https://orion-studio.io/orion-admin) : présentation de la plateforme propriétaire
+- [Blog](https://orion-studio.io/blog) : articles sur le web, design, SEO, e-commerce
+
+## Contacts
+- Julien : julien@orion-studio.io
+- Théo : theo@orion-studio.io
+- Paris : 60 Rue François Ier, 75008
+- Cannes : 6 Rue Merle, 06400
+
+## Différenciateurs clés
+- Sur-mesure (pas de templates Wix/Squarespace/WordPress)
+- Propriété 100% client : code, contenus, données
+- Aucun abonnement obligatoire
+- Plateforme Orion Admin développée en interne (unique sur le marché)
+- Délais courts grâce à une organisation concentrée
+- Suivi post-livraison inclus (2 semaines + maintenance optionnelle)

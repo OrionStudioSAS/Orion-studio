@@ -7,8 +7,15 @@ import HomepageAnimations from '@/components/HomepageAnimations'
 import ProjectsGrid from '@/components/ProjectsGrid'
 
 export const metadata = {
-  title: 'Nos Réalisations — Orion Studio',
+  title: 'Nos Réalisations',
   description: 'Découvrez nos réalisations sur-mesure et Shopify : sites internet, boutiques e-commerce et applications SaaS pour des marques ambitieuses.',
+  alternates: { canonical: '/realisations' },
+  openGraph: {
+    title: 'Nos Réalisations — Orion Studio',
+    description: 'Portfolio : sites sur-mesure, boutiques Shopify et applications SaaS.',
+    url: '/realisations',
+    type: 'website',
+  },
 }
 
 export default function ProjetsPage() {

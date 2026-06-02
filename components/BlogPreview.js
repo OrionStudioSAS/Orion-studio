@@ -37,7 +37,7 @@ export default function BlogPreview() {
               <div className="bp-card__image">
                 {article.cover
                   // eslint-disable-next-line @next/next/no-img-element
-                  ? <img src={article.cover} alt={article.title} width="900" height="600" />
+                  ? <img src={article.cover} alt={article.title} width="900" height="600" loading="lazy" />
                   : <div style={{ background: article.coverGradient, width: '100%', height: '100%' }} />
                 }
               </div>

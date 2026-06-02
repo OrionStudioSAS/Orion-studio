@@ -7,11 +7,41 @@ import Contact from '@/components/Contact'
 import ScrollObserver from '@/components/ScrollObserver'
 import SiteVitrineAnimations from '@/components/SiteVitrineAnimations'
 import LeStudioAnimations from '@/components/LeStudioAnimations'
+import JsonLd from '@/components/JsonLd'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Boutique en ligne Shopify — Orion Studio',
+  title: 'Boutique en ligne Shopify',
   description: "Une boutique en ligne sur-mesure avec Shopify. Pensée pour vendre, simple à gérer, et livrée en quelques semaines.",
+  alternates: { canonical: '/site-e-commerce' },
+  openGraph: {
+    title: 'Boutique en ligne Shopify — Orion Studio',
+    description: "Une boutique en ligne sur-mesure avec Shopify. Pensée pour vendre, simple à gérer.",
+    url: '/site-e-commerce',
+    type: 'website',
+  },
+}
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: "Création de boutique e-commerce Shopify",
+  name: "Boutique e-commerce Shopify sur-mesure",
+  description: "Boutique en ligne Shopify sur-mesure, optimisée pour la conversion, livrée en 3 à 6 semaines.",
+  provider: { '@type': 'Organization', name: 'Orion Studio', url: 'https://orion-studio.io' },
+  areaServed: { '@type': 'Country', name: 'France' },
+  offers: {
+    '@type': 'Offer',
+    price: '3000',
+    priceCurrency: 'EUR',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      price: '3000',
+      priceCurrency: 'EUR',
+      valueAddedTaxIncluded: false,
+      description: 'À partir de 3 000 € HT',
+    },
+  },
 }
 
 const chiffres = [
@@ -46,6 +76,7 @@ const etapes = [
 export default function SiteEcommerce() {
   return (
     <>
+      <JsonLd data={serviceSchema} />
       <Cursor />
       <Nav />
       <main>

@@ -27,32 +27,32 @@ export default function Studio() {
 
             {/* Image de fond */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/basePlanet.webp" alt="" className="image-4" width="888" height="920" />
+            <img src="/images/basePlanet.webp" alt="" className="image-4" width="888" height="920" loading="lazy" />
 
             {/* Orbites rotatives */}
             <div className="rotating _1">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/planet1.png" alt="" className="planet" width="60" height="60" />
+              <img src="/images/planet1.png" alt="" className="planet" width="60" height="60" loading="lazy" />
             </div>
             <div className="rotating _2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/planet2.png" alt="" className="planet" width="60" height="60" />
+              <img src="/images/planet2.png" alt="" className="planet" width="60" height="60" loading="lazy" />
             </div>
             <div className="rotating _3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/planet3.png" alt="" className="planet" width="60" height="60" />
+              <img src="/images/planet3.png" alt="" className="planet" width="60" height="60" loading="lazy" />
             </div>
             <div className="rotating _4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/planet4.png" alt="" className="planet" width="60" height="60" />
+              <img src="/images/planet4.png" alt="" className="planet" width="60" height="60" loading="lazy" />
             </div>
             <div className="rotating _5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/planet5.png" alt="" className="planet" width="60" height="60" />
+              <img src="/images/planet5.png" alt="" className="planet" width="60" height="60" loading="lazy" />
             </div>
             <div className="rotating _6">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/planet6.png" alt="" className="planet" width="60" height="60" />
+              <img src="/images/planet6.png" alt="" className="planet" width="60" height="60" loading="lazy" />
             </div>
 
           </div>
