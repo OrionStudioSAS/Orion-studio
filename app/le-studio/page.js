@@ -43,10 +43,10 @@ const founders = [
 
 const photos = [
   { src: '/images/banner.webp', alt: "Julien et Théo, cofondateurs d'Orion Studio", className: 'ls-photos__item--main' },
-  { src: '/images/Lequipe.jpg', alt: "L'équipe Orion Studio" },
-  { src: '/images/Cannes.png', alt: 'Cannes, bureau Sud' },
-  { src: '/images/Paris.png', alt: 'Paris, bureau Nord' },
-  { src: '/images/Mascotte.png', alt: 'La mascotte du studio' },
+  { src: '/images/Lequipe.webp', alt: "L'équipe Orion Studio" },
+  { src: '/images/Cannes.webp', alt: 'Cannes, bureau Sud' },
+  { src: '/images/Paris.webp', alt: 'Paris, bureau Nord' },
+  { src: '/images/Mascotte.webp', alt: 'La mascotte du studio' },
 ]
 
 const offices = [
