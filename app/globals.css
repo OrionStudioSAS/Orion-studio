@@ -5784,6 +5784,46 @@ section[id] {
   color: rgba(255,255,255,0.6);
   margin-bottom: 1.25rem;
 }
+.article-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: rgba(255,255,255,0.92);
+}
+.article-content ul {
+  margin: 0 0 1.5rem 0;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+.article-content ul li {
+  position: relative;
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+.article-content ul li::before {
+  content: '→';
+  position: absolute;
+  left: -0.25rem;
+  color: rgba(168, 85, 247, 0.7);
+}
+.article-content a {
+  color: rgba(168, 85, 247, 0.9);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+.article-content a:hover {
+  color: #fff;
+}
+.article-content strong {
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+}
 .article-related { padding: 5rem 0; border-top: 1px solid var(--border); }
 .article-related__header { margin-bottom: 3rem; }
 .article-related__header h2 { margin-bottom: 0; }

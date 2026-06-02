@@ -151,7 +151,6 @@ export default function Footer() {
           <span>© 2025 Orion Studio. Tous droits réservés.</span>
           <div className="footer__legal">
             <Link href="/mentions-legales">Mentions légales</Link>
-            <Link href="/cgv">CGV</Link>
           </div>
         </div>
 
