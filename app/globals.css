@@ -5616,12 +5616,14 @@ section[id] {
 
   /* Footer logo BIG : éviter le débordement, lettres complètes */
   .footer__logo-stage {
-    height: calc(22vw * 0.88);
+    height: calc(12vw * 0.95);
   }
   .footer__logo-big {
-    font-size: 22vw;
-    padding-left: 0.5rem;
-    letter-spacing: -0.05em;
+    font-size: 12vw;
+    padding: 0;
+    letter-spacing: -0.04em;
+    text-align: center;
+    width: 100%;
   }
 
   /* ===== Testimonials mobile = style hero slide ===== */
