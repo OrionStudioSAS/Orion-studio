@@ -85,7 +85,6 @@ export default function SiteInternet() {
         <section className="ls-hero ls-hero--full">
           <div className="container">
             <div className="ls-hero__inner">
-              <span className="section-tag ls-hero__tag">SITE INTERNET</span>
               <h1 className="ls-hero__title">
                 Un site internet{' '}
                 <span className="gradient-text">sur-mesure</span>, livré en{' '}

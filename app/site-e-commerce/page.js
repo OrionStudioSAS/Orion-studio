@@ -85,7 +85,6 @@ export default function SiteEcommerce() {
         <section className="ls-hero ls-hero--full">
           <div className="container">
             <div className="ls-hero__inner">
-              <span className="section-tag ls-hero__tag">E-COMMERCE</span>
               <h1 className="ls-hero__title">
                 Une{' '}
                 <span className="gradient-text">boutique en ligne</span>{' '}

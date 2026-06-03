@@ -5762,10 +5762,10 @@ section[id] {
 
 /* H1 — titres principaux de page (hero) */
 h1 {
-  font-size: clamp(2rem, 4.5vw, 3.25rem) !important;
-  line-height: 1.1 !important;
-  letter-spacing: -0.025em !important;
-  font-weight: 600 !important;
+  font-size: clamp(2.5rem, 5.5vw, 4rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+  font-weight: 700 !important;
 }
 
 /* H2 — titres de section */
@@ -5794,68 +5794,22 @@ h4 {
 
 /* Body text — uniforme partout */
 p,
-.body-text,
-li {
+.body-text {
   font-size: 15px !important;
   line-height: 1.7 !important;
 }
-/* Exceptions micro-typo nécessaires (gérées par classes spécifiques) */
-.section-tag,
-.faq-item__icon,
-.hero__google,
-.hero__nav-links a,
-.svt-stat__unit,
-.svt-stat__label,
-.footer__col-desc,
-.footer__time,
-.footer__city,
-.footer__col-links,
-.footer__col-brand,
-.testimonial-card__meta em,
-.testimonial-card__text,
-.testimonial-card__meta strong,
-.exp-row__items li,
-.oa-home__feature,
-.ls-partner__role,
-.ls-founder__role,
-.ls-location__index,
-.ls-location__coords,
-.ls-pricing__label,
-.ls-pricing__amount,
-.ls-pricing__unit,
-.vis-dash__metric-num,
-.vis-dash__metric-label,
-.vis-cart__price,
+
+/* Exceptions explicites pour p/li qui doivent rester plus petits */
+.footer__col-desc { font-size: 13px !important; }
+.testimonial-card__text { font-size: 13.5px !important; }
+.exp-row__items li { font-size: 14px !important; }
+.oa-home__feature { font-size: 14.5px !important; }
+.svt-stat__label { font-size: 13px !important; }
+.article-intro { font-size: 17px !important; }
+.bp-card__title { font-size: 1.05rem !important; }
 .bp-card__cat,
 .bp-card__date,
-.bp-card__read,
-.blog-card__category,
-.project-card__category,
-.pd-tag,
-.pd-deliverable,
-.pd-step__phase,
-.pd-step__num,
-.pd-step__duration,
-.pd-back,
-.pd-hero__year,
-.article-hero__byline,
-.article-hero__read,
-.article-intro,
-.exp-row__num,
-.ls-value-row__num,
-.ls-value-row__total,
-.ls-founder__avatar,
-.oa-home__feature,
-.faq__hours-day,
-.faq__hours-time,
-.faq__hours-label,
-.faq__tab,
-.contact__panel-title,
-.contact__panel-text {
-  font-size: revert !important;
-}
-/* Petits compléments précis */
-p.article-intro { font-size: 17px !important; }
+.bp-card__read { font-size: 11px !important; }
 
 /* CTA — uniforme */
 .cta {
@@ -5868,4 +5822,115 @@ p.article-intro { font-size: 17px !important; }
    les valeurs minimales déjà adaptées tiennent compte du mobile */
 @media (max-width: 700px) {
   h2::before { display: none !important; }
+}
+
+/* ================================================================
+   FIXES PAGES CMS (site-internet / e-commerce / saas)
+   ================================================================ */
+
+/* svt-admin : empile sur mobile, image SOUS le texte */
+@media (max-width: 991px) {
+  .svt-admin__grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  /* Image (visual) placée APRÈS le contenu via order */
+  .svt-admin__visual { order: 2; }
+  .svt-admin__content { order: 1; }
+  .svt-admin__screen { max-width: 100%; }
+}
+
+/* ================================================================
+   TARIFS : prix mis plus en avant
+   ================================================================ */
+.ls-pricing__price {
+  position: relative;
+  padding: 1.5rem 2rem;
+  background:
+    radial-gradient(80% 100% at 50% 0%, rgba(168, 85, 247, 0.12), transparent 70%),
+    rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.05), 0 20px 60px -20px rgba(168, 85, 247, 0.25);
+  margin: 0.5rem 0;
+}
+.ls-pricing__amount {
+  font-size: clamp(3.5rem, 8vw, 5.5rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+.ls-pricing__amount--text {
+  font-size: clamp(2.75rem, 6vw, 4.25rem) !important;
+}
+.ls-pricing__label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.5rem;
+}
+.ls-pricing__unit {
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+}
+
+/* ================================================================
+   SVT-STATS — redesign mobile (cards stackées avec gros chiffre)
+   ================================================================ */
+@media (max-width: 700px) {
+  .svt-stats__grid,
+  .ls-hero__stats-bar .svt-stats__grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px !important;
+    padding: 0;
+  }
+  .svt-stat {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    text-align: left !important;
+    position: relative;
+    overflow: hidden;
+  }
+  .svt-stat::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #4F8EF7, #A855F7, #f97316);
+    border-radius: 3px 0 0 3px;
+  }
+  .svt-stat__value {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    line-height: 1;
+    min-width: 80px;
+  }
+  .svt-stat__value > span:first-child {
+    font-size: 2rem !important;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .svt-stat__unit {
+    font-size: 10px !important;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .svt-stat__label {
+    font-size: 13px !important;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.3;
+    margin: 0;
+    text-align: left !important;
+  }
 }

@@ -80,7 +80,6 @@ export default function SaaS() {
         <section className="ls-hero ls-hero--full">
           <div className="container">
             <div className="ls-hero__inner">
-              <span className="section-tag ls-hero__tag">SAAS</span>
               <h1 className="ls-hero__title">
                 Votre{' '}
                 <span className="gradient-text">application web</span>{' '}
