@@ -31,7 +31,7 @@ export default function BlogPreview() {
             <span className="section-tag">LE BLOG</span>
             <h2>Nos derniers articles</h2>
           </div>
-          <Link href="/blog" className="cta">
+          <Link href="/blog" className="cta blog-preview__cta--desktop">
             <span className="text-cta">Voir tous les articles</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
@@ -73,6 +73,14 @@ export default function BlogPreview() {
               <span aria-hidden="true">→</span>
             </button>
           </div>
+        </div>
+
+        <div className="blog-preview__cta-mobile">
+          <Link href="/blog" className="cta">
+            <span className="text-cta">Voir tous les articles</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
+          </Link>
         </div>
 
       </div>

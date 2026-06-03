@@ -5728,3 +5728,25 @@ section[id] {
     margin-top: 1rem;
   }
 }
+
+/* ─── BlogPreview / Projects — CTA mobile sous les flèches ─── */
+.blog-preview__cta-mobile { display: none; }
+@media (max-width: 700px) {
+  .blog-preview__cta--desktop { display: none !important; }
+  .blog-preview__cta-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  /* Réalisations : espace entre flèches et CTA */
+  .projects__cta {
+    margin-top: 2rem;
+  }
+}
+
+/* ─── Hero : équilibrer l'espace haut (sous nav) et bas (avant image) ─── */
+@media (max-width: 991px) {
+  .hero__left {
+    padding: calc(var(--nav-height) + 1.5rem) 1.75rem 1.5rem;
+  }
+}
