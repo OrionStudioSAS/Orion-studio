@@ -5754,3 +5754,118 @@ section[id] {
     padding: calc(var(--nav-height) + 1.5rem) 1.75rem 1.5rem;
   }
 }
+
+/* ================================================================
+   TYPE SCALE UNIFIÉ — applique la même hiérarchie partout
+   (override des dérives historiques sur tous les composants)
+   ================================================================ */
+
+/* H1 — titres principaux de page (hero) */
+h1 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 600 !important;
+}
+
+/* H2 — titres de section */
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 600 !important;
+}
+
+/* H3 — sous-titres de cartes / sections (uniforme partout) */
+h3 {
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem) !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.015em !important;
+  font-weight: 600 !important;
+}
+
+/* H4 — micro-titres (colonnes footer, etc) */
+h4 {
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 600 !important;
+}
+
+/* Body text — uniforme partout */
+p,
+.body-text,
+li {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+/* Exceptions micro-typo nécessaires (gérées par classes spécifiques) */
+.section-tag,
+.faq-item__icon,
+.hero__google,
+.hero__nav-links a,
+.svt-stat__unit,
+.svt-stat__label,
+.footer__col-desc,
+.footer__time,
+.footer__city,
+.footer__col-links,
+.footer__col-brand,
+.testimonial-card__meta em,
+.testimonial-card__text,
+.testimonial-card__meta strong,
+.exp-row__items li,
+.oa-home__feature,
+.ls-partner__role,
+.ls-founder__role,
+.ls-location__index,
+.ls-location__coords,
+.ls-pricing__label,
+.ls-pricing__amount,
+.ls-pricing__unit,
+.vis-dash__metric-num,
+.vis-dash__metric-label,
+.vis-cart__price,
+.bp-card__cat,
+.bp-card__date,
+.bp-card__read,
+.blog-card__category,
+.project-card__category,
+.pd-tag,
+.pd-deliverable,
+.pd-step__phase,
+.pd-step__num,
+.pd-step__duration,
+.pd-back,
+.pd-hero__year,
+.article-hero__byline,
+.article-hero__read,
+.article-intro,
+.exp-row__num,
+.ls-value-row__num,
+.ls-value-row__total,
+.ls-founder__avatar,
+.oa-home__feature,
+.faq__hours-day,
+.faq__hours-time,
+.faq__hours-label,
+.faq__tab,
+.contact__panel-title,
+.contact__panel-text {
+  font-size: revert !important;
+}
+/* Petits compléments précis */
+p.article-intro { font-size: 17px !important; }
+
+/* CTA — uniforme */
+.cta {
+  font-size: 14px !important;
+  padding: 14px 22px !important;
+}
+.cta .star { width: 14px !important; height: 14px !important; }
+
+/* Mobile : on conserve la même échelle déclarée en clamp(),
+   les valeurs minimales déjà adaptées tiennent compte du mobile */
+@media (max-width: 700px) {
+  h2::before { display: none !important; }
+}
