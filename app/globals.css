@@ -5539,3 +5539,192 @@ section[id] {
     gap: 2.5rem;
   }
 }
+
+/* ================================================================
+   MOBILE HARMONIZATION (overrides finaux)
+   ================================================================ */
+@media (max-width: 700px) {
+  /* H2 : taille unifiée + centrés + étoile retirée */
+  h2,
+  .section-header h2,
+  .blog-preview__header h2,
+  .ls-photos__header h2,
+  .ls-founders__header h2,
+  .ls-story h2,
+  .ls-offices__left h2,
+  .ls-hero__title,
+  .ls-values__heading h2,
+  .expertises__heading,
+  .article-related__header h2,
+  .pg-hero__title,
+  .blog-hero__title,
+  .pd-steps__header h2,
+  .testimonials .section-header h2 {
+    font-size: 1.75rem !important;
+    line-height: 1.2;
+    text-align: center;
+  }
+  h2::before {
+    display: none !important;
+  }
+
+  /* Section-tag : centré sur mobile */
+  .section-tag {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-self: center;
+    width: fit-content;
+  }
+  .section-header,
+  .ls-photos__header,
+  .ls-founders__header,
+  .ls-partners__header,
+  .blog-preview__header > div,
+  .ls-story__left,
+  .ls-offices__left,
+  .ls-hero__inner,
+  .ls-mission__left,
+  .ls-values__heading {
+    text-align: center;
+    align-items: center;
+  }
+
+  /* CTAs : tous centrés horizontalement */
+  .cta {
+    align-self: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ls-hero__inner .cta,
+  .ls-values__heading + * + * .cta,
+  .ls-story__left .cta,
+  .ls-pricing__card .cta,
+  .blog-preview__header .cta,
+  .projects__cta {
+    align-self: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .projects__cta { display: flex; justify-content: center; }
+  .blog-preview__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* Footer logo BIG : éviter le débordement, lettres complètes */
+  .footer__logo-stage {
+    height: calc(22vw * 0.88);
+  }
+  .footer__logo-big {
+    font-size: 22vw;
+    padding-left: 0.5rem;
+    letter-spacing: -0.05em;
+  }
+
+  /* ===== Testimonials mobile = style hero slide ===== */
+  .testimonials .testimonial-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: stretch;
+    text-align: left;
+  }
+  .testimonials .testimonial-card__avatar {
+    flex-shrink: 0;
+    width: 110px;
+    height: auto;
+    min-height: 140px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background: none;
+    padding: 0;
+    display: block;
+  }
+  .testimonials .testimonial-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .testimonials .testimonial-card__body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .testimonials .testimonial-card__body strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .testimonials .testimonial-card__body p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+  }
+  .testimonials .testimonial-card__body em {
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: normal;
+    margin-top: auto;
+  }
+
+  /* ===== Menu mobile en plein écran ===== */
+  .nav__mobile {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    height: calc(100vh - var(--nav-height));
+    height: calc(100dvh - var(--nav-height));
+    max-height: 0;
+    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+  }
+  .nav__mobile.open {
+    max-height: calc(100vh - var(--nav-height));
+    max-height: calc(100dvh - var(--nav-height));
+    padding: 2rem;
+  }
+  .nav__mobile a {
+    padding: 18px 0;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .nav__mobile a:last-child {
+    margin-top: 1rem;
+    padding: 14px 28px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    width: auto;
+    display: inline-block;
+  }
+  .nav__mobile-label {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

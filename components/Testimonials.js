@@ -3,22 +3,22 @@ import { useRef } from 'react'
 
 const testimonials = [
   {
-    initials: 'VL',
+    photo: '/images/VirginieLelong.webp',
     name: 'Virginie Lelong',
-    role: 'Diététicienne nutritionniste',
-    text: '"Absolument ravie du résultat ! Mon site internet correspond parfaitement à mes attentes : design soigné, navigation fluide et accompagnement très professionnel du début à la fin. À l\'écoute, réactif et force de proposition. Je recommande sans hésitation !"',
+    role: '— Diététicienne nutritionniste',
+    text: '"Absolument ravie du résultat ! Design soigné, navigation fluide et accompagnement très professionnel du début à la fin. À l\'écoute, réactif et force de proposition."',
   },
   {
-    initials: 'VC',
+    photo: '/images/VincentChopine.webp',
     name: 'Vincent Chopine',
-    role: 'Association AEV',
-    text: '"Nous avons fait appel à Orion Studio pour la création de notre site internet et l\'expérience a été excellente du début à la fin. L\'équipe a su parfaitement comprendre nos besoins et nous proposer un site moderne, rapide et surtout très facile à administrer."',
+    role: "— Membre de l'association AEV",
+    text: '"Nous avons fait appel à Orion Studio pour la création de notre site internet et l\'expérience a été excellente du début à la fin. L\'équipe a su parfaitement comprendre nos besoins."',
   },
   {
-    initials: 'TC',
+    photo: '/images/ThierryCordier.webp',
     name: 'Thierry Cordier',
-    role: 'Association AEV',
-    text: '"Orion Studio nous a accompagnés sur la refonte complète de notre présence en ligne. Leur expertise sur le développement sur-mesure et Shopify est impressionnante. Une équipe à l\'écoute, professionnelle, et qui livre dans les temps."',
+    role: "— Membre de l'association AEV",
+    text: '"Leur expertise sur le développement sur-mesure est impressionnante. Une équipe à l\'écoute, professionnelle, et qui livre dans les temps. Nous recommandons vivement Orion Studio."',
   },
 ]
 
@@ -43,15 +43,15 @@ export default function Testimonials() {
         <div className="carousel-wrap">
           <div className="testimonials__grid carousel-track" ref={gridRef}>
             {testimonials.map((t) => (
-              <div key={t.initials} className="testimonial-card">
-                <div className="testimonial-card__stars">★★★★★</div>
-                <p>{t.text}</p>
-                <div className="testimonial-card__author">
-                  <div className="testimonial-card__avatar">{t.initials}</div>
-                  <div>
-                    <strong>{t.name}</strong>
-                    <span>{t.role}</span>
-                  </div>
+              <div key={t.name} className="testimonial-card">
+                <div className="testimonial-card__avatar">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={t.photo} alt={t.name} width="120" height="120" loading="lazy" />
+                </div>
+                <div className="testimonial-card__body">
+                  <strong>{t.name}</strong>
+                  <p>{t.text}</p>
+                  <em>{t.role}</em>
                 </div>
               </div>
             ))}
