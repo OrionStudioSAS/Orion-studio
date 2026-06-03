@@ -5,6 +5,7 @@ import Studio from '@/components/Studio'
 import Expertises from '@/components/Expertises'
 import Projects from '@/components/Projects'
 import BlogPreview from '@/components/BlogPreview'
+import Testimonials from '@/components/Testimonials'
 import OrionAdminSection from '@/components/OrionAdminSection'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
@@ -23,6 +24,7 @@ export default function Home() {
         <Expertises />
         <Projects />
         <OrionAdminSection />
+        <Testimonials />
         <BlogPreview />
         <FAQ />
         <Contact />

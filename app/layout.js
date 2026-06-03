@@ -39,6 +39,9 @@ export const metadata = {
       },
     ],
   },
+  other: {
+    'og:updated_time': new Date().toISOString(),
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'Orion Studio — Agence Web sur-mesure',

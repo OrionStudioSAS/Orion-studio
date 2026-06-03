@@ -730,7 +730,7 @@ strong {
   height: 1.5px;
   background: #ffffff;
   border-radius: 2px;
-  transition: all 0.3s ease, background 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .nav.scrolled .nav__toggle span {
@@ -1085,6 +1085,7 @@ strong {
 }
 
 /* ===================== STUDIO ===================== */
+.studio { overflow: hidden; }
 .studio .container {
   display: flex;
   align-items: center;
@@ -1338,6 +1339,7 @@ section[id] {
   align-self: flex-start;
   margin-top: 1.75rem;
 }
+.exp-row__cta--mobile { display: none; }
 
 /* ===== VISUELS PAR SERVICE ===== */
 .vis {
@@ -1594,8 +1596,13 @@ section[id] {
     gap: 10px;
     margin-top: 1rem;
   }
-  .exp-row__cta {
-    margin-top: 0.5rem;
+  /* CTA desktop caché, CTA mobile full-width après le visuel */
+  .exp-row__cta--desktop { display: none; }
+  .exp-row__cta--mobile {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1.25rem;
   }
 }
 
@@ -2027,7 +2034,62 @@ section[id] {
   }
 }
 
+/* ===================== CAROUSEL (mobile only) ===================== */
+.carousel-wrap { position: relative; }
+.carousel-nav { display: none; }
+
+@media (max-width: 700px) {
+  .carousel-track {
+    display: flex !important;
+    grid-template-columns: none !important;
+    gap: 14px !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+  }
+  .carousel-track::-webkit-scrollbar { display: none; }
+  .carousel-track > * {
+    flex: 0 0 88%;
+    scroll-snap-align: start;
+  }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1.25rem;
+  }
+  .carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s, border-color 0.25s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .carousel-btn:active {
+    transform: scale(0.92);
+    background: linear-gradient(135deg, rgba(79,142,247,0.25), rgba(168,85,247,0.25));
+    border-color: rgba(168, 85, 247, 0.6);
+  }
+}
+
 /* ===================== TESTIMONIALS ===================== */
+/* Visible uniquement sur mobile (le hero a déjà un slider sur desktop) */
+.testimonials { display: none; }
+@media (max-width: 991px) {
+  .testimonials { display: block; }
+}
+
 .testimonials__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3632,6 +3694,11 @@ section[id] {
   .nav__toggle {
     display: flex;
   }
+  /* Burger toujours noir sur mobile */
+  .nav__toggle span,
+  .nav.scrolled .nav__toggle span {
+    background-color: #000;
+  }
 
   /* Hero stacks vertically on tablet */
   .hero {
@@ -3822,15 +3889,15 @@ section[id] {
 
   .hero__title {
     font-size: 2.5rem;
+    text-align: center;
   }
-  .hero__subtitle { font-size: 14px; }
+  .hero__subtitle { font-size: 14px; text-align: center; }
+  .hero__left-content { align-items: center; }
+  .hero__left-content .cta { align-self: center !important; }
+  .hero__google { justify-content: center; }
 
-  /* Hero slider — réduit l'avatar pour les très petits écrans */
-  .hero__slide-avatar {
-    width: 80px;
-    height: 80px;
-  }
-  .hero__slider { padding: 1rem 1rem 0; }
+  /* Slider testimonials retiré du hero sur mobile */
+  .hero__slider { display: none; }
 
   section {
     padding: 4rem 0;

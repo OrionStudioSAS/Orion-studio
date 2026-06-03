@@ -86,7 +86,7 @@ export default function Expertises() {
                     <li key={j} style={{ '--exp-i': j }}>{item}</li>
                   ))}
                 </ul>
-                <Link href={service.href} className="cta exp-row__cta">
+                <Link href={service.href} className="cta exp-row__cta exp-row__cta--desktop">
                   <span className="text-cta">Découvrir</span>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
@@ -94,6 +94,12 @@ export default function Expertises() {
               </div>
 
               <ServiceVisual type={service.visual} />
+
+              <Link href={service.href} className="cta exp-row__cta exp-row__cta--mobile">
+                <span className="text-cta">Découvrir</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/starblack.png" alt="" className="star" width="14" height="14" />
+              </Link>
             </li>
           ))}
         </ol>
