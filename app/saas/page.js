@@ -192,13 +192,12 @@ export default function SaaS() {
             <div className="ls-pricing__card">
               <span className="section-tag">TARIFS</span>
               <div className="ls-pricing__price">
-                <span className="ls-pricing__label">Investissement</span>
                 <span className="ls-pricing__amount ls-pricing__amount--text">
                   <span className="gradient-text">Sur devis</span>
                 </span>
               </div>
               <p className="ls-pricing__desc">
-                Chaque projet SaaS est unique : périmètre fonctionnel, architecture, intégrations, comptes utilisateurs. On vous fait un devis clair et détaillé après un premier appel de cadrage.
+                Chaque projet SaaS est unique : périmètre fonctionnel, architecture, intégrations, comptes utilisateurs. On vous fait un devis clair et détaillé après un premier échange de cadrage.
               </p>
               <Link href="#contact" className="cta">
                 <span className="text-cta">Parler de votre projet</span>

@@ -204,7 +204,7 @@ export default function SiteEcommerce() {
                 </span>
               </div>
               <p className="ls-pricing__desc">
-                Le tarif final dépend du catalogue, des intégrations (paiements, livraison, ERP) et du design. On vous fait un devis clair et détaillé en moins de 48h après notre premier appel.
+                Le tarif final dépend du catalogue, des intégrations (paiements, livraison, ERP) et du design. On vous fait un devis clair et détaillé en moins de 48h après notre premier échange.
               </p>
               <Link href="#contact" className="cta">
                 <span className="text-cta">Demander un devis gratuit</span>

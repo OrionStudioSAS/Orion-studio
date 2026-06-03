@@ -395,7 +395,8 @@ strong {
 }
 
 /* Section-tag centré quand son parent est centré */
-.section-header .section-tag {
+.section-header .section-tag,
+.ls-pricing__card .section-tag {
   align-self: center;
 }
 
