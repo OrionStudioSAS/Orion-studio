@@ -44,15 +44,17 @@ export default function Testimonials() {
           <div className="testimonials__grid carousel-track" ref={gridRef}>
             {testimonials.map((t) => (
               <div key={t.name} className="testimonial-card">
-                <div className="testimonial-card__avatar">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={t.photo} alt={t.name} width="120" height="120" loading="lazy" />
+                <div className="testimonial-card__head">
+                  <div className="testimonial-card__avatar">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={t.photo} alt={t.name} width="120" height="120" loading="lazy" />
+                  </div>
+                  <div className="testimonial-card__meta">
+                    <strong>{t.name}</strong>
+                    <em>{t.role}</em>
+                  </div>
                 </div>
-                <div className="testimonial-card__body">
-                  <strong>{t.name}</strong>
-                  <p>{t.text}</p>
-                  <em>{t.role}</em>
-                </div>
+                <p className="testimonial-card__text">{t.text}</p>
               </div>
             ))}
           </div>

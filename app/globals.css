@@ -5626,24 +5626,29 @@ section[id] {
     width: 100%;
   }
 
-  /* ===== Testimonials mobile = style hero slide ===== */
+  /* ===== Testimonials mobile : avatar carré + meta puis texte ===== */
   .testimonials .testimonial-card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 1.25rem;
+    padding: 1.5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
     align-items: stretch;
     text-align: left;
   }
+  .testimonials .testimonial-card__head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
   .testimonials .testimonial-card__avatar {
     flex-shrink: 0;
-    width: 110px;
-    height: auto;
-    min-height: 140px;
-    border-radius: 10px;
+    width: 64px;
+    height: 64px;
+    min-height: 0;
+    border-radius: 50%;
     border: 1px solid var(--border);
     overflow: hidden;
     background: none;
@@ -5654,33 +5659,30 @@ section[id] {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 25%;
     display: block;
   }
-  .testimonials .testimonial-card__body {
-    flex: 1;
-    min-width: 0;
+  .testimonials .testimonial-card__meta {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 2px;
+    min-width: 0;
   }
-  .testimonials .testimonial-card__body strong {
-    display: block;
-    font-size: 14px;
+  .testimonials .testimonial-card__meta strong {
+    font-size: 15px;
     font-weight: 600;
     color: #fff;
   }
-  .testimonials .testimonial-card__body p {
-    font-size: 13px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.5);
-    margin: 0;
-  }
-  .testimonials .testimonial-card__body em {
-    font-size: 11.5px;
+  .testimonials .testimonial-card__meta em {
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.4);
     font-style: normal;
-    margin-top: auto;
+  }
+  .testimonials .testimonial-card__text {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
   }
 
   /* ===== Menu mobile en plein écran ===== */
