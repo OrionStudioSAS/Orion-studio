@@ -3656,12 +3656,15 @@ section[id] {
 .footer__logo-stage {
   overflow: hidden;
   line-height: 1;
-  /* La hauteur = environ 85% de la font-size */
-  height: calc(13vw * 0.88);
+  /* La hauteur suit la font-size cappée (min(13vw, 13rem)) */
+  height: calc(min(13vw, 13rem) * 0.88);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
 }
 
 .footer__logo-big {
-  font-size: 13vw;
+  font-size: min(13vw, 13rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   color: rgba(255, 255, 255, 0.9);
@@ -3670,7 +3673,6 @@ section[id] {
   will-change: transform;
   white-space: nowrap;
   user-select: none;
-  padding-left: calc((100vw - min(95rem, 100vw)) / 2 + 1.5rem);
 }
 
 /* ===================== SCROLL ANIMATIONS ===================== */
